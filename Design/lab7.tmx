@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="64" tileheight="64" nextobjectid="26">
+ <tileset firstgid="1" name="TS1" tilewidth="64" tileheight="64" tilecount="128" columns="8">
+  <image source="../WebContent/assets/map/spritesheet_tiles.png" width="512" height="1024"/>
+ </tileset>
+ <tileset firstgid="129" name="TS2" tilewidth="64" tileheight="64" tilecount="128" columns="8">
+  <image source="../WebContent/assets/map/spritesheet_ground.png" width="512" height="1024"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="10" offsetx="229.333" offsety="24">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,188,188,188,141,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+188,188,188,188,212,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+181,181,181,181,133,212,0,0,0,0,0,0,43,0,19,0,0,0,0,0,
+188,188,188,188,188,188,188,188,188,188,188,188,188,188,180,0,0,0,0,0,
+181,181,181,181,181,181,181,181,181,181,181,181,181,181,181,2,2,2,2,2,
+181,181,181,181,181,181,181,181,181,181,181,181,181,181,181,10,10,10,10,10
+</data>
+ </layer>
+ <layer name="Tile Layer 2" width="20" height="10" offsetx="228" offsety="24">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,60,60,33,27,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,149,0,0,0,0,0,0,0,0,0,0,0,0,
+61,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,84,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+11,0,92,33,44,0,0,60,60,60,52,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,0,121,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="object" offsetx="228" offsety="24">
+  <object id="19" name="Roake" type="player" gid="53" x="18" y="138" width="64" height="64"/>
+  <object id="21" name="Dummy" type="monster" gid="53" x="394" y="444" width="64" height="64"/>
+  <object id="22" name="Dummy" type="monster" gid="53" x="582" y="446" width="64" height="64"/>
+  <object id="23" name="Celt" type="minister" gid="53" x="820" y="400" width="64" height="64"/>
+  <object id="25" name="Dummy" type="monster" gid="53" x="490" y="176" width="64" height="64"/>
+ </objectgroup>
+</map>

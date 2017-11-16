@@ -1,0 +1,49 @@
+{
+  "frames": {
+    "Celt-Idle_000": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 152,
+        "h": 368
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 368
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 368
+      }
+    },
+    "Celt-Idle_001": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 156,
+        "y": 2,
+        "w": 152,
+        "h": 368
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 368
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 368
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "Celt.png"
+  }
+}

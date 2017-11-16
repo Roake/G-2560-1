@@ -1,0 +1,101 @@
+{
+  "level": [
+    {
+      "type": "tilemap",
+      "key": "lab7",
+      "url": "assets/map/lab7.json",
+      "format": "TILED_JSON"
+    },
+    {
+      "type": "atlas",
+      "key": "Celt",
+      "textureURL": "assets/images/Celt.png",
+      "atlasURL": "assets/images/Celt.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "Roake",
+      "textureURL": "assets/images/Roake.png",
+      "atlasURL": "assets/images/Roake.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "spritesheet",
+      "key": "TS2",
+      "url": "assets/map/spritesheet_ground.png",
+      "frameWidth": 0,
+      "frameHeight": 0,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "TS1",
+      "url": "assets/map/spritesheet_tiles.png",
+      "frameWidth": 0,
+      "frameHeight": 0,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "BG",
+      "url": "assets/images/unnamed.png",
+      "overwrite": false
+    }
+  ],
+  "start": [
+    {
+      "type": "image",
+      "key": "tap-to-start",
+      "url": "assets/images/tap-to-start.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Dev-Icon",
+      "url": "assets/images/Dev-Icon.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Exit",
+      "url": "assets/images/Exit.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Setting-Icon",
+      "url": "assets/images/Setting-Icon.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Start-Icon",
+      "url": "assets/images/Start-Icon.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Title",
+      "url": "assets/images/Title.png",
+      "overwrite": false
+    }
+  ],
+  "preload": [{
+    "type": "image",
+    "key": "loading",
+    "url": "assets/images/loading.png",
+    "overwrite": false
+  }],
+  "meta": {
+    "generated": "1510837645785",
+    "app": "Phaser Editor",
+    "url": "http://phasereditor.boniatillo.com",
+    "version": "1.0",
+    "copyright": "Arian Fornaris (c) 2015,2016"
+  }
+}

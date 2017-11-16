@@ -1,0 +1,169 @@
+{
+  "frames": {
+    "Roake-Idle_000": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 159,
+        "h": 359
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 159,
+        "h": 359
+      },
+      "sourceSize": {
+        "w": 159,
+        "h": 359
+      }
+    },
+    "Roake-Idle_001": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 176,
+        "y": 2,
+        "w": 155,
+        "h": 359
+      },
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 0,
+        "w": 155,
+        "h": 359
+      },
+      "sourceSize": {
+        "w": 159,
+        "h": 359
+      }
+    },
+    "Roake-Idle_002": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 350,
+        "y": 2,
+        "w": 158,
+        "h": 359
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 158,
+        "h": 359
+      },
+      "sourceSize": {
+        "w": 159,
+        "h": 359
+      }
+    },
+    "Roake-Walk_000": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 524,
+        "y": 2,
+        "w": 159,
+        "h": 362
+      },
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 0,
+        "w": 159,
+        "h": 362
+      },
+      "sourceSize": {
+        "w": 172,
+        "h": 362
+      }
+    },
+    "Roake-Walk_001": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 698,
+        "y": 2,
+        "w": 153,
+        "h": 362
+      },
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 0,
+        "w": 153,
+        "h": 362
+      },
+      "sourceSize": {
+        "w": 172,
+        "h": 362
+      }
+    },
+    "Roake-Walk_002": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 366,
+        "w": 153,
+        "h": 362
+      },
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 0,
+        "w": 153,
+        "h": 362
+      },
+      "sourceSize": {
+        "w": 172,
+        "h": 362
+      }
+    },
+    "Roake-Walk_003": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 176,
+        "y": 366,
+        "w": 172,
+        "h": 362
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 172,
+        "h": 362
+      },
+      "sourceSize": {
+        "w": 172,
+        "h": 362
+      }
+    },
+    "Roake-Walk_004": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 350,
+        "y": 366,
+        "w": 161,
+        "h": 362
+      },
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 0,
+        "w": 161,
+        "h": 362
+      },
+      "sourceSize": {
+        "w": 172,
+        "h": 362
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "Roake.png"
+  }
+}
