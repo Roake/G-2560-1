@@ -14,11 +14,7 @@ Menu.prototype.preload = function() {
 };
 
 
-function render() {
 
-    game.debug.text("Copyright© F5 Group", 32, 32);
-
-}
 
 Menu.prototype.create = function() {
 		this.stage.backgroundColor = "#bb0406";
@@ -27,6 +23,8 @@ Menu.prototype.create = function() {
 		sprite.anchor.set(0.5, 0.5);
 		this.input.onDown.add(this.startGame, this);
 		this.exit= this.exit (130,100);
+		var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
+		text.scale.set(1);
 	};
 	
 	Menu.prototype.exit = function(x,y) {
