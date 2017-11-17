@@ -18,7 +18,7 @@ Menu.prototype.preload = function() {
 
 Menu.prototype.create = function() {
 		this.stage.backgroundColor = "#bb0406";
-		var sprite = this.add.sprite(this.world.centerX, this.world.centerY,
+		var sprite = this.add.sprite(this.world.centerX-70, this.world.centerY-200,
 				"Title");
 		sprite.anchor.set(0.5, 0.5);
 		this.input.onDown.add(this.startGame, this);
