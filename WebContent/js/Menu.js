@@ -14,6 +14,11 @@ Menu.prototype.preload = function() {
 };
 
 
+function render() {
+
+    game.debug.text("Copyright© F5 Group", 32, 32);
+
+}
 
 Menu.prototype.create = function() {
 		this.stage.backgroundColor = "#bb0406";
