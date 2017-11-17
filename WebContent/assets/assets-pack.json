@@ -83,6 +83,18 @@
       "key": "Title",
       "url": "assets/images/Title.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Close",
+      "url": "assets/images/Close.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "Open",
+      "url": "assets/images/Open.png",
+      "overwrite": false
     }
   ],
   "preload": [{
@@ -92,7 +104,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1510837645785",
+    "generated": "1510915027557",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
