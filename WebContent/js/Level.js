@@ -60,10 +60,16 @@ Level.prototype.update = function() {
 			this.player.play("idle");
 		}
 		
-		
+		if(this.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
+			this.player.body.velocity.x = -120;
+			this.player.play("walk");
+		}else if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
+			this.player.body.velocity.x = 120;
+			this.player.play("walk");
+		}
 		if(this.input.keyboard.isDown(Phaser.Keyboard.UP)){
 			if(this.player.body.velocity.y==0)
-				
+			
 				this.player.body.velocity.y=-550;
 				
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
