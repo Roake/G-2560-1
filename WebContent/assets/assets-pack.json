@@ -113,6 +113,13 @@
       "key": "SetPage",
       "url": "assets/images/SetPage.png",
       "overwrite": false
+    },
+    {
+      "type": "atlas",
+      "key": "Winston",
+      "textureURL": "assets/images/Winston.png",
+      "atlasURL": "assets/images/Winston.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
     }
   ],
   "preload": [{
@@ -122,7 +129,7 @@
     "overwrite": true
   }],
   "meta": {
-    "generated": "1511202811132",
+    "generated": "1511203299763",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
