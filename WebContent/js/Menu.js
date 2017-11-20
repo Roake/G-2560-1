@@ -36,15 +36,15 @@ Menu.prototype.create = function() {
 		return R;
 	}
 	
-	Menu.prototype.Dev = function(x,y) {
-		R= this.add.sprite(x,y,"Dev-Icon", actionOnClick, this, 2, 1, 0);
-		R.anchor.set(0.5, 0.5);
-		
-		return R;
-	}
-	Menu.prototype.Dev = function actionOnClick () {
-		this.game.state.start("Dev");
-	}
+//	Menu.prototype.Dev = function(x,y) {
+//		R= this.add.sprite(x,y,"Dev-Icon", actionOnClick, this, 2, 1, 0);
+//		R.anchor.set(0.5, 0.5);
+//		
+//		return R;
+//	}
+//	Menu.prototype.Dev = function actionOnClick () {
+//		this.game.state.start("Dev");
+//	}
 Menu.prototype.startGame = function() {
 	this.game.state.start("Level");
 };

@@ -59,6 +59,16 @@ Level.prototype.update = function() {
 			this.player.body.velocity.x = 0;
 			this.player.play("idle");
 		}
+		
+		
+		if(this.input.keyboard.isDown(Phaser.Keyboard.UP)){
+			if(this.player.body.velocity.y==0)
+				
+				this.player.body.velocity.y=-550;
+				
+		}else if (this.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
+		
+		}
 };
 
 Level.prototype.addPlayer = function(x, y) {
