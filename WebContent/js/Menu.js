@@ -22,13 +22,25 @@ Menu.prototype.create = function() {
 				"Title");
 		sprite.anchor.set(0.5, 0.5);
 		this.input.onDown.add(this.startGame, this);
-		this.exit= this.exit (950,700);
+		this.Start= this.Start (400,200);
+		this.Set= this.Set (950,700);
+		this.Dev= this.Dev (950,700);
 		var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
 		text.scale.set(1);
 	};
+	Menu.prototype.Start = function(x,y) {
+		R= this.add.sprite(x,y,"start");
+		R.anchor.set(0.5, 0.5);
+		return R;
+	}
+	Menu.prototype.Set = function(x,y) {
+		R= this.add.sprite(x,y,"set");
+		R.anchor.set(0.5, 0.5);
+		return R;
+	}
 	
-	Menu.prototype.exit = function(x,y) {
-		R= this.add.sprite(x,y,"Exit");
+	Menu.prototype.Dev = function(x,y) {
+		R= this.add.sprite(x,y,"dev");
 		R.anchor.set(0.5, 0.5);
 		return R;
 	}
