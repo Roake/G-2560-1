@@ -11,9 +11,6 @@ Dev.prototype = proto;
 /**
  *
  */
-Dev.prototype.preload = function() {
-	this.load.pack("start", "assets/assets-pack.json");
-};
 
 Dev.prototype.create = function() {
 	var sprite = this.add.sprite(this.world.centerX, this.world.centerY,
