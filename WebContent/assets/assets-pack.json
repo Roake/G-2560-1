@@ -95,6 +95,12 @@
       "key": "Open",
       "url": "assets/images/Open.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "DevPage",
+      "url": "assets/images/DevPage.png",
+      "overwrite": false
     }
   ],
   "preload": [{
@@ -104,7 +110,7 @@
     "overwrite": true
   }],
   "meta": {
-    "generated": "1511191051699",
+    "generated": "1511191865219",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

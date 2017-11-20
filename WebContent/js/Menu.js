@@ -22,9 +22,9 @@ Menu.prototype.create = function() {
 				"Title");
 		sprite.anchor.set(0.5, 0.5);
 		this.input.onDown.add(this.startGame, this);
-		this.Start= this.Start (400,200);
-		this.Set= this.Set (950,700);
-		this.Dev= this.Dev (950,700);
+		this.Start= this.Start (277,370);
+		this.Set= this.Set (160,450);
+		this.Dev= this.Dev (235,530);
 		var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
 		text.scale.set(1);
 	};
@@ -40,11 +40,16 @@ Menu.prototype.create = function() {
 	}
 	
 	Menu.prototype.Dev = function(x,y) {
-		R= this.add.sprite(x,y,"Dev-Icon");
+		R= this.add.sprite(x,y,"Dev-Icon", actionOnClick, this, 2, 1, 0);
 		R.anchor.set(0.5, 0.5);
+		
 		return R;
 	}
-	
+	Menu.prototype.Dev = function actionOnClick () {
+		var sprite = this.add.sprite(this.world.centerX, this.world.centerY,
+		"DevPage");
+		sprite.anchor.set(0.5, 0.5);
+	}
 Menu.prototype.startGame = function() {
 	this.game.state.start("Level");
 };
