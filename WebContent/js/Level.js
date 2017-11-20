@@ -38,6 +38,8 @@ Level.prototype.create = function() {
 			this.enemies.add(d);
 		}
 		}
+	var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
+	text.scale.set(1);
 };
 Level.prototype.update = function() {
 	this.game.physics.arcade.collide(this.player,this.maplayer);
