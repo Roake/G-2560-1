@@ -13,6 +13,7 @@ Preload.prototype.preload = function() {
 	// This sets the preloadBar sprite as a loader sprite.
 	// What that does is automatically crop the sprite from 0 to full-width
 	// as the files below are loaded in.
+	this.load.pack("preload", "assets/assets-pack.json");
 	var preloadBar = this.add.sprite(this.world.centerX, this.world.centerY,
 			"Load");
 	preloadBar.anchor.set(0.5, 0.5);
