@@ -13,9 +13,6 @@ Menu.prototype.preload = function() {
 	this.load.pack("start", "assets/assets-pack.json");
 };
 
-
-
-
 Menu.prototype.create = function() {
 		this.stage.backgroundColor = "#bb0406";
 		var sprite = this.add.sprite(this.world.centerX-70, this.world.centerY-200,
@@ -46,9 +43,7 @@ Menu.prototype.create = function() {
 		return R;
 	}
 	Menu.prototype.Dev = function actionOnClick () {
-		var sprite = this.add.sprite(this.world.centerX, this.world.centerY,
-		"DevPage");
-		sprite.anchor.set(0.5, 0.5);
+		this.game.state.start("Dev");
 	}
 Menu.prototype.startGame = function() {
 	this.game.state.start("Level");

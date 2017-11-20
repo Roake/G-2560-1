@@ -106,11 +106,11 @@
   "preload": [{
     "type": "image",
     "key": "loading",
-    "url": "assets/images/preload.png",
+    "url": "assets/images/loading.png",
     "overwrite": true
   }],
   "meta": {
-    "generated": "1511191865219",
+    "generated": "1511191954706",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
