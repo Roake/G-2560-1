@@ -15,7 +15,7 @@ Preload.prototype.preload = function() {
 	// as the files below are loaded in.
 	this.load.pack("preload", "assets/assets-pack.json");
 	var preloadBar = this.add.sprite(this.world.centerX, this.world.centerY,
-			"preload");
+			"loading");
 	preloadBar.anchor.set(0.5, 0.5);
 	this.load.setPreloadSprite(preloadBar);
 
