@@ -17,8 +17,10 @@ Dev.prototype.create = function() {
 	"DevPage");
 sprite.anchor.set(0.5, 0.5);
 this.input.onDown.add(this.startGame, this);
+var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
+text.scale.set(1);
 }
 
-Menu.prototype.startGame = function() {
-	this.game.state.start("Level");
+Dev.prototype.startGame = function() {
+	this.game.state.start("Menu");
 };
