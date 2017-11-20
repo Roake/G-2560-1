@@ -16,5 +16,9 @@ Dev.prototype.create = function() {
 	var sprite = this.add.sprite(this.world.centerX, this.world.centerY,
 	"DevPage");
 sprite.anchor.set(0.5, 0.5);
+this.input.onDown.add(this.startGame, this);
 }
 
+Menu.prototype.startGame = function() {
+	this.game.state.start("Level");
+};
