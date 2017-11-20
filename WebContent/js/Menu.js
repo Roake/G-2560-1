@@ -29,18 +29,18 @@ Menu.prototype.create = function() {
 		text.scale.set(1);
 	};
 	Menu.prototype.Start = function(x,y) {
-		R= this.add.sprite(x,y,"start");
+		R= this.add.sprite(x,y,"Start-Icon");
 		R.anchor.set(0.5, 0.5);
 		return R;
 	}
 	Menu.prototype.Set = function(x,y) {
-		R= this.add.sprite(x,y,"set");
+		R= this.add.sprite(x,y,"Setting-Icon");
 		R.anchor.set(0.5, 0.5);
 		return R;
 	}
 	
 	Menu.prototype.Dev = function(x,y) {
-		R= this.add.sprite(x,y,"dev");
+		R= this.add.sprite(x,y,"Dev-Icon");
 		R.anchor.set(0.5, 0.5);
 		return R;
 	}

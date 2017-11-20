@@ -56,7 +56,7 @@
     },
     {
       "type": "image",
-      "key": "dev",
+      "key": "Dev-Icon",
       "url": "assets/images/Dev-Icon.png",
       "overwrite": false
     },
@@ -68,13 +68,13 @@
     },
     {
       "type": "image",
-      "key": "set",
+      "key": "Setting-Icon",
       "url": "assets/images/Setting-Icon.png",
       "overwrite": false
     },
     {
       "type": "image",
-      "key": "start",
+      "key": "Start-Icon",
       "url": "assets/images/Start-Icon.png",
       "overwrite": false
     },
@@ -99,12 +99,12 @@
   ],
   "preload": [{
     "type": "image",
-    "key": "preload",
+    "key": "loading",
     "url": "assets/images/preload.png",
     "overwrite": false
   }],
   "meta": {
-    "generated": "1511190466782",
+    "generated": "1511190700296",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
