@@ -70,12 +70,15 @@ Level.prototype.update = function() {
 			this.player.play("jump");
 		}
 		if(this.input.keyboard.isDown(Phaser.Keyboard.UP)){
-			if(this.player.body.velocity.y==0)
+			if(this.player.body.velocity.y==0){
 			
 				this.player.body.velocity.y=-550;
-			this.player.play("jump");
+			this.player.play("jump");}
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
-		
+		}
+	
+			if(this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
+				this.player.play("attack");
 		}
 };
 
@@ -84,6 +87,7 @@ Level.prototype.addPlayer = function(x, y) {
 	t.animations.add("idle", gframes("Winston-True-Idle", 2),2, true);
 	t.animations.add("walk", gframes("Winston-Walk", 5), 5, true);
 	t.animations.add("jump", gframes("Winston-Jump", 5), 5, true);
+	t.animations.add("attack", gframes("Winston-Fire", 5), 5, true);
 	t.anchor.set(0.5, 0.5);
 	t.scale.set (0.4);
 	t.smoothed = false;
@@ -110,5 +114,5 @@ function gframes(key, n) {
 		f.push(key + "_" + "00" + i);
 	}
 	return f;
-}
+};
 
