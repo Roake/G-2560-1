@@ -4,8 +4,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 2,
-        "y": 2818,
+        "x": 951,
+        "y": 4059,
         "w": 397,
         "h": 659
       },
@@ -24,8 +24,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 800,
-        "y": 2663,
+        "x": 860,
+        "y": 2078,
         "w": 459,
         "h": 659
       },
@@ -45,7 +45,7 @@
       "rotated": false,
       "frame": {
         "x": 2,
-        "y": 6,
+        "y": 81,
         "w": 572,
         "h": 667
       },
@@ -65,7 +65,7 @@
       "rotated": false,
       "frame": {
         "x": 420,
-        "y": 4787,
+        "y": 4728,
         "w": 548,
         "h": 650
       },
@@ -84,8 +84,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 425,
-        "y": 675,
+        "x": 886,
+        "y": 1412,
         "w": 457,
         "h": 664
       },
@@ -104,8 +104,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 798,
-        "y": 2002,
+        "x": 2,
+        "y": 1418,
         "w": 459,
         "h": 659
       },
@@ -124,8 +124,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 2,
-        "y": 4139,
+        "x": 970,
+        "y": 4720,
         "w": 397,
         "h": 658
       },
@@ -145,27 +145,7 @@
       "rotated": false,
       "frame": {
         "x": 860,
-        "y": 3324,
-        "w": 459,
-        "h": 658
-      },
-      "spriteSourceSize": {
-        "x": 7,
-        "y": 0,
-        "w": 459,
-        "h": 658
-      },
-      "sourceSize": {
-        "w": 579,
-        "h": 658
-      }
-    },
-    "Winston-Fire_005": {
-      "trimmed": true,
-      "rotated": false,
-      "frame": {
-        "x": 860,
-        "y": 3324,
+        "y": 3399,
         "w": 459,
         "h": 658
       },
@@ -184,8 +164,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 2,
-        "y": 1489,
+        "x": 813,
+        "y": 2739,
         "w": 572,
         "h": 658
       },
@@ -205,7 +185,7 @@
       "rotated": false,
       "frame": {
         "x": 401,
-        "y": 4129,
+        "y": 4070,
         "w": 548,
         "h": 656
       },
@@ -225,7 +205,7 @@
       "rotated": false,
       "frame": {
         "x": 401,
-        "y": 3471,
+        "y": 3412,
         "w": 457,
         "h": 656
       },
@@ -240,12 +220,32 @@
         "h": 658
       }
     },
+    "Winston-Fire_005": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 399,
+        "y": 2079,
+        "w": 459,
+        "h": 658
+      },
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 0,
+        "w": 459,
+        "h": 658
+      },
+      "sourceSize": {
+        "w": 579,
+        "h": 658
+      }
+    },
     "Winston-Idle_000": {
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 951,
-        "y": 3984,
+        "x": 930,
+        "y": 2,
         "w": 352,
         "h": 736
       },
@@ -264,8 +264,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 970,
-        "y": 4722,
+        "x": 576,
+        "y": 23,
         "w": 352,
         "h": 715
       },
@@ -284,8 +284,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 401,
-        "y": 2810,
+        "x": 2,
+        "y": 3419,
         "w": 397,
         "h": 659
       },
@@ -304,28 +304,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 884,
-        "y": 674,
-        "w": 434,
-        "h": 665
-      },
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 434,
-        "h": 665
-      },
-      "sourceSize": {
-        "w": 460,
-        "h": 670
-      }
-    },
-    "Winston-Jump_003": {
-      "trimmed": true,
-      "rotated": false,
-      "frame": {
-        "x": 884,
-        "y": 674,
+        "x": 2,
+        "y": 751,
         "w": 434,
         "h": 665
       },
@@ -344,8 +324,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 576,
-        "y": 2,
+        "x": 874,
+        "y": 740,
         "w": 459,
         "h": 670
       },
@@ -360,12 +340,32 @@
         "h": 670
       }
     },
+    "Winston-Jump_003": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 438,
+        "y": 750,
+        "w": 434,
+        "h": 665
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 434,
+        "h": 665
+      },
+      "sourceSize": {
+        "w": 460,
+        "h": 670
+      }
+    },
     "Winston-True-Idle_000": {
       "trimmed": true,
       "rotated": false,
       "frame": {
         "x": 2,
-        "y": 3479,
+        "y": 4080,
         "w": 397,
         "h": 658
       },
@@ -385,7 +385,7 @@
       "rotated": false,
       "frame": {
         "x": 2,
-        "y": 4799,
+        "y": 4740,
         "w": 416,
         "h": 638
       },
@@ -405,7 +405,7 @@
       "rotated": false,
       "frame": {
         "x": 2,
-        "y": 2157,
+        "y": 2758,
         "w": 397,
         "h": 659
       },
@@ -424,8 +424,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 576,
-        "y": 1341,
+        "x": 401,
+        "y": 2751,
         "w": 410,
         "h": 659
       },
@@ -444,8 +444,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 2,
-        "y": 828,
+        "x": 463,
+        "y": 1417,
         "w": 421,
         "h": 659
       },
@@ -464,8 +464,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 401,
-        "y": 2149,
+        "x": 2,
+        "y": 2097,
         "w": 395,
         "h": 659
       },

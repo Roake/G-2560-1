@@ -46,7 +46,7 @@
     "wrapX": "ClampToEdge",
     "wrapY": "ClampToEdge",
     "format": "RGBA8888",
-    "alias": true,
+    "alias": false,
     "outputFormat": "png",
     "jpegQuality": 0.8999999761581421,
     "ignoreBlankImages": true,
