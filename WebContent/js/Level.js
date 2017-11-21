@@ -45,6 +45,9 @@ Level.prototype.update = function() {
 	this.game.physics.arcade.collide(this.player,this.maplayer);
 	this.game.physics.arcade.collide(this.enemies,this.maplayer);
 	var pointer = this.input.activePointer;
+		if(this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
+		this.player.play("attack");
+}
 	if (pointer.isDown) {
 		var dx = (pointer.worldX - this.player.x) * 2;
 		if (dx < -20 || dx > 20) {
@@ -76,10 +79,7 @@ Level.prototype.update = function() {
 			this.player.play("jump");}
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
 		}
-	
-			if(this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
-				this.player.play("attack");
-		}
+
 };
 
 Level.prototype.addPlayer = function(x, y) {
