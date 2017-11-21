@@ -40,7 +40,21 @@ Level.prototype.create = function() {
 		}
 	var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
 	text.scale.set(1);
+	
+	this.createWeapon();
+	this.player.events.onInputDown.add(this.fireWeapon, this);
 };
+
+Level.prototype.createWeapon = function() {
+	this.weapon1 = this.add.weapon(10,"bullet",1);
+	this.weapon1.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
+	this.weapon1.trackSprite(this.player,0,0);
+	this.weapon1.bulletSpeed = 2000;
+	this.weapon1.fireAngle = 0;
+	this.weapon1.rate = 1;
+	
+	}
+
 Level.prototype.update = function() {
 	this.game.physics.arcade.collide(this.player,this.maplayer);
 	this.game.physics.arcade.collide(this.enemies,this.maplayer);
@@ -54,7 +68,9 @@ Level.prototype.update = function() {
 				dx = -0.4;}
 			this.player.scale.x = dx;
 			this.player.body.velocity.x = 250 * dx;
-			this.player.play("walk");
+			this.player.play("attack");
+//			this.player.fireWeapon();
+			
 		}
 	}
 		if (pointer.isUp){
@@ -64,10 +80,10 @@ Level.prototype.update = function() {
 		
 		if(this.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
 			this.player.body.velocity.x = -120;
-			this.player.play("jump");
+			this.player.play("walk");
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
 			this.player.body.velocity.x = 120;
-			this.player.play("jump");
+			this.player.play("walk");
 		}
 		if(this.input.keyboard.isDown(Phaser.Keyboard.UP)){
 			if(this.player.body.velocity.y==0){
@@ -75,11 +91,15 @@ Level.prototype.update = function() {
 				this.player.body.velocity.y=-550;
 			this.player.play("jump");}
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
+			
+		}
+		if(this.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
+//			this.player.play("attack");
+			
 		}
 	
-			if(this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
-				this.player.play("attack");
-		}
+						
+		
 };
 
 Level.prototype.addPlayer = function(x, y) {
@@ -87,7 +107,7 @@ Level.prototype.addPlayer = function(x, y) {
 	t.animations.add("idle", gframes("Winston-True-Idle", 2),2, true);
 	t.animations.add("walk", gframes("Winston-Walk", 5), 5, true);
 	t.animations.add("jump", gframes("Winston-Jump", 5), 5, true);
-	t.animations.add("attack", gframes("Winston-Fire", 5), 5, true);
+	t.animations.add("attack", gframes("Winston-Fire", 5), 10, true);
 	t.anchor.set(0.5, 0.5);
 	t.scale.set (0.4);
 	t.smoothed = false;
@@ -96,6 +116,15 @@ Level.prototype.addPlayer = function(x, y) {
 	t.body.collideWorldBounds = true;
 	return t;
 };
+Level.prototype.fireWeapon = function (){
+	
+//	if(this.weapon1.fire()!=false){
+//		this.shot.play();
+//	}
+ this.weapon1.fire();
+	
+	
+}
 Level.prototype.addMinister = function(x, y) {
 	var a = this.add.sprite(x, y, "Celt");
 	a.animations.add("idle", gframes("Celt-Idle", 1), 1, true,false);

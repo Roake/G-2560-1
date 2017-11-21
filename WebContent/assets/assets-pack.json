@@ -45,6 +45,12 @@
       "key": "BG",
       "url": "assets/images/unnamed.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "bullet",
+      "url": "assets/images/bullet.png",
+      "overwrite": false
     }
   ],
   "start": [
@@ -129,7 +135,7 @@
     "overwrite": true
   }],
   "meta": {
-    "generated": "1511248179570",
+    "generated": "1511257725893",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
