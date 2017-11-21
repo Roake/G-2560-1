@@ -22,9 +22,9 @@ Menu.prototype.create = function() {
 		
 		var start = this.add.button(277,370,"Start-Icon",this.Start, this);
 		start.anchor.set(0.5,0.5);
-		this.input.onDown.add(this.startGame, this);
 		
-		var setting = this.add.button(160,450,"Setting-Icon");
+		
+		var setting = this.add.button(160,450,"Setting-Icon",this.Set, this);
 		setting.anchor.set(0.5,0.5);
 		
 		var dev = this.add.button(235,530,"Dev-Icon",this.Dev, this);
@@ -39,7 +39,7 @@ Menu.prototype.Start = function(x,y) {
 	}
 
 Menu.prototype.Set = function(x,y) {
-		
+		this.game.state.start("Setting");
 	}
 	
 Menu.prototype.Dev = function(x,y) {
