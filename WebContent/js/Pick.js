@@ -16,18 +16,17 @@ Pick.prototype.create = function() {
 	var sprite = this.add.sprite(this.world.centerX, this.world.centerY,
 	"PickPage");
 sprite.anchor.set(0.5, 0.5);
-this.orange1= this.addWinston(130,100);
+this.orange1= this.addWinston(420,600);
 }
 
 Pick.prototype.addWinston = function(x, y) {
-	var a = this.add.sprite(x, y, "Winston");
+	var a = this.add.button(x, y, "Winston",this.WinstonPlay, this);
 	a.animations.add("Idle", gframes("Winston-Idle", 1), 1, true,false);
 	a.anchor.set(0.5, 1);
-	a.scale.set (0.5);
+	a.scale.set (0.45);
 	a.smoothed = false;
 	this.game.physics.arcade.enable(a);
 	a.play("Idle");
-	a.body.collideWorldBounds = true;
 	return a;
 };
 
@@ -38,6 +37,9 @@ function gframes(key, n) {
 	}
 	return f;
 }
+Pick.prototype.WinstonPlay = function(x,y) {
+	this.game.state.start("Level");
+	}
 
 Pick.prototype.startGame = function() {
 	this.game.state.start("Level");
