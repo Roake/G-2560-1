@@ -20,21 +20,23 @@ Menu.prototype.create = function() {
 		title.anchor.set(0.5, 0.5);
 		
 		
-		var start = this.add.sprite(277,370,"Start-Icon");
+		var start = this.add.button(277,370,"Start-Icon",this.Start, this);
 		start.anchor.set(0.5,0.5);
 		this.input.onDown.add(this.startGame, this);
 		
 		var setting = this.add.sprite(160,450,"Setting-Icon");
 		setting.anchor.set(0.5,0.5);
 		
-		var dev = this.add.sprite(235,530,"Dev-Icon");
+		var dev = this.add.button(235,530,"Dev-Icon",this.Dev, this);
 		dev.anchor.set(0.5,0.5);
-		this.input.onDown.add(this.Dev, this);
 		//235,530
 		var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
 		text.scale.set(1);
 		
 	};
+Menu.prototype.Start = function(x,y) {
+	this.game.state.start("Pick");
+	}
 
 Menu.prototype.Set = function(x,y) {
 		
