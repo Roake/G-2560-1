@@ -83,6 +83,7 @@ Level.prototype.update = function() {
 };
 
 Level.prototype.addPlayer = function(x, y) {
+	if(character==1){
 	var t = this.add.sprite(x, y, "Winston");
 	t.animations.add("idle", gframes("Winston-True-Idle", 2),2, true);
 	t.animations.add("walk", gframes("Winston-Walk", 5), 5, true);
@@ -95,6 +96,7 @@ Level.prototype.addPlayer = function(x, y) {
 	t.play("idle");
 	t.body.collideWorldBounds = true;
 	return t;
+	}
 };
 Level.prototype.addMinister = function(x, y) {
 	var a = this.add.sprite(x, y, "Celt");
