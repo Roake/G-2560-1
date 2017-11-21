@@ -24,7 +24,7 @@ Menu.prototype.create = function() {
 		start.anchor.set(0.5,0.5);
 		this.input.onDown.add(this.startGame, this);
 		
-		var setting = this.add.sprite(160,450,"Setting-Icon");
+		var setting = this.add.button(160,450,"Setting-Icon");
 		setting.anchor.set(0.5,0.5);
 		
 		var dev = this.add.button(235,530,"Dev-Icon",this.Dev, this);
@@ -48,5 +48,5 @@ Menu.prototype.Dev = function(x,y) {
 
 
 Menu.prototype.startGame = function() {
-	this.game.state.start("Level");
+	this.game.state.start("Pick");
 };
