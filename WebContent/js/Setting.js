@@ -16,14 +16,14 @@ function Setting () {
 }
 
 Setting.prototype.create = function (){
-<<<<<<< HEAD
+
 	var sprite = this.add.sprite(this.world.centerX, this.world.centerY,
 	"SetPage");
 sprite.anchor.set(0.5, 0.5);
-=======
+
 	var text = this.add.text(this.world.centerX-100, this.world.centerY, "Not Available in Alpha Version", {fill: 'white'});
 	text.scale.set(1);
->>>>>>> branch 'master' of https://github.com/Roake/G-2560-1.git
+
 	this.input.onDown.add(this.startGame,this);
 	var open1 = this.add.button(160,600,"Open",this.Open, this);
 	open1.anchor.set(0.5,0.5);

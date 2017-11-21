@@ -14,7 +14,7 @@ Level.prototype.create = function() {
 	background = this.add.tileSprite(0, 0, 1400, 600, "BG");
 	background.scale.set(1);
 	background.fixedToCamera = true;
-	this.map = this.game.add.tilemap("C1-1");
+	this.map = this.game.add.tilemap("lab7");
 	this.map.addTilesetImage('TS1');
 	this.map.addTilesetImage('TS2');
 	this.maplayer = this.map.createLayer("Tile Layer 1");
