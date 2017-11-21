@@ -14,21 +14,21 @@ Level.prototype.create = function() {
 	background = this.add.tileSprite(0, 0, 1400, 600, "BG");
 	background.scale.set(1);
 	background.fixedToCamera = true;
-	this.map = this.game.add.tilemap("lab7");
+	this.map = this.game.add.tilemap("C1-1");
 	this.map.addTilesetImage('TS1');
 	this.map.addTilesetImage('TS2');
 	this.maplayer = this.map.createLayer("Tile Layer 1");
 	this.maplayer1 = this.map.createLayer("Tile Layer 2");
 	this.maplayer.resizeWorld();
-	 this.map.setCollisionBetween(0,1000,true,this.maplayer);
-		this.game.physics.startSystem(Phaser.Physics.ARCADE);
-		this.game.physics.arcade.gravity.y = 1000;
+	this.map.setCollisionBetween(0,1000,true,this.maplayer);
+	this.game.physics.startSystem(Phaser.Physics.ARCADE);
+	this.game.physics.arcade.gravity.y = 1000;
 
 
-		this.enemies = this.add.group();
+	this.enemies = this.add.group();
 	for (x  in this.map.objects.object) {
-		var obj = this.map.objects.object[x];
-		if (obj.type == "player") {
+	var obj = this.map.objects.object[x];
+	if (obj.type == "player") {
 			console.log(this.player);
 			this.player = this.addPlayer(obj.x, obj.y);
 			this.game.camera.follow(this.player,Phaser.Camera.FOLLOW_PLATFORMER);
