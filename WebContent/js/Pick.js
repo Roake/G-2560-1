@@ -19,7 +19,7 @@ sprite.anchor.set(0.5, 0.5);
 this.orange1= this.addWinston(130,100);
 }
 
-Level.prototype.addWinston = function(x, y) {
+Pick.prototype.addWinston = function(x, y) {
 	var a = this.add.sprite(x, y, "Winston");
 	a.animations.add("Idle", gframes("Winston-Idle", 1), 1, true,false);
 	a.anchor.set(0.5, 1);
