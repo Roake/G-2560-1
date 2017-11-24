@@ -11,7 +11,7 @@ Level.prototype = proto;
 
 
 Level.prototype.create = function() {
-	background = this.add.tileSprite(0, 0, 1400, 600, "BG");
+	background = this.add.tileSprite(0, 0, 1024, 768, "BG");
 	background.scale.set(1);
 	background.fixedToCamera = true;
 	this.map = this.game.add.tilemap("lab7");
@@ -58,48 +58,39 @@ Level.prototype.createWeapon = function() {
 Level.prototype.update = function() {
 	this.game.physics.arcade.collide(this.player,this.maplayer);
 	this.game.physics.arcade.collide(this.enemies,this.maplayer);
-	var pointer = this.input.activePointer;
-	if (pointer.isDown) {
+	/*if (input.keyboard.isDown) {
 		var dx = (pointer.worldX - this.player.x) * 2;
-		if (dx < -20 || dx > 20) {
+		if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
 			if (dx > 0){
 				dx = 0.4;}
 			else{
 				dx = -0.4;}
 			this.player.scale.x = dx;
 			this.player.body.velocity.x = 250 * dx;
-			this.player.play("attack");
-//			this.player.fireWeapon();
-			
-		}
-	}
-		if (pointer.isUp){
-			this.player.body.velocity.x = 0;
-			this.player.play("idle");
-		}
+			}
+	}	*/
 		
-		if(this.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
+		 if(this.input.keyboard.isDown(Phaser.Keyboard.UP)){
+				if(this.player.body.velocity.y==0){
+					this.player.body.velocity.y=-350;
+					this.player.play("jump");
+					if(this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
+				this.player.play("ffb");}} 
+		 }else if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
 			this.player.body.velocity.x = -120;
+			this.player.scale.x = -0.3;
 			this.player.play("walk");
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
 			this.player.body.velocity.x = 120;
+			this.player.scale.x = 0.3;
 			this.player.play("walk");
 		}
-		if(this.input.keyboard.isDown(Phaser.Keyboard.UP)){
-			if(this.player.body.velocity.y==0){
-			
-				this.player.body.velocity.y=-550;
-			this.player.play("jump");}
-		}else if (this.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
-			
+	else if (this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
+			this.player.play("attack");
+		}else {
+			this.player.body.velocity.x = 0;
+			this.player.play("idle");
 		}
-		if(this.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
-//			this.player.play("attack");
-			
-		}
-	
-						
-		
 };
 
 Level.prototype.addPlayer = function(x, y) {
@@ -108,8 +99,9 @@ Level.prototype.addPlayer = function(x, y) {
 	t.animations.add("walk", gframes("Winston-Walk", 5), 5, true);
 	t.animations.add("jump", gframes("Winston-Jump", 5), 5, true);
 	t.animations.add("attack", gframes("Winston-Fire", 5), 10, true);
+	t.animations.add("ffb", gframes("Winston-Fire-From-Above", 5), 20, true);
 	t.anchor.set(0.5, 0.5);
-	t.scale.set (0.4);
+	t.scale.set (0.3);
 	t.smoothed = false;
 	this.game.physics.arcade.enable(t);
 	t.play("idle");
