@@ -126,6 +126,12 @@
       "key": "bullet",
       "url": "assets/images/bullet.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "F5",
+      "url": "assets/images/F5.png",
+      "overwrite": false
     }
   ],
   "preload": [{
@@ -135,7 +141,7 @@
     "overwrite": true
   }],
   "meta": {
-    "generated": "1511512592385",
+    "generated": "1511518126574",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
