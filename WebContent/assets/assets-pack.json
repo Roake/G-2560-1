@@ -48,7 +48,7 @@
     },
     {
       "type": "image",
-      "key": "bullet",
+      "key": "Bullet",
       "url": "assets/images/bullet.png",
       "overwrite": false
     }
@@ -135,7 +135,7 @@
     "overwrite": true
   }],
   "meta": {
-    "generated": "1511257725893",
+    "generated": "1511511423889",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

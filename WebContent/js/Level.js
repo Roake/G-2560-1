@@ -24,7 +24,6 @@ Level.prototype.create = function() {
 	this.game.physics.startSystem(Phaser.Physics.ARCADE);
 	this.game.physics.arcade.gravity.y = 1000;
 
-
 	this.enemies = this.add.group();
 	for (x  in this.map.objects.object) {
 	var obj = this.map.objects.object[x];
@@ -42,16 +41,15 @@ Level.prototype.create = function() {
 	text.scale.set(1);
 	
 	this.createWeapon();
-	this.player.events.onInputDown.add(this.fireWeapon, this);
 };
 
 Level.prototype.createWeapon = function() {
-	this.weapon1 = this.add.weapon(10,"bullet",1);
+	this.weapon1 = this.add.weapon(5, "Bullet",5);	
 	this.weapon1.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
-	this.weapon1.trackSprite(this.player,0,0);
-	this.weapon1.bulletSpeed = 2000;
-	this.weapon1.fireAngle = 0;
-	this.weapon1.rate = 1;
+	this.weapon1.trackSprite(this.player, 100, 100);
+	this.weapon1.bulletSpeed = 300;
+	this.weapon1.fireAngle = 90;
+	this.weapon1.rate = 60;
 	
 	}
 
@@ -108,15 +106,10 @@ Level.prototype.addPlayer = function(x, y) {
 	t.body.collideWorldBounds = true;
 	return t;
 };
+
 Level.prototype.fireWeapon = function (){
-	
-//	if(this.weapon1.fire()!=false){
-//		this.shot.play();
-//	}
- this.weapon1.fire();
-	
-	
-}
+	this.weapon1.fire();
+};
 Level.prototype.addMinister = function(x, y) {
 	var a = this.add.sprite(x, y, "Celt");
 	a.animations.add("idle", gframes("Celt-Idle", 1), 1, true,false);
