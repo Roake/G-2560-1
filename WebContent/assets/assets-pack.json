@@ -129,7 +129,7 @@
     },
     {
       "type": "image",
-      "key": "project",
+      "key": "F5",
       "url": "assets/images/F5.png",
       "overwrite": false
     }
@@ -141,7 +141,7 @@
     "overwrite": true
   }],
   "meta": {
-    "generated": "1511518431938",
+    "generated": "1511518566581",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
