@@ -44,13 +44,13 @@ Level.prototype.create = function() {
 };
 
 Level.prototype.createWeapon = function() {
-	this.weapon1 = this.add.weapon(5, "Bullet",5);	
+	this.weapon1 = this.add.weapon(100, "bullet",10);	
 	this.weapon1.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
-	this.weapon1.trackSprite(this.player, 100, 100);
-	this.weapon1.bulletSpeed = 300;
-	this.weapon1.fireAngle = 90;
-	this.weapon1.rate = 60;
-	
+	this.weapon1.trackSprite(this.player, 70, 0);
+	this.weapon1.bulletSpeed = 2000;
+	this.weapon1.fireAngle = 0;
+	this.weapon1.rate = 90000000000000;
+	this.weapon1.bulletGravity.y = -1000;
 	}
 
 Level.prototype.update = function() {
@@ -85,6 +85,7 @@ Level.prototype.update = function() {
 		}
 	else if (this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
 			this.player.play("attack");
+			this.fireWeapon();
 		}else {
 			this.player.body.velocity.x = 0;
 			this.player.play("idle");
