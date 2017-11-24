@@ -18,8 +18,8 @@ Menu.prototype.create = function() {
 		var title = this.add.sprite(this.world.centerX-70, this.world.centerY-200,
 				"Title");
 		title.anchor.set(0.5, 0.5);
-		var f5 = this.add.sprite(700, 600,
-		"F5");
+		var f = this.add.sprite(700, 600,"project");
+		f.anchor.set(0.5, 0.5);
 		
 		var start = this.add.button(277,370,"Start-Icon",this.Start, this);
 		start.anchor.set(0.5,0.5);
