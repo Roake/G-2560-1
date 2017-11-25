@@ -39,7 +39,7 @@ function gframes(key, n) {
 }
 Pick.prototype.WinstonPlay = function(x,y) {
 	this.game.state.start("Level");
-	 character=1;
+	character=1;
 	}
 
 Pick.prototype.startGame = function() {

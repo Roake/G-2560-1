@@ -24,6 +24,7 @@ Level.prototype.create = function() {
 	this.game.physics.startSystem(Phaser.Physics.ARCADE);
 	this.game.physics.arcade.gravity.y = 1000;
 
+	if(character ==1){
 	this.enemies = this.add.group();
 	for (x  in this.map.objects.object) {
 	var obj = this.map.objects.object[x];
@@ -41,16 +42,24 @@ Level.prototype.create = function() {
 	text.scale.set(1);
 	
 	this.createWeapon();
+	}
 };
 
 Level.prototype.createWeapon = function() {
 	this.weapon1 = this.add.weapon(100, "bullet",10);	
+	this.weapon2 = this.add.weapon(100, "bullet",10);	
 	this.weapon1.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
-	this.weapon1.trackSprite(this.player, 70, 0);
+	this.weapon1.trackSprite(this.player, 75, -10);
 	this.weapon1.bulletSpeed = 2000;
 	this.weapon1.fireAngle = 0;
 	this.weapon1.rate = 90000000000000;
 	this.weapon1.bulletGravity.y = -1000;
+	this.weapon2.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
+	this.weapon2.trackSprite(this.player, -75,-10);
+	this.weapon2.bulletSpeed = 2000;
+	this.weapon2.fireAngle = 180;
+	this.weapon2.rate = 90000000000000;
+	this.weapon2.bulletGravity.y = -1000;
 	}
 
 Level.prototype.update = function() {
@@ -78,14 +87,20 @@ Level.prototype.update = function() {
 			this.player.body.velocity.x = -120;
 			this.player.scale.x = -0.3;
 			this.player.play("walk");
+	
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
 			this.player.body.velocity.x = 120;
 			this.player.scale.x = 0.3;
 			this.player.play("walk");
+			
 		}
-	else if (this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
+		else if (this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
+			if(this.player.scale.x == -0.3){
 			this.player.play("attack");
-			this.fireWeapon();
+			this.fireWeaponback();}
+			if(this.player.scale.x == 0.3){
+				this.player.play("attack");
+				this.fireWeapon();}
 		}else {
 			this.player.body.velocity.x = 0;
 			this.player.play("idle");
@@ -107,7 +122,9 @@ Level.prototype.addPlayer = function(x, y) {
 	t.body.collideWorldBounds = true;
 	return t;
 };
-
+Level.prototype.fireWeaponback = function (){
+	this.weapon2.fire();
+};
 Level.prototype.fireWeapon = function (){
 	this.weapon1.fire();
 };
@@ -130,4 +147,4 @@ function gframes(key, n) {
 	}
 	return f;
 };
-
+//}
