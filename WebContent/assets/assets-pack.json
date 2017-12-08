@@ -194,6 +194,12 @@
       "overwrite": false
     },
     {
+<<<<<<< HEAD
+      "type": "image",
+      "key": "goal",
+      "url": "assets/images/goal.png",
+      "overwrite": false
+=======
       "type": "atlas",
       "key": "SGTMcFry",
       "textureURL": "assets/images/SGTMcFry.png",
@@ -206,6 +212,7 @@
       "textureURL": "assets/images/Wehrmacht.png",
       "atlasURL": "assets/images/Wehrmacht.json",
       "format": "TEXTURE_ATLAS_JSON_HASH"
+>>>>>>> branch 'master' of https://github.com/Roake/G-2560-1.git
     }
   ],
   "preload": [{
@@ -215,7 +222,11 @@
     "overwrite": true
   }],
   "meta": {
+<<<<<<< HEAD
+    "generated": "1512724847230",
+=======
     "generated": "1512727822550",
+>>>>>>> branch 'master' of https://github.com/Roake/G-2560-1.git
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
