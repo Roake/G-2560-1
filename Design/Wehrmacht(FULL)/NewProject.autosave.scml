@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+    <folder id="0">
+        <file id="0" name="Wehrmacht-Side-Body.png" width="242" height="388" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="Wehrmacht-Head.png" width="240" height="230" pivot_x="0" pivot_y="1"/>
+        <file id="2" name="Wehrmacht-Arm-With-Gun.png" width="476" height="196" pivot_x="0" pivot_y="1"/>
+        <file id="3" name="Wehrmacht-Leg.png" width="101" height="175" pivot_x="0" pivot_y="1"/>
+        <file id="4" name="Wehrmacht-Foot.png" width="108" height="63" pivot_x="0" pivot_y="1"/>
+        <file id="5" name="Wehrmacht-Arm.png" width="228" height="102" pivot_x="0" pivot_y="1"/>
+        <file id="6" name="Wehrmacht-Hand.png" width="172" height="87" pivot_x="0" pivot_y="1"/>
+        <file id="7" name="Wehrmacht-Gun.png" width="468" height="216" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <entity id="0" name="entity_000">
+        <animation id="0" name="NewAnimation" length="1000" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="1" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="5" key="0" z_index="1"/>
+                    <object_ref id="2" timeline="3" key="0" z_index="2"/>
+                    <object_ref id="3" timeline="4" key="0" z_index="3"/>
+                    <object_ref id="4" timeline="6" key="0" z_index="4"/>
+                    <object_ref id="5" timeline="0" key="0" z_index="5"/>
+                    <object_ref id="6" timeline="2" key="0" z_index="6"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="Wehrmacht-Side-Body">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-110.060606" y="441.367965"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="Wehrmacht-Head">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="-106.926407" y="587.705628" angle="359.61759" scale_y="1"/>
+                </key>
+            </timeline>
+            <timeline id="2" name="Wehrmacht-Arm-With-Gun">
+                <key id="0" spin="0">
+                    <object folder="0" file="2" x="-29.056741" y="453.924466" angle="341.070281" scale_x="1"/>
+                </key>
+            </timeline>
+            <timeline id="3" name="Wehrmacht-Leg">
+                <key id="0" spin="0">
+                    <object folder="0" file="3" x="-59.310345" y="174.482759"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="Wehrmacht-Foot">
+                <key id="0" spin="0">
+                    <object folder="0" file="4" x="-55.369458" y="46.896552"/>
+                </key>
+            </timeline>
+            <timeline id="5" name="Wehrmacht-Leg_000">
+                <key id="0" spin="0">
+                    <object folder="0" file="3" x="-11.034483" y="174.581281"/>
+                </key>
+            </timeline>
+            <timeline id="6" name="Wehrmacht-Foot_000">
+                <key id="0" spin="0">
+                    <object folder="0" file="4" x="3.270936" y="49.753695"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>

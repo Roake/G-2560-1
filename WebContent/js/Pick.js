@@ -17,6 +17,7 @@ Pick.prototype.create = function() {
 	"PickPage");
 sprite.anchor.set(0.5, 0.5);
 this.orange1= this.addWinston(420,600);
+this.orange2=this.addStalin(620,420);
 }
 
 Pick.prototype.addWinston = function(x, y) {
@@ -29,7 +30,18 @@ Pick.prototype.addWinston = function(x, y) {
 	a.play("Idle");
 	return a;
 };
-
+//
+Pick.prototype.addStalin = function(x, y) {
+	// add monkey
+	var b = this.add.button(x, y,
+			"Stalin-Idle");
+	b.anchor.set(0.5, 0.5);
+	b.scale.set(0.4);
+	b.animations.add("idle").play(1,true);
+	b.smoothed=false;
+	return b;
+};
+//
 function gframes(key, n) {
 	f = [];
 	for (var i = 0; i <= n; i++) {

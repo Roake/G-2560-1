@@ -85,6 +85,26 @@
       "key": "reMap1",
       "url": "assets/map/reMap1.json",
       "format": "TILED_JSON"
+    },
+    {
+      "type": "spritesheet",
+      "key": "explosjon3",
+      "url": "assets/images/explosjon3.png",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "Stalin-Idle",
+      "url": "assets/images/Stalin-Idle.png",
+      "frameWidth": 1024,
+      "frameHeight": 1024,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
     }
   ],
   "start": [
@@ -174,10 +194,25 @@
       "overwrite": false
     },
     {
+<<<<<<< HEAD
       "type": "image",
       "key": "goal",
       "url": "assets/images/goal.png",
       "overwrite": false
+=======
+      "type": "atlas",
+      "key": "SGTMcFry",
+      "textureURL": "assets/images/SGTMcFry.png",
+      "atlasURL": "assets/images/SGTMcFry.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "Wehrmacht",
+      "textureURL": "assets/images/Wehrmacht.png",
+      "atlasURL": "assets/images/Wehrmacht.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+>>>>>>> branch 'master' of https://github.com/Roake/G-2560-1.git
     }
   ],
   "preload": [{
@@ -187,7 +222,11 @@
     "overwrite": true
   }],
   "meta": {
+<<<<<<< HEAD
     "generated": "1512724847230",
+=======
+    "generated": "1512727822550",
+>>>>>>> branch 'master' of https://github.com/Roake/G-2560-1.git
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

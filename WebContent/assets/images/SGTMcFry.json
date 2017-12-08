@@ -1,0 +1,49 @@
+{
+  "frames": {
+    "SgtMcFry_Idle_000": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 552,
+        "h": 664
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 0,
+        "w": 552,
+        "h": 664
+      },
+      "sourceSize": {
+        "w": 553,
+        "h": 664
+      }
+    },
+    "SgtMcFry_Idle_001": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 556,
+        "y": 19,
+        "w": 552,
+        "h": 647
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 16,
+        "w": 552,
+        "h": 647
+      },
+      "sourceSize": {
+        "w": 553,
+        "h": 664
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "SGTMcFry.png"
+  }
+}
