@@ -172,6 +172,12 @@
       "key": "F5",
       "url": "assets/images/F5.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "goal",
+      "url": "assets/images/goal.png",
+      "overwrite": false
     }
   ],
   "preload": [{
@@ -181,7 +187,7 @@
     "overwrite": true
   }],
   "meta": {
-    "generated": "1512721032437",
+    "generated": "1512724847230",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

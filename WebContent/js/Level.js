@@ -35,9 +35,13 @@ Level.prototype.create = function() {
 			this.player = this.addPlayer(obj.x, obj.y);
 			this.game.camera.follow(this.player,Phaser.Camera.FOLLOW_PLATFORMER);
 		}
-		if (obj.type == "minister") {
+		if (obj.type == "bot") {
 			var d = this.addMinister(obj.x, obj.y);
 			this.enemies.add(d);
+		} if (obj.type == "goal") {
+			// เพิ่ม sprite goal
+			var g = this.addGoal(obj.x,obj.y);
+//			this.goal.add(g);
 		}
 		}
 	var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
@@ -67,6 +71,7 @@ Level.prototype.createWeapon = function() {
 Level.prototype.update = function() {
 	this.game.physics.arcade.collide(this.player,this.maplayer);
 	this.game.physics.arcade.collide(this.enemies,this.maplayer);
+	this.game.physics.arcade.collide(this.goal,this.maplayer);
 	/*if (input.keyboard.isDown) {
 		var dx = (pointer.worldX - this.player.x) * 2;
 		if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
@@ -142,14 +147,21 @@ Level.prototype.addMinister = function(x, y) {
 	return a;
 };
 
-//Level.prototype.addGoal = function(x, y) {
-//	c = this.add.sprite(x, y, "Goal");
-//	c.anchor.set(0,0.9);
-//	c.smoothed = false;
-//	this.game.physics.enable(c);
-//	c.body.collideWorldBounds = true;
-//	return c;
-//};
+//Level.prototype.Next = function(player,goal){ 
+//
+//	this.game.state.start("Level2");
+//	
+//}
+
+Level.prototype.addGoal = function(x, y) {
+	c = this.add.sprite(x, y, "goal");
+	c.anchor.set(0,0);
+	c.scale.set(0.2);
+	c.smoothed = false;
+	this.game.physics.enable(c);
+	c.body.collideWorldBounds = true;
+	return c;
+};
 
 function gframes(key, n) {
 	f = [];
