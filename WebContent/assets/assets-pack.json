@@ -43,7 +43,7 @@
     {
       "type": "image",
       "key": "BG",
-      "url": "assets/images/unnamed.png",
+      "url": "assets/images/BG.jpg",
       "overwrite": false
     },
     {
@@ -72,6 +72,18 @@
       "type": "tilemap",
       "key": "map11",
       "url": "assets/map/map1.json",
+      "format": "TILED_JSON"
+    },
+    {
+      "type": "tilemap",
+      "key": "test",
+      "url": "assets/map/test.json",
+      "format": "TILED_JSON"
+    },
+    {
+      "type": "tilemap",
+      "key": "reMap1",
+      "url": "assets/map/reMap1.json",
       "format": "TILED_JSON"
     }
   ],
@@ -169,7 +181,7 @@
     "overwrite": true
   }],
   "meta": {
-    "generated": "1512715978077",
+    "generated": "1512721032437",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

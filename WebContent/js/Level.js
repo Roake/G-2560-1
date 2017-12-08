@@ -14,7 +14,7 @@ Level.prototype.create = function() {
 	background = this.add.tileSprite(0, 0, 1024, 768, "BG");
 	background.scale.set(1);
 	background.fixedToCamera = true;
-	this.map = this.game.add.tilemap("map11");
+	this.map = this.game.add.tilemap("c1-1");
 	this.map.addTilesetImage('industrial.v1');
 
 	this.maplayer = this.map.createLayer("TL1");
@@ -81,7 +81,7 @@ Level.prototype.update = function() {
 		
 		 if(this.input.keyboard.isDown(Phaser.Keyboard.UP)){
 				if(this.player.body.velocity.y==0){
-					this.player.body.velocity.y=-350;
+					this.player.body.velocity.y=-500;
 					this.player.play("jump");
 					if(this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
 				this.player.play("ffb");}} 
@@ -117,7 +117,7 @@ Level.prototype.addPlayer = function(x, y) {
 	t.animations.add("attack", gframes("Winston-Fire", 5), 10, true);
 	t.animations.add("ffb", gframes("Winston-Fire-From-Above", 5), 20, true);
 	t.anchor.set(0.5, 0.5);
-	t.scale.set (0.3);
+	t.scale.set (0.25);
 	t.smoothed = false;
 	this.game.physics.arcade.enable(t);
 	t.play("idle");
@@ -141,6 +141,15 @@ Level.prototype.addMinister = function(x, y) {
 	a.body.collideWorldBounds = true;
 	return a;
 };
+
+//Level.prototype.addGoal = function(x, y) {
+//	c = this.add.sprite(x, y, "Goal");
+//	c.anchor.set(0,0.9);
+//	c.smoothed = false;
+//	this.game.physics.enable(c);
+//	c.body.collideWorldBounds = true;
+//	return c;
+//};
 
 function gframes(key, n) {
 	f = [];
