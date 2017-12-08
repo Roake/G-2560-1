@@ -45,6 +45,12 @@
       "key": "BG",
       "url": "assets/images/unnamed.png",
       "overwrite": false
+    },
+    {
+      "type": "tilemap",
+      "key": "c1-1",
+      "url": "assets/map/c1-1.json",
+      "format": "TILED_JSON"
     }
   ],
   "start": [
@@ -141,7 +147,7 @@
     "overwrite": true
   }],
   "meta": {
-    "generated": "1511518566581",
+    "generated": "1512712758613",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
