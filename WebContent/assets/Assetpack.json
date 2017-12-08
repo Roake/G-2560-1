@@ -207,12 +207,12 @@
   "level": [],
   "preload": [{
     "type": "image",
-    "key": "loading1",
+    "key": "loading",
     "url": "assets/images/loading.png",
     "overwrite": false
   }],
   "meta": {
-    "generated": "1512751808042",
+    "generated": "1512752714315",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

@@ -36,8 +36,8 @@ Level.prototype.create = function() {
 			this.game.camera.follow(this.player,Phaser.Camera.FOLLOW_PLATFORMER);
 		}
 		if (obj.type == "bot") {
-			var d = this.addMinister(obj.x, obj.y);
-			this.enemies.add(d);
+			var a = this.addSGT(obj.x, obj.y);
+			this.enemies.add(a);
 		} if (obj.type == "goal") {
 			// เพิ่ม sprite goal
 			var g = this.addGoal(obj.x,obj.y);
@@ -135,16 +135,16 @@ Level.prototype.fireWeaponback = function (){
 Level.prototype.fireWeapon = function (){
 	this.weapon1.fire();
 };
-Level.prototype.addMinister = function(x, y) {
-	var a = this.add.sprite(x, y, "Celt");
-	a.animations.add("idle", gframes("Celt-Idle", 1), 1, true,false);
-	a.anchor.set(0.5, 1);
-	a.scale.set (0.5);
-	a.smoothed = false;
-	this.game.physics.arcade.enable(a);
-	a.play("idle");
-	a.body.collideWorldBounds = true;
-	return a;
+
+Level.prototype.addSGT = function(x, y) {
+		var a = this.add.sprite(x, y,
+	"SGTMcFry");
+		a.anchor.set(0.5, 1);
+a.scale.set(0.4);
+a.animations.add("idle").play(1,true);
+a.body.collideWorldBounds = true;
+a.smoothed=false;
+return a;
 };
 
 //Level.prototype.Next = function(player,goal){ 
