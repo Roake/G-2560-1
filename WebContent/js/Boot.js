@@ -24,7 +24,7 @@ Boot.prototype.preload = function() {
 	// Load the assets to be used in the Preload state (progress bar,
 	// etc...). Note we use the "preload" key of the asset pack. The rest of
 	// the assets should be loaded in the Preload state.
-	this.load.pack("preload", "assets/assets-pack.json");
+	this.load.pack("preload", "assets/Assetpack.json");
 };
 
 Boot.prototype.create = function() {

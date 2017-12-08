@@ -18,8 +18,8 @@ Preload.prototype.preload = function() {
 	preloadBar.anchor.set(0.5, 0.5);
 	this.load.setPreloadSprite(preloadBar);
 	// Here we load the rest of the assets our game needs.
-	this.load.pack("start", "assets/assets-pack.json");
-	this.load.pack("level", "assets/assets-pack.json");
+	this.load.pack("start", "assets/Assetpack.json");
+	this.load.pack("level", "assets/Assetpack.json");
 };
 
 Preload.prototype.create = function() {
