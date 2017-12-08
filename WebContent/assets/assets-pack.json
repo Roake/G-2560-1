@@ -51,6 +51,16 @@
       "key": "c1-1",
       "url": "assets/map/c1-1.json",
       "format": "TILED_JSON"
+    },
+    {
+      "type": "spritesheet",
+      "key": "map1",
+      "url": "assets/map/industrial.v1.png",
+      "frameWidth": 0,
+      "frameHeight": 0,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
     }
   ],
   "start": [
@@ -147,7 +157,7 @@
     "overwrite": true
   }],
   "meta": {
-    "generated": "1512712758613",
+    "generated": "1512713869071",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

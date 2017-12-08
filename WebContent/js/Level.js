@@ -17,8 +17,11 @@ Level.prototype.create = function() {
 	this.map = this.game.add.tilemap("lab7");
 	this.map.addTilesetImage('TS1');
 	this.map.addTilesetImage('TS2');
-	this.maplayer = this.map.createLayer("Tile Layer 1");
-	this.maplayer1 = this.map.createLayer("Tile Layer 2");
+	this.maplayer = this.map.createLayer("TL1");
+	this.maplayer1 = this.map.createLayer("TL2");
+//	this.maplayer2 = this.map.createLayer("TL3");
+//	this.maplayer3 = this.map.createLayer("OL");
+
 	this.maplayer.resizeWorld();
 	this.map.setCollisionBetween(0,1000,true,this.maplayer);
 	this.game.physics.startSystem(Phaser.Physics.ARCADE);
