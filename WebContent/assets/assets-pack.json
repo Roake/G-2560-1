@@ -54,13 +54,25 @@
     },
     {
       "type": "spritesheet",
-      "key": "map1",
+      "key": "industrial.v1",
       "url": "assets/map/industrial.v1.png",
       "frameWidth": 0,
       "frameHeight": 0,
       "frameMax": -1,
       "margin": 0,
       "spacing": 0
+    },
+    {
+      "type": "tilemap",
+      "key": "c1-2",
+      "url": "assets/map/c1-2.json",
+      "format": "TILED_JSON"
+    },
+    {
+      "type": "tilemap",
+      "key": "map11",
+      "url": "assets/map/map1.json",
+      "format": "TILED_JSON"
     }
   ],
   "start": [
@@ -157,7 +169,7 @@
     "overwrite": true
   }],
   "meta": {
-    "generated": "1512713869071",
+    "generated": "1512715978077",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

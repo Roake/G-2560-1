@@ -14,13 +14,12 @@ Level.prototype.create = function() {
 	background = this.add.tileSprite(0, 0, 1024, 768, "BG");
 	background.scale.set(1);
 	background.fixedToCamera = true;
-	this.map = this.game.add.tilemap("lab7");
-	this.map.addTilesetImage('TS1');
-	this.map.addTilesetImage('TS2');
+	this.map = this.game.add.tilemap("map11");
+	this.map.addTilesetImage('industrial.v1');
+
 	this.maplayer = this.map.createLayer("TL1");
 	this.maplayer1 = this.map.createLayer("TL2");
-//	this.maplayer2 = this.map.createLayer("TL3");
-//	this.maplayer3 = this.map.createLayer("OL");
+	this.maplayer2 = this.map.createLayer("TL3");
 
 	this.maplayer.resizeWorld();
 	this.map.setCollisionBetween(0,1000,true,this.maplayer);
