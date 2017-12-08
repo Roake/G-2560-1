@@ -13,8 +13,7 @@ Boot.prototype.init = function() {
 	// Unless you specifically know your game needs to support multi-touch I
 	// would recommend setting this to 1
 	this.input.maxPointers = 1;
-	BasicGame = { character : 0
-										music : null};
+	BasicGame = { character : 0};
 	// Setup the scale strategy
 	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 	this.scale.pageAlignHorizontally = true;
