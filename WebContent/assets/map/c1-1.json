@@ -37,8 +37,8 @@
                  "type":"goal",
                  "visible":true,
                  "width":16,
-                 "x":972,
-                 "y":702
+                 "x":991,
+                 "y":639
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -68,7 +68,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":7,
+ "nextobjectid":9,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.0.3",
