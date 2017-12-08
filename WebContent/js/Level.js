@@ -35,8 +35,8 @@ Level.prototype.create = function() {
 			this.player = this.addPlayer(obj.x, obj.y);
 			this.game.camera.follow(this.player,Phaser.Camera.FOLLOW_PLATFORMER);
 		}
-		if (obj.type == "minister") {
-			var d = this.addMinister(obj.x, obj.y);
+		if (obj.type == "bot") {
+			var d = this.addSGT(obj.x, obj.y);
 			this.enemies.add(d);
 		}
 		}
@@ -87,20 +87,20 @@ Level.prototype.update = function() {
 				this.player.play("ffb");}} 
 		 }else if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
 			this.player.body.velocity.x = -120;
-			this.player.scale.x = -0.3;
+			this.player.scale.x = -0.32;
 			this.player.play("walk");
 	
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
 			this.player.body.velocity.x = 120;
-			this.player.scale.x = 0.3;
+			this.player.scale.x = 0.32;
 			this.player.play("walk");
 			
 		}
 		else if (this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
-			if(this.player.scale.x == -0.3){
+			if(this.player.scale.x == -0.32){
 			this.player.play("attack");
 			this.fireWeaponback();}
-			if(this.player.scale.x == 0.3){
+			if(this.player.scale.x == 0.32){
 				this.player.play("attack");
 				this.fireWeapon();}
 		}else {
@@ -114,10 +114,10 @@ Level.prototype.addPlayer = function(x, y) {
 	t.animations.add("idle", gframes("Winston-True-Idle", 2),2, true);
 	t.animations.add("walk", gframes("Winston-Walk", 5), 5, true);
 	t.animations.add("jump", gframes("Winston-Jump", 5), 5, true);
-	t.animations.add("attack", gframes("Winston-Fire", 5), 10, true);
+	t.animations.add("attack", kframes("Winston-Fire", 5), 10, true);
 	t.animations.add("ffb", gframes("Winston-Fire-From-Above", 5), 20, true);
 	t.anchor.set(0.5, 0.5);
-	t.scale.set (0.25);
+	t.scale.set (0.32);
 	t.smoothed = false;
 	this.game.physics.arcade.enable(t);
 	t.play("idle");
@@ -130,11 +130,11 @@ Level.prototype.fireWeaponback = function (){
 Level.prototype.fireWeapon = function (){
 	this.weapon1.fire();
 };
-Level.prototype.addMinister = function(x, y) {
-	var a = this.add.sprite(x, y, "Celt");
-	a.animations.add("idle", gframes("Celt-Idle", 1), 1, true,false);
-	a.anchor.set(0.5, 1);
-	a.scale.set (0.5);
+Level.prototype.addSGT = function(x, y) {
+	var a = this.add.sprite(x, y, "SGTMcFry");
+	a.animations.add("idle", gframes("SgtMcFry_Idle", 1), 1, true,false);
+	a.anchor.set(0, 0.5);
+	a.scale.set (0.3);
 	a.smoothed = false;
 	this.game.physics.arcade.enable(a);
 	a.play("idle");
@@ -150,7 +150,13 @@ Level.prototype.addMinister = function(x, y) {
 //	c.body.collideWorldBounds = true;
 //	return c;
 //};
-
+function kframes(key, n) {
+	f = [];
+	for (var i = 1; i <= n; i++) {
+		f.push(key + "_" + "00" + i);
+	}
+	return f;
+};
 function gframes(key, n) {
 	f = [];
 	for (var i = 0; i <= n; i++) {
