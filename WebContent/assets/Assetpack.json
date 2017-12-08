@@ -117,8 +117,8 @@
       "type": "spritesheet",
       "key": "Stalin-Idle",
       "url": "assets/images/Stalin-Idle.png",
-      "frameWidth": 0,
-      "frameHeight": 0,
+      "frameWidth": 1024,
+      "frameHeight": 1024,
       "frameMax": -1,
       "margin": 0,
       "spacing": 0
@@ -127,8 +127,8 @@
       "type": "spritesheet",
       "key": "bullet",
       "url": "assets/images/bullet.png",
-      "frameWidth": 0,
-      "frameHeight": 0,
+      "frameWidth": 10,
+      "frameHeight": 10,
       "frameMax": -1,
       "margin": 0,
       "spacing": 0
@@ -137,8 +137,8 @@
       "type": "spritesheet",
       "key": "explosjon3",
       "url": "assets/images/explosjon3.png",
-      "frameWidth": 0,
-      "frameHeight": 0,
+      "frameWidth": 128,
+      "frameHeight": 128,
       "frameMax": -1,
       "margin": 0,
       "spacing": 0
@@ -212,7 +212,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1512751610593",
+    "generated": "1512751808042",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
