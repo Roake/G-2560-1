@@ -61,5 +61,4 @@ Pick.prototype.startGame = function() {
 function characterPick(character) {
 	var c=character;
 	
-	
 }

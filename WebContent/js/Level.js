@@ -26,7 +26,7 @@ Level.prototype.create = function() {
 	this.game.physics.startSystem(Phaser.Physics.ARCADE);
 	this.game.physics.arcade.gravity.y = 1000;
 
-	
+//if(this.game.character==1){
 	this.enemies = this.add.group();
 	for (x  in this.map.objects.object) {
 	var obj = this.map.objects.object[x];
@@ -35,6 +35,7 @@ Level.prototype.create = function() {
 			this.player = this.addPlayer(obj.x, obj.y);
 			this.game.camera.follow(this.player,Phaser.Camera.FOLLOW_PLATFORMER);
 		}
+
 		if (obj.type == "bot") {
 			var a = this.addSGT(obj.x, obj.y);
 			this.enemies.add(a);
@@ -43,13 +44,14 @@ Level.prototype.create = function() {
 			var g = this.addGoal(obj.x,obj.y);
 //			this.goal.add(g);
 		}
-		
+	
 	var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
 	text.scale.set(1);
 	
 	this.createWeapon();
 	this.createText();
 	}
+//}
 };
 
 Level.prototype.createWeapon = function() {
