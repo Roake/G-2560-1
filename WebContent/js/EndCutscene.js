@@ -44,8 +44,7 @@ p4.anchor.set(0.5, 0.5);
 var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
 text.scale.set(1);
 this.input.onDown.add(fade, this);
-this.game.camera.onFadeComplete.add(resetFade, this);
-this.time.events.add(Phaser.Timer.SECOND * 4, this.PG5, this);
+this.time.events.add(Phaser.Timer.SECOND * 4, resetFade, this);
 this.time.events.add(Phaser.Timer.SECOND * 4, this.PG5, this);
 };
 
@@ -64,8 +63,6 @@ EndCutscene.prototype.PG5 = function() {
 	"SELLPAGE");
 p5.anchor.set(0.5, 0.5);
 this.input.onDown.add(this.startGame, this);
-var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
-text.scale.set(1);
 };
 
 
