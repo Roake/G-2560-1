@@ -37,7 +37,7 @@ Menu.prototype.create = function() {
 		
 	};
 Menu.prototype.Start = function(x,y) {
-	this.game.state.start("Pick");
+	this.game.state.start("Cutscene");
 	}
 
 Menu.prototype.Set = function(x,y) {
