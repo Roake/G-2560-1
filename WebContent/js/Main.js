@@ -12,6 +12,7 @@ window.onload = function() {
 	game.state.add("Dev", Dev);
 	game.state.add("Setting", Setting);
 	game.state.add("Pick", Pick);
+	game.state.add("Level1-2", Level1-2);
 	
 	// Now start the Boot state.
 	game.state.start("Boot");
