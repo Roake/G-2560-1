@@ -1,0 +1,7 @@
+/**
+ *Cutscene state.
+ */
+function Cutscene () {
+	
+}
+

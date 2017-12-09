@@ -1,0 +1,7 @@
+/**
+ *EndCutscene state.
+ */
+function EndCutscene () {
+	
+}
+

@@ -217,7 +217,7 @@ return a;
 };
 
 //Level.prototype.Next = function(player,goal){ 
-//
+//	
 //	this.game.state.start("Level2");
 //	
 //}
