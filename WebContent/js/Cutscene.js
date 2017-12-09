@@ -11,7 +11,7 @@ Cutscene.prototype = proto;
 
 
 Cutscene.prototype.create = function() {
-	var p1 = this.add.sprite(this.world.centerX, this.world.centerY,
+		var p1 = this.add.sprite(this.world.centerX, this.world.centerY,
 	"PG1");
 p1.anchor.set(0.5, 0.5);
 this.input.onDown.add(this.PG2, this);
@@ -36,6 +36,7 @@ this.input.onDown.add(this.PG4, this);
 var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
 text.scale.set(1);
 };
+
 Cutscene.prototype.PG4 = function() {
 	var p4 = this.add.sprite(this.world.centerX, this.world.centerY,
 	"PG4");
