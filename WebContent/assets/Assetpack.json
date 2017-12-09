@@ -202,6 +202,72 @@
       "frameMax": -1,
       "margin": 0,
       "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "END",
+      "url": "assets/images/END.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "END1",
+      "url": "assets/images/END1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "END2",
+      "url": "assets/images/END2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "END3",
+      "url": "assets/images/END3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "END4",
+      "url": "assets/images/END4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "PG1",
+      "url": "assets/images/PG1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "PG2",
+      "url": "assets/images/PG2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "PG3",
+      "url": "assets/images/PG3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "PG4",
+      "url": "assets/images/PG4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "PG5",
+      "url": "assets/images/PG5.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "SELLPAGE",
+      "url": "assets/images/SELLPAGE.png",
+      "overwrite": false
     }
   ],
   "level": [],
@@ -212,7 +278,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1512752714315",
+    "generated": "1512789603910",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
