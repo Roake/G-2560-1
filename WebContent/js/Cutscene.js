@@ -45,6 +45,7 @@ this.input.onDown.add(this.PG5, this);
 var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
 text.scale.set(1);
 };
+
 Cutscene.prototype.PG5 = function() {
 	var p5 = this.add.sprite(this.world.centerX, this.world.centerY,
 	"PG5");

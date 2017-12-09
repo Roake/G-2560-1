@@ -1,5 +1,5 @@
 /**
- * Dev state.
+ * Pick state.
  */
 function Pick() {
 	Phaser.State.call(this);
