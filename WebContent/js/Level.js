@@ -75,6 +75,7 @@ Level.prototype.update = function() {
 	this.game.physics.arcade.collide(this.player,this.maplayer);
 	this.game.physics.arcade.collide(this.enemies,this.maplayer);
 	this.game.physics.arcade.collide(this.goal,this.maplayer);
+	this.physics.arcade.collide(this.player,this.goal,this.Next,null,this);
 	/*if (input.keyboard.isDown) {
 		var dx = (pointer.worldX - this.player.x) * 2;
 		if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
@@ -218,11 +219,11 @@ this.game.physics.arcade.enable(a);
 return a;
 };
 
-//Level.prototype.Next = function(player,goal){ 
-//	
-//	this.game.state.start("Level2");
-//	
-//}
+Level.prototype.Next = function(player,goal){ 
+	
+	this.game.state.start("Level2");
+	
+}
 
 Level.prototype.addGoal = function(x, y) {
 	c = this.add.sprite(x, y, "goal");
