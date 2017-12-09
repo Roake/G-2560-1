@@ -26,7 +26,7 @@ Level.prototype.create = function() {
 	this.game.physics.startSystem(Phaser.Physics.ARCADE);
 	this.game.physics.arcade.gravity.y = 1000;
 
-	if(character ==1){
+	
 	this.enemies = this.add.group();
 	for (x  in this.map.objects.object) {
 	var obj = this.map.objects.object[x];
@@ -43,11 +43,12 @@ Level.prototype.create = function() {
 			var g = this.addGoal(obj.x,obj.y);
 //			this.goal.add(g);
 		}
-		}
+		
 	var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
 	text.scale.set(1);
 	
 	this.createWeapon();
+	this.createText();
 	}
 };
 
@@ -113,8 +114,74 @@ Level.prototype.update = function() {
 			this.player.play("idle");
 		}
 };
+Level.prototype.createText = function (){
+	msgTxt =  this.add.text(this.game.width/2,this.game.height/2, " ", { font: "25px TH SarabunPSK Bold", fill: "#ffffff" },this.ui);
+	msgTxt.stroke = "#000";
+	msgTxt.strokeThickness = 3;
+	msgTxt.scale.set(5);
+	msgTxt.anchor.set(0.5,0.5);
+	
+	winTxt =  this.add.text(this.game.width/2,this.game.height/2, " ", { font: "25px TH SarabunPSK Bold", fill: "#990000" },this.ui);
+	winTxt.stroke = "#000";
+	winTxt.strokeThickness = 3;
+	winTxt.scale.set(1);
+	winTxt.anchor.set(0.5,0.5);
+	
+	iTxt =  this.add.text(this.game.width/2,this.game.height/2, " ", { font: "25px TH SarabunPSK Bold", fill: "#0066cc" },this.ui);
+	iTxt.stroke = "#000";
+	iTxt.strokeThickness = 3;
+	iTxt.scale.set(1);
+	iTxt.anchor.set(0.5,0.5);
+	
+	sTxt =  this.add.text(this.game.width/2,this.game.height/2, " ", { font: "25px TH SarabunPSK Bold", fill: "#ff5050" },this.ui);
+	sTxt.stroke = "#000";
+	sTxt.strokeThickness = 3;
+	sTxt.scale.set(1);
+	sTxt.anchor.set(0.5,0.5);
+	
+	deTxt =  this.add.text(this.game.width/2,this.game.height/2, " ", { font: "25px TH SarabunPSK Bold", fill: "#ff0000" },this.ui);
+	deTxt.stroke = "#000";
+	deTxt.strokeThickness = 3;
+	deTxt.scale.set(1);
+	deTxt.anchor.set(0.5,0.5);
+	tw = this.add.tween(msgTxt.scale);
+	tw.to({x:1,y:1},1000,"Linear",true, 0, 0, false);
+	this.time.events.add(1000,function(){this.text = "จ่าแม็คฟลาย : …คุณชื่อวินสตัน จากฝ่ายจารกรรมข้อมูลของกองทัพสัมพันธมิตรสินะ ";},msgTxt);
+	this.time.events.add(6000,function(){this.text = "จ่าแม็คฟลาย : …คุณคือไอแซนฮาวล์ จากกองทัพเรือสัมพันธมิตรอเมริกาสินะ";},msgTxt);
+	this.time.events.add(11000,function(){this.text = "จ่าแม็คฟลาย :คุณคือสตาร์ลิน นักรบแนวหน้าของกองทัพสัมพันธมิตรโซเวียตที่ถูกส่งตัวมาช่วยงานที่นี่สินะ";},msgTxt);
+	this.time.events.add(16000,function(){this.text = "จ่าแม็คฟลาย : …คุณชื่อเดอกัวล์ นักดาบจากกองทัพสัมพันธมิตรฝรั่งเศสที่ประกาศยอมแพ้ไปแล้วสินะ";},msgTxt);
+	this.time.events.add(20000,function(){this.visible=false},msgTxt);
+	
+	this.time.events.add(20000,function(){this.text = "วินสตัน : ใช่แล้ว หวังว่าที่นี่จะมีอะไรให้ผมทำมากกว่านั่งจิบชาอยู่เฉยๆนะ";},winTxt);
+	this.time.events.add(24000,function(){this.visible=false;},winTxt);
+	this.time.events.add(24000,function(){this.text = "ไอแซนฮาวล์ : ครับ ผมถูกส่งตัวมาที่ลอนดอนเมื่อวานนี้";},iTxt);
+	this.time.events.add(28000,function(){this.visible=false;},iTxt);
+	this.time.events.add(28000,function(){this.text = "สตาร์ลิน : อ่า ใช่แล้ว ที่นี่ไม่มีวอดก้าบ้างหรือ?";},sTxt);
+	this.time.events.add(32000,function(){this.visible=false;},sTxt);
+	this.time.events.add(32000,function(){this.text = "เดอกัวล์ : …";},deTxt);
+	this.time.events.add(36000,function(){this.visible=false;},deTxt);
+	
+	(this.game.width/2,this.game.height/2,this.time.events.add(36000,function(){this.text = "จ่าแม็คฟลาย : ผมชื่อแม็คฟลาย ผมเป็นผู้ช่วยของคุณเอง แต่ก่อนที่ภารกิจใหม่ของคุณจะเริ่มขึ้น ท่านนายพลอูรัค ";},msgTxt));
+	this.time.events.add(38000,function(){this.text = "ผู้บัญชาการกองทัพสัมพันธมิตรอังกฤษต้องการพบคุณพอดี ท่านรอคุณอยู่ด้านบน เดินไปทางขวาก็เจอทางขึ้นแล้ว;"},msgTxt);
+	this.time.events.add(38000,function(){this.visible=true;},msgTxt);
 
+//	this.time.events.add(20000,function(){this.text = "วินสตัน : ใช่แล้ว หวังว่าที่นี่จะมีอะไรให้ผมทำมากกว่านั่งจิบชาอยู่เฉยๆนะ";},winTxt);
+//	this.time.events.add(24000,function(){this.visible=true;},winTxt);
+//	this.time.events.add(24000,function(){this.text = "ไอแซนฮาวล์ : ครับ ผมถูกส่งตัวมาที่ลอนดอนเมื่อวานนี้";},iTxt);
+//	this.time.events.add(28000,function(){this.visible=true;},iTxt);
+//	this.time.events.add(28000,function(){this.text = "สตาร์ลิน : อ่า ใช่แล้ว ที่นี่ไม่มีวอดก้าบ้างหรือ?";},sTxt);
+//	this.time.events.add(32000,function(){this.visible=true;},sTxt);
+//	this.time.events.add(32000,function(){this.text = "เดอกัวล์ : …";},deTxt);
+//	this.time.events.add(36000,function(){this.visible=true;},deTxt);
+	
+//	วินสตัน : รับทราบ ผมจะไปเดี๋ยวนี้
+//	ไอแซนฮาวล์ : รับทราบ
+//	สตาร์ลิน : ทราบแล้ว
+//	เดอกัวล์ : เราต้องไปใช่ไหม?
+
+}
 Level.prototype.addPlayer = function(x, y) {
+	
 	var t = this.add.sprite(x, y, "Winston");
 	t.animations.add("idle", gframes("Winston-True-Idle", 2),2, true);
 	t.animations.add("walk", gframes("Winston-Walk", 5), 5, true);
@@ -128,6 +195,8 @@ Level.prototype.addPlayer = function(x, y) {
 	t.play("idle");
 	t.body.collideWorldBounds = true;
 	return t;
+	
+	
 };
 Level.prototype.fireWeaponback = function (){
 	this.weapon2.fire();
