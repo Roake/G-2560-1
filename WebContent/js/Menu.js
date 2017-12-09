@@ -10,7 +10,7 @@ var proto = Object.create(Phaser.State);
 Menu.prototype = proto;
 
 Menu.prototype.preload = function() {
-	this.load.pack("start", "assets/assets-pack.json");
+	this.load.pack("start", "assets/assetspack.json");
 };
 
 Menu.prototype.create = function() {
