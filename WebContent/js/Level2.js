@@ -27,6 +27,7 @@ Level2.prototype.create = function() {
 	this.game.physics.arcade.gravity.y = 1000;
 	
 	this.enemies = this.add.group();
+	this.goal=this.add.group();
 	for (x  in this.map.objects.object) {
 	var obj = this.map.objects.object[x];
 	if (obj.type == "player") {
@@ -41,14 +42,14 @@ Level2.prototype.create = function() {
 		} if (obj.type == "goal") {
 			// เพิ่ม sprite goal
 			var g = this.addGoal(obj.x,obj.y);
-//			this.goal.add(g);
+			this.goal.add(g);
 		}
 	
 	var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
 	text.scale.set(1);
 	
 	this.createWeapon();
-	this.createText();
+	
 	}
 	
 }
@@ -124,7 +125,7 @@ Level2.prototype.addPlayer = function(x, y) {
 	t.animations.add("jump", gframes("Winston-Jump", 5), 5, true);
 	t.animations.add("attack", kframes("Winston-Fire", 5), 10, true);
 	t.animations.add("ffb", gframes("Winston-Fire-From-Above", 5), 20, true);
-	t.anchor.set(0.5, 0.5);
+	t.anchor.set(0.5, 1);
 	t.scale.set (0.32);
 	t.smoothed = false;
 	this.game.physics.arcade.enable(t);
@@ -159,9 +160,9 @@ return a;
 //}
 
 Level2.prototype.addGoal = function(x, y) {
-	c = this.add.sprite(x, y, "goal");
-	c.anchor.set(0,0);
-	c.scale.set(0.2);
+	var c = this.add.sprite(x, y, "goal");
+	c.anchor.set(0.5,10);
+	c.scale.set(0.5);
 	c.smoothed = false;
 	this.game.physics.enable(c);
 	c.body.collideWorldBounds = true;

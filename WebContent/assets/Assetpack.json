@@ -73,12 +73,6 @@
       "overwrite": false
     },
     {
-      "type": "image",
-      "key": "goal",
-      "url": "assets/images/goal.png",
-      "overwrite": false
-    },
-    {
       "type": "atlas",
       "key": "Celt",
       "textureURL": "assets/images/Celt.png",
@@ -278,7 +272,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1512789603910",
+    "generated": "1512796743118",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

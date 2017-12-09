@@ -28,6 +28,7 @@ Level.prototype.create = function() {
 
 //if(this.game.character==1){
 	this.enemies = this.add.group();
+	this.goal=this.add.group();
 	for (x  in this.map.objects.object) {
 	var obj = this.map.objects.object[x];
 	if (obj.type == "player") {
@@ -42,7 +43,7 @@ Level.prototype.create = function() {
 		} if (obj.type == "goal") {
 			// เพิ่ม sprite goal
 			var g = this.addGoal(obj.x,obj.y);
-//			this.goal.add(g);
+			this.goal.add(g);
 		}
 	
 	var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
@@ -95,12 +96,12 @@ Level.prototype.update = function() {
 					if(this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
 				this.player.play("ffb");}} 
 		 }else if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
-			this.player.body.velocity.x = -120;
+			this.player.body.velocity.x = -12000;
 			this.player.scale.x = -0.32;
 			this.player.play("walk");
 	
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
-			this.player.body.velocity.x = 120;
+			this.player.body.velocity.x = 12000;
 			this.player.scale.x = 0.32;
 			this.player.play("walk");
 			
@@ -226,9 +227,9 @@ Level.prototype.Next = function(player,goal){
 }
 
 Level.prototype.addGoal = function(x, y) {
-	c = this.add.sprite(x, y, "goal");
+	var c = this.add.sprite(x, y, "goal");
 	c.anchor.set(0,0);
-	c.scale.set(0.2);
+	c.scale.set(0.5);
 	c.smoothed = false;
 	this.game.physics.enable(c);
 	c.body.collideWorldBounds = true;
