@@ -54,10 +54,6 @@ Pick.prototype.WinstonPlay = function(x,y) {
 	this.game.state.start("Level");
 	}
 
-Pick.prototype.startGame = function() {
-	this.game.state.start("Level");
-};
-
 function characterPick(character) {
 	var c=character;
 	

@@ -68,6 +68,6 @@ text.scale.set(1);
 };
 
 
-Cutscene.prototype.startGame = function() {
+EndCutscene.prototype.startGame = function() {
 	this.game.state.start("Menu");
 };

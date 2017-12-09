@@ -55,7 +55,6 @@ var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'whit
 text.scale.set(1);
 };
 
-
 Cutscene.prototype.startGame = function() {
 	this.game.state.start("Pick");
 };
