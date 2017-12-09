@@ -45,7 +45,8 @@ var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'whit
 text.scale.set(1);
 this.input.onDown.add(fade, this);
 this.game.camera.onFadeComplete.add(resetFade, this);
-//this.time.events.add(1000,PG5()
+this.time.events.add(Phaser.Timer.SECOND * 4, this.PG5, this);
+this.time.events.add(Phaser.Timer.SECOND * 4, this.PG5, this);
 };
 
 function fade() {
