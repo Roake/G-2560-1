@@ -227,7 +227,7 @@ Level.prototype.Next = function(player,goal){
 }
 
 Level.prototype.addGoal = function(x, y) {
-	var c = this.add.sprite(x, y, "goal");
+	var c = this.add.sprite(x, y, "go");
 	c.anchor.set(0,0);
 	c.scale.set(0.5);
 	c.smoothed = false;

@@ -262,6 +262,12 @@
       "key": "SELLPAGE",
       "url": "assets/images/SELLPAGE.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "go",
+      "url": "assets/images/goal.png",
+      "overwrite": false
     }
   ],
   "level": [],
@@ -272,7 +278,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1512796743118",
+    "generated": "1512797359156",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
