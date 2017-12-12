@@ -159,11 +159,11 @@ a.smoothed=false;
 return a;
 };
 
-//Level2.prototype.Next = function(player,goal){ 
-//	
-//	this.game.state.start("Level2");
-//	
-//}
+Level2.prototype.Next = function(player,goal){ 
+	
+	this.game.state.start("Level3");
+	
+}
 
 Level2.prototype.addGoal = function(x, y) {
 	var c = this.add.sprite(x, y, "go");
