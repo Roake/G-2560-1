@@ -119,6 +119,7 @@ Level.prototype.update = function() {
 		}
 };
 
+//ด้านล่างนี้เดี๋ยวซ่อมเองนะ อย่าลืมล่ะ (บอกตัวเอง)
 Level.prototype.createText = function (){
 	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
 	"SGT1-1",this.WIN1, this);
@@ -182,6 +183,7 @@ Level.prototype.WIN2 = function() {
 function destroySprite (sprite) {
     this.sprite.destroy();
 }
+//
 
 Level.prototype.addPlayer = function(x, y) {
 	
