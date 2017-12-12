@@ -118,47 +118,60 @@ Level.prototype.update = function() {
 			this.player.play("idle");
 		}
 };
+
 Level.prototype.createText = function (){
 	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
 	"SGT1-1",this.WIN1, this);
 	msgTxt.scale.set(1);
 	msgTxt.anchor.set(0.5,0.5);
-	msgTxt.events.onInputDown.add(destroySprite, this);
+	if(msgTxt.events.onInputDown){
+		msgTxt.destroy();
+	}
 }
 Level.prototype.WIN1 = function() {
 	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
 			"WIN1-1",this.SGT2, this);
 			msgTxt.scale.set(1);
 			msgTxt.anchor.set(0.5,0.5);
-			msgTxt.events.onInputDown.add(destroySprite, this);
+			if(msgTxt.events.onInputDown){
+				msgTxt.destroy();
+			}
 		}
 Level.prototype.SGT2 = function() {
 	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
 			"SGT1-2",this.SGT3, this);
 			msgTxt.scale.set(1);
 			msgTxt.anchor.set(0.5,0.5);
-			msgTxt.events.onInputDown.add(destroySprite, this);
+			if(msgTxt.events.onInputDown){
+				msgTxt.destroy();
+			}
 		}
 Level.prototype.SGT3 = function() {
 	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
 			"SGT1-3",this.SGT4, this);
 			msgTxt.scale.set(1);
 			msgTxt.anchor.set(0.5,0.5);
-			msgTxt.events.onInputDown.add(destroySprite, this);
+			if(msgTxt.events.onInputDown){
+				msgTxt.destroy();
+			}
 		}	
 Level.prototype.SGT4 = function() {
 	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
 			"SGT1-4",this.SGT5, this);
 			msgTxt.scale.set(1);
 			msgTxt.anchor.set(0.5,0.5);
-			msgTxt.events.onInputDown.add(destroySprite, this);
+			if(msgTxt.events.onInputDown){
+				msgTxt.destroy();
+			}
 		}
 Level.prototype.SGT5 = function() {
 	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
 			"SGT1-5",this.WIN2, this);
 			msgTxt.scale.set(1);
 			msgTxt.anchor.set(0.5,0.5);
-			msgTxt.events.onInputDown.add(destroySprite, this);
+			if(msgTxt.events.onInputDown){
+				msgTxt.destroy();
+			}
 		}
 Level.prototype.WIN2 = function() {
 	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
@@ -167,7 +180,7 @@ Level.prototype.WIN2 = function() {
 			msgTxt.anchor.set(0.5,0.5);
 		}
 function destroySprite (sprite) {
-    sprite.destroy();
+    this.sprite.destroy();
 }
 
 Level.prototype.addPlayer = function(x, y) {
