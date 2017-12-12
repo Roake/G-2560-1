@@ -40,13 +40,17 @@ b.scale.set(0.8);
 			this.game.camera.follow(this.player,Phaser.Camera.FOLLOW_PLATFORMER);
 		}
 
-		if (obj.type == "bot") {
-			var a = this.addSGT(obj.x, obj.y);
+		if (obj.type == "enemy1") {
+			var a = this.addDummy(obj.x, obj.y);
 			this.enemies.add(a);
+			
 		} if (obj.type == "goal") {
 			// เพิ่ม sprite goal
 			var g = this.addGoal(obj.x,obj.y);
 			this.goal.add(g);
+		}	if (obj.type == "enemy2") {
+			var b = this.addDummy(obj.x, obj.y);
+			this.enemies.add(b);
 		}
 	
 	var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
@@ -146,14 +150,12 @@ Level2.prototype.fireWeapon = function (){
 	this.weapon1.fire();
 };
 
-Level2.prototype.addSGT = function(x, y) {
+Level2.prototype.addDummy = function(x, y) {
 		var a = this.add.sprite(x, y,
-	"SGTMcFry");
-		a.anchor.set(-1, 0.5);
+	"Dummy");
+		a.anchor.set(1, 0.56);
 a.scale.set(0.3);
-a.animations.add("idle").play(1,true);
 a.smoothed=false;
-this.game.physics.arcade.enable(a);
 return a;
 };
 

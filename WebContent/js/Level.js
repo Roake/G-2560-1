@@ -125,7 +125,7 @@ Level.prototype.createText = function (){
 	"SGT1-1",this.WIN1, this);
 	msgTxt.scale.set(1);
 	msgTxt.anchor.set(0.5,0.5);
-	if(msgTxt.events.onInputDown){
+	if(this.events.onInputDown){
 		msgTxt.destroy();
 	}
 }
