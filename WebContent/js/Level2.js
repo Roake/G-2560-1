@@ -14,9 +14,10 @@ Level2.prototype.create = function() {
 	background = this.add.tileSprite(0, 0, 1024, 768, "BG");
 		background.scale.set(1);
 	background.fixedToCamera = true;
-	var b = this.add.sprite(100, 150,
+	var b = this.add.sprite(480, 400,
 	"BOARD");
 b.anchor.set(0.5, 0.5);
+b.scale.set(0.8);
 	this.map = this.game.add.tilemap("c1-2");
 	this.map.addTilesetImage('industrial.v1');
 
@@ -128,7 +129,7 @@ Level2.prototype.addPlayer = function(x, y) {
 	t.animations.add("jump", gframes("Winston-Jump", 5), 5, true);
 	t.animations.add("attack", kframes("Winston-Fire", 5), 10, true);
 	t.animations.add("ffb", gframes("Winston-Fire-From-Above", 5), 20, true);
-	t.anchor.set(0.5, 1);
+	t.anchor.set(0.5, 0.5);
 	t.scale.set (0.32);
 	t.smoothed = false;
 	this.game.physics.arcade.enable(t);
