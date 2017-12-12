@@ -12,8 +12,11 @@ Level2.prototype = proto;
 
 Level2.prototype.create = function() {
 	background = this.add.tileSprite(0, 0, 1024, 768, "BG");
-	background.scale.set(1);
+		background.scale.set(1);
 	background.fixedToCamera = true;
+	var b = this.add.sprite(100, 150,
+	"BOARD");
+b.anchor.set(0.5, 0.5);
 	this.map = this.game.add.tilemap("c1-2");
 	this.map.addTilesetImage('industrial.v1');
 

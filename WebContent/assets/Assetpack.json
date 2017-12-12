@@ -274,6 +274,60 @@
       "key": "Dummy",
       "url": "assets/images/Dummy.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "BOARD",
+      "url": "assets/dialogue/BOARD.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "SGT1-1",
+      "url": "assets/dialogue/SGT1-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "SGT1-2",
+      "url": "assets/dialogue/SGT1-2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "SGT1-3",
+      "url": "assets/dialogue/SGT1-3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "SGT1-4",
+      "url": "assets/dialogue/SGT1-4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "SGT1-5",
+      "url": "assets/dialogue/SGT1-5.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "STA1-1",
+      "url": "assets/dialogue/STA1-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN1-1",
+      "url": "assets/dialogue/WIN1-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN1-2",
+      "url": "assets/dialogue/WIN1-2.png",
+      "overwrite": false
     }
   ],
   "level": [],
@@ -284,7 +338,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1512798680108",
+    "generated": "1513055659657",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
