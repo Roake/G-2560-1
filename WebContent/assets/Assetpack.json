@@ -358,6 +358,12 @@
       "key": "lift",
       "urls": ["assets/audio/lift.ogg"],
       "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "gun",
+      "urls": ["assets/audio/gun.ogg"],
+      "autoDecode": true
     }
   ],
   "level": [],
@@ -368,7 +374,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513150135049",
+    "generated": "1513162424239",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
