@@ -19,7 +19,7 @@ Level3.prototype.create = function() {
 
 	this.maplayer = this.map.createLayer("TL1");
 	this.maplayer1 = this.map.createLayer("TL2");
-	this.maplayer2 = this.map.createLayer("TL3");
+
 
 	this.maplayer.resizeWorld();
 	this.map.setCollisionBetween(0,1000,true,this.maplayer);
@@ -39,19 +39,20 @@ Level3.prototype.create = function() {
 
 //		if (obj.type == "bot") {
 //			var a = this.addSGT(obj.x, obj.y);
-//			this.enemies.add(a);
-		} if (obj.type == "goal") {
+//			this.enemies.add(a);}
+		if (obj.type == "goal") {
 			// เพิ่ม sprite goal
 			var g = this.addGoal(obj.x,obj.y);
 			this.goal.add(g);
 		}
 	
-	var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
+	var text = this.add.text(10, this.world.height-30, "Alpha Version C:1-3", {fill: 'white'});
 	text.scale.set(1);
 	
 	this.createWeapon();
 	this.createText();
 	}
+
 //}
 };
 

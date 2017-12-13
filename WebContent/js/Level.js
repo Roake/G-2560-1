@@ -16,10 +16,10 @@ Level.prototype.create = function() {
 	background.fixedToCamera = true;
 	this.map = this.game.add.tilemap("c1-1");
 	this.map.addTilesetImage('industrial.v1');
-
+//	this.map.addTilesetImage('tileset4');
 	this.maplayer = this.map.createLayer("TL1");
 	this.maplayer1 = this.map.createLayer("TL2");
-	this.maplayer2 = this.map.createLayer("TL3");
+
 
 	this.maplayer.resizeWorld();
 	this.map.setCollisionBetween(0,1000,true,this.maplayer);
@@ -46,7 +46,7 @@ Level.prototype.create = function() {
 			this.goal.add(g);
 		}
 	
-	var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
+	var text = this.add.text(10, this.world.height-30, "Alpha Version C:1-1", {fill: 'white'});
 	text.scale.set(1);
 	
 	this.createWeapon();

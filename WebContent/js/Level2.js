@@ -23,7 +23,7 @@ b.scale.set(0.8);
 
 	this.maplayer = this.map.createLayer("TL1");
 	this.maplayer1 = this.map.createLayer("TL2");
-	this.maplayer2 = this.map.createLayer("TL3");
+	
 
 	this.maplayer.resizeWorld();
 	this.map.setCollisionBetween(0,1000,true,this.maplayer);
@@ -53,7 +53,7 @@ b.scale.set(0.8);
 			this.enemies.add(b);
 		}
 	
-	var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
+	var text = this.add.text(10, this.world.height-30, "Alpha Version C:1-2", {fill: 'white'});
 	text.scale.set(1);
 	
 	this.createWeapon();
@@ -83,6 +83,7 @@ Level2.prototype.update = function() {
 	this.game.physics.arcade.collide(this.player,this.maplayer);
 	this.game.physics.arcade.collide(this.enemies,this.maplayer);
 	this.game.physics.arcade.collide(this.goal,this.maplayer);
+	this.physics.arcade.collide(this.player,this.goal,this.Next,null,this);
 	/*if (input.keyboard.isDown) {
 		var dx = (pointer.worldX - this.player.x) * 2;
 		if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
@@ -102,12 +103,12 @@ Level2.prototype.update = function() {
 					if(this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
 				this.player.play("ffb");}} 
 		 }else if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
-			this.player.body.velocity.x = -120;
+			this.player.body.velocity.x = -200;
 			this.player.scale.x = -0.32;
 			this.player.play("walk");
 	
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
-			this.player.body.velocity.x = 120;
+			this.player.body.velocity.x = 200;
 			this.player.scale.x = 0.32;
 			this.player.play("walk");
 			
