@@ -352,6 +352,12 @@
       "key": "BB",
       "url": "assets/images/c1-4BG.png",
       "overwrite": false
+    },
+    {
+      "type": "audio",
+      "key": "lift",
+      "urls": ["assets/audio/lift.ogg"],
+      "autoDecode": true
     }
   ],
   "level": [],
@@ -362,7 +368,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513142147212",
+    "generated": "1513150135049",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

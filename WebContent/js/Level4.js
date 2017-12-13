@@ -14,6 +14,8 @@ Level4.prototype.create = function() {
 	background = this.add.tileSprite(0, 0, 1024, 768, "BB");
 	background.scale.set(1);
 	background.fixedToCamera = true;
+	this.lift = this.add.audio("lift");
+	this.lift.play();
 	this.map = this.game.add.tilemap("c1-4");
 	this.map.addTilesetImage('industrial.v1');
 	
