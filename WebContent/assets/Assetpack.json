@@ -349,7 +349,7 @@
     },
     {
       "type": "image",
-      "key": "c1-4BG",
+      "key": "BB",
       "url": "assets/images/c1-4BG.png",
       "overwrite": false
     }
@@ -362,7 +362,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513141282351",
+    "generated": "1513142147212",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
