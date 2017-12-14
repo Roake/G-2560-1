@@ -130,39 +130,27 @@ Level.prototype.createText = function (){
 }
 Level.prototype.WIN1 = function() {
 	msgTxt.loadTexture("WIN1-1",0);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
 			this.input.onDown.add(this.SGT2, this);
 		}
 Level.prototype.SGT2 = function() {
 	msgTxt.loadTexture("SGT1-2",0);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
 			this.input.onDown.add(this.SGT3, this);
 		}
 Level.prototype.SGT3 = function() {
 	msgTxt.loadTexture("SGT1-3",0);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
 			this.input.onDown.add(this.SGT4, this);
 		}	
 Level.prototype.SGT4 = function() {
 	msgTxt.loadTexture("SGT1-4",0);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
 			this.input.onDown.add(this.SGT5, this);
 		}
 Level.prototype.SGT5 = function() {
 	msgTxt.loadTexture("SGT1-5",0);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
 			this.input.onDown.add(this.WIN2, this);
 		}
 Level.prototype.WIN2 = function() {
 	msgTxt.loadTexture("WIN1-2",0);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
-			this.input.onDown.add(this.destroySprite, this);
+				this.input.onDown.add(this.destroySprite, this);
 		}
 function destroySprite (sprite) {
     this.sprite.destroy();
