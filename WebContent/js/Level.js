@@ -122,11 +122,12 @@ Level.prototype.update = function() {
 
 //ด้านล่างนี้เดี๋ยวซ่อมเองนะ อย่าลืมล่ะ (บอกตัวเอง)
 Level.prototype.createText = function (){
-	msgTxt  = this.add.sprite(this.world.centerX, this.world.centerY,
+	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
 	"SGT1-1");
 	msgTxt.scale.set(1);
 	msgTxt.anchor.set(0.5,0.5);
 	this.input.onDown.add(this.WIN1, this);
+	this.input.onDown.add(this.DES, this);
 }
 Level.prototype.WIN1 = function() {
 	msgTxt.loadTexture("WIN1-1",0);
@@ -149,13 +150,13 @@ Level.prototype.SGT5 = function() {
 			this.input.onDown.add(this.WIN2, this);
 		}
 Level.prototype.WIN2 = function() {
-	msgTxt.loadTexture("WIN1-2",0);
+	msgTxt.loadTexture("WIN1-2",this);
+
 	this.input.onDown.add(this.DES, this);
 		}
 Level.prototype.DES = function() {
-	msgTxt.visible = false; 
+	msgTxt.destroy(); 
 }
-//
 
 Level.prototype.addPlayer = function(x, y) {
 	
