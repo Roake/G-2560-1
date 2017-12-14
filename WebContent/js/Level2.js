@@ -24,7 +24,9 @@ b.scale.set(0.8);
 	this.maplayer = this.map.createLayer("TL1");
 	this.maplayer1 = this.map.createLayer("TL2");
 	
-
+	this.gun = this.add.audio("gun");
+	this.gun.allowMultiple=true;
+	
 	this.maplayer.resizeWorld();
 	this.map.setCollisionBetween(0,1000,true,this.maplayer);
 	this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -144,11 +146,16 @@ Level2.prototype.addPlayer = function(x, y) {
 	
 	
 };
-Level2.prototype.fireWeaponback = function (){
-	this.weapon2.fire();
+Level2.prototype.fireWeaponback = function (){if(this.weapon2.fire()!=false){
+	this.gun.play();
+}
+
+this.weapon2.fire();
 };
-Level2.prototype.fireWeapon = function (){
-	this.weapon1.fire();
+Level2.prototype.fireWeapon = function (){if(this.weapon1.fire()!=false){
+	this.gun.play();
+}
+this.weapon1.fire();
 };
 
 Level2.prototype.addDummy = function(x, y) {
