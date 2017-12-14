@@ -382,6 +382,12 @@
       "key": "hitmark",
       "url": "assets/images/hitmark.png",
       "overwrite": false
+    },
+    {
+      "type": "audio",
+      "key": "sewer",
+      "urls": ["assets/audio/sewer.ogg"],
+      "autoDecode": true
     }
   ],
   "level": [],
@@ -392,7 +398,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513227888360",
+    "generated": "1513277992427",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

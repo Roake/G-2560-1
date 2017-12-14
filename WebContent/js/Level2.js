@@ -57,23 +57,11 @@ b.scale.set(0.8);
 	
 	var text = this.add.text(10, this.world.height-30, "Alpha Version C:1-2", {fill: 'white'});
 	text.scale.set(1);
-	
-	this.createWeapon();
-	
-	}
+		this.createWeapon();
+		}
 	
 }
 
-Level2.prototype.onCollide = function(a,bullet){
-	
-	bullet.kill();
-	
-	exp = this.add.sprite(a.x, a.y,"hitmark");
-	exp.anchor.set(0.5,0.5);
-	exp.animations.add("all",null,12,false).play().killOnComplete=true;
-	this.hit.play();
-	};
-	
 Level2.prototype.createWeapon = function() {
 	this.weapon1 = this.add.weapon(100, "bullet",10);	
 	this.weapon2 = this.add.weapon(100, "bullet",10);	
@@ -96,8 +84,8 @@ Level2.prototype.update = function() {
 	this.game.physics.arcade.collide(this.enemies,this.maplayer);
 	this.game.physics.arcade.collide(this.goal,this.maplayer);
 	this.physics.arcade.collide(this.player,this.goal,this.Next,null,this);
-//	this.physics.arcade.collide(this.a,this.weapon1.bullets,this.onCollide,null,this);
-//	this.physics.arcade.collide(this.a,this.weapon2.bullets,this.onCollide,null,this);
+	this.physics.arcade.collide(this.enemy1,this.weapon1.bullets,this.onCollide,null,this);
+	this.physics.arcade.collide(this.enemy2,this.weapon2.bullets,this.onCollide,null,this);
 	/*if (input.keyboard.isDown) {
 		var dx = (pointer.worldX - this.player.x) * 2;
 		if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
@@ -171,7 +159,7 @@ this.weapon1.fire();
 };
 
 Level2.prototype.addDummy = function(x, y) {
-		var a = this.add.sprite(x, y,
+	var a = this.add.sprite(x, y,
 	"Dummy");
 		a.anchor.set(1, 0.56);
 a.scale.set(0.3);
@@ -180,10 +168,21 @@ return a;
 };
 
 Level2.prototype.Next = function(player,goal){ 
-	
 	this.game.state.start("Level3");
+	}
+
+Level2.prototype.onCollide = function(enemy1,bullet){
+	explosion = this.add.audio("lift",0.5,false);
+	if(enemy1.kill() !=false){
+	explosion.play();
+	}
+	bullet.kill();
+	bomb = this.add.sprite(alien.x,alien.y,"explosjon3");
+	bomb.anchor.set(0.5);
+	bomb.scale.set(1);
+	bomb.animations.add("bork").play(12,false,true);
+	};
 	
-}
 
 Level2.prototype.addGoal = function(x, y) {
 	var c = this.add.sprite(x, y, "go");
@@ -204,7 +203,7 @@ function gframes(key, n) {
 };
 function kframes(key, n) {
 	f = [];
-	for (var i = 1; i <= n; i++) {
+	for (var i = 4; i <= n; i++) {
 		f.push(key + "_" + "00" + i);
 	}
 	return f;

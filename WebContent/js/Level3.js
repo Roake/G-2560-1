@@ -51,7 +51,7 @@ Level3.prototype.create = function() {
 	text.scale.set(1);
 	
 	this.createWeapon();
-	this.createText();
+
 	}
 
 //}
@@ -120,72 +120,6 @@ Level3.prototype.update = function() {
 			this.player.play("idle");
 		}
 };
-
-//ด้านล่างนี้เดี๋ยวซ่อมเองนะ อย่าลืมล่ะ (บอกตัวเอง)
-Level3.prototype.createText = function (){
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-	"SGT1-1",this.WIN1, this);
-	msgTxt.scale.set(1);
-	msgTxt.anchor.set(0.5,0.5);
-	if(msgTxt.events.onInputDown){
-		msgTxt.destroy();
-	}
-}
-Level3.prototype.WIN1 = function() {
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-			"WIN1-1",this.SGT2, this);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
-			if(msgTxt.events.onInputDown){
-				msgTxt.destroy();
-			}
-		}
-Level3.prototype.SGT2 = function() {
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-			"SGT1-2",this.SGT3, this);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
-			if(msgTxt.events.onInputDown){
-				msgTxt.destroy();
-			}
-		}
-Level3.prototype.SGT3 = function() {
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-			"SGT1-3",this.SGT4, this);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
-			if(msgTxt.events.onInputDown){
-				msgTxt.destroy();
-			}
-		}	
-Level3.prototype.SGT4 = function() {
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-			"SGT1-4",this.SGT5, this);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
-			if(msgTxt.events.onInputDown){
-				msgTxt.destroy();
-			}
-		}
-Level3.prototype.SGT5 = function() {
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-			"SGT1-5",this.WIN2, this);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
-			if(msgTxt.events.onInputDown){
-				msgTxt.destroy();
-			}
-		}
-Level3.prototype.WIN2 = function() {
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-			"WIN1-2",destroySprite, this);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
-		}
-function destroySprite (sprite) {
-    this.sprite.destroy();
-}
-//
 
 Level3.prototype.addPlayer = function(x, y) {
 	

@@ -19,6 +19,9 @@ Level.prototype.create = function() {
 //	this.map.addTilesetImage('tileset4');
 	this.maplayer = this.map.createLayer("TL1");
 	this.maplayer1 = this.map.createLayer("TL2");
+	this.sewer = this.add.sound("sewer",0.6,true);
+	this.sewer.play();
+
 	this.gun = this.add.audio("gun");
 	this.gun.allowMultiple=true;
 	this.maplayer.resizeWorld();
@@ -123,68 +126,36 @@ Level.prototype.update = function() {
 //ด้านล่างนี้เดี๋ยวซ่อมเองนะ อย่าลืมล่ะ (บอกตัวเอง)
 Level.prototype.createText = function (){
 	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-	"SGT1-1",this.WIN1, this);
+	"SGT1-1");
 	msgTxt.scale.set(1);
 	msgTxt.anchor.set(0.5,0.5);
-	if(msgTxt.events.onInputDown){
-		msgTxt.destroy();
+	this.input.onDown.add(this.WIN1, this);
+	this.time.events.add(10000,function(){this.destroy();},msgTxt);
 	}
-}
 Level.prototype.WIN1 = function() {
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-			"WIN1-1",this.SGT2, this);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
-			if(msgTxt.events.onInputDown){
-				msgTxt.destroy();
-			}
+	msgTxt.loadTexture("WIN1-1",0);
+			this.input.onDown.add(this.SGT2, this);
 		}
 Level.prototype.SGT2 = function() {
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-			"SGT1-2",this.SGT3, this);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
-			if(msgTxt.events.onInputDown){
-				msgTxt.destroy();
-			}
+	msgTxt.loadTexture("SGT1-2",0);
+			this.input.onDown.add(this.SGT3, this);
 		}
 Level.prototype.SGT3 = function() {
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-			"SGT1-3",this.SGT4, this);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
-			if(msgTxt.events.onInputDown){
-				msgTxt.destroy();
-			}
+	msgTxt.loadTexture("SGT1-3",0);
+			this.input.onDown.add(this.SGT4, this);
 		}	
 Level.prototype.SGT4 = function() {
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-			"SGT1-4",this.SGT5, this);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
-			if(msgTxt.events.onInputDown){
-				msgTxt.destroy();
-			}
+	msgTxt.loadTexture("SGT1-4",0);
+			this.input.onDown.add(this.SGT5, this);
 		}
 Level.prototype.SGT5 = function() {
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-			"SGT1-5",this.WIN2, this);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
-			if(msgTxt.events.onInputDown){
-				msgTxt.destroy();
-			}
+	msgTxt.loadTexture("SGT1-5",0);
+			this.input.onDown.add(this.WIN2, this);
 		}
 Level.prototype.WIN2 = function() {
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-			"WIN1-2",destroySprite, this);
-			msgTxt.scale.set(1);
-			msgTxt.anchor.set(0.5,0.5);
+	msgTxt.loadTexture("WIN1-2",0);
 		}
-function destroySprite (sprite) {
-    this.sprite.destroy();
-}
-//
+
 
 Level.prototype.addPlayer = function(x, y) {
 	
@@ -254,7 +225,7 @@ function gframes(key, n) {
 };
 function kframes(key, n) {
 	f = [];
-	for (var i = 1; i <= n; i++) {
+	for (var i = 4; i <= n; i++) {
 		f.push(key + "_" + "00" + i);
 	}
 	return f;
