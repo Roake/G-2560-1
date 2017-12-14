@@ -57,10 +57,8 @@ b.scale.set(0.8);
 	
 	var text = this.add.text(10, this.world.height-30, "Alpha Version C:1-2", {fill: 'white'});
 	text.scale.set(1);
-	
-	this.createWeapon();
-	
-	}
+		this.createWeapon();
+		}
 	
 }
 
@@ -173,16 +171,16 @@ Level2.prototype.Next = function(player,goal){
 	this.game.state.start("Level3");
 	}
 
-Level2.prototype.onCollide = function(enemy1,bullet){
-	explosion = this.add.audio("Iceberg1",0.5,false);
-	if(alien.kill() !=false){
+Level2.prototype.onCollide = function(enemies,bullet){
+	explosion = this.add.audio("lift",0.5,false);
+	if(enemies.kill() !=false){
 	explosion.play();
 	}
 	bullet.kill();
 	bomb = this.add.sprite(alien.x,alien.y,"explosjon3");
 	bomb.anchor.set(0.5);
-	bomb.scale.set(2);
-	bomb.animations.add("knock").play(12,false,true);
+	bomb.scale.set(1);
+	bomb.animations.add("bork").play(12,false,true);
 	};
 	
 
@@ -195,19 +193,7 @@ Level2.prototype.addGoal = function(x, y) {
 	c.body.collideWorldBounds = true;
 	return c;
 };
-Level2.prototype.onCollide = function(enemie1,bullet){
-	explosion = this.add.audio("lift",0.5,false);
-	if(alien.kill() !=false){
-	explosion.play();
-	}
-	bullet.kill();
-	bomb = this.add.sprite(alien.x,alien.y,"Bomb");
-	bomb.anchor.set(0.5);
-	bomb.scale.set(2);
-	bomb.animations.add("knock").play(12,false,true);
-	this.game.score++;
-	this.scoreText.text = ''+this.game.score;
-	};
+
 function gframes(key, n) {
 	f = [];
 	for (var i = 0; i <= n; i++) {
