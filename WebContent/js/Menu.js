@@ -21,6 +21,8 @@ Menu.prototype.create = function() {
 		var f = this.add.sprite(930, 670,"F5");
 		f.anchor.set(0.5, 0.5);
 		f.scale.set (0.3);
+
+		
 		
 		var start = this.add.button(277,370,"Start-Icon",this.Start, this);
 		start.anchor.set(0.5,0.5);

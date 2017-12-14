@@ -19,7 +19,8 @@ Level.prototype.create = function() {
 //	this.map.addTilesetImage('tileset4');
 	this.maplayer = this.map.createLayer("TL1");
 	this.maplayer1 = this.map.createLayer("TL2");
-	this.sewer = this.add.sound("sewer",0.6,true);
+	
+	this.sewer = this.add.sound("c1-1bgm",0.5,true);
 	this.sewer.play();
 
 	this.gun = this.add.audio("gun");
