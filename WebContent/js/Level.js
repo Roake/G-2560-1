@@ -20,8 +20,8 @@ Level.prototype.create = function() {
 	this.maplayer = this.map.createLayer("TL1");
 	this.maplayer1 = this.map.createLayer("TL2");
 	
-	this.sewer = this.add.sound("c1-1bgm",0.5,true);
-	this.sewer.play();
+	var sewer = this.add.sound("c1-1bgm",0.5,true,true);
+	sewer.play();
 
 	this.gun = this.add.audio("gun");
 	this.gun.allowMultiple=true;
@@ -132,6 +132,7 @@ Level.prototype.createText = function (){
 	msgTxt.anchor.set(0.5,0.5);
 	this.input.onDown.add(this.WIN1, this);
 	this.time.events.add(10000,function(){this.destroy();},msgTxt);
+	
 	}
 Level.prototype.WIN1 = function() {
 	msgTxt.loadTexture("WIN1-1",0);
@@ -155,6 +156,7 @@ Level.prototype.SGT5 = function() {
 		}
 Level.prototype.WIN2 = function() {
 	msgTxt.loadTexture("WIN1-2",0);
+	
 		}
 
 

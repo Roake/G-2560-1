@@ -17,11 +17,12 @@ Level3.prototype.create = function() {
 	
 	this.map = this.game.add.tilemap("c1-3");
 	this.map.addTilesetImage('industrial.v1');
-
+	
 	this.maplayer = this.map.createLayer("TL1");
 	this.maplayer1 = this.map.createLayer("TL2");
 
-
+	this.gun = this.add.audio("gun");
+	this.gun.allowMultiple=true;
 	this.maplayer.resizeWorld();
 	this.map.setCollisionBetween(0,1000,true,this.maplayer);
 	this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -62,13 +63,13 @@ Level3.prototype.createWeapon = function() {
 	this.weapon2 = this.add.weapon(100, "bullet",10);	
 	this.weapon1.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
 	this.weapon1.trackSprite(this.player, 75, -10);
-	this.weapon1.bulletSpeed = 2000;
+	this.weapon1.bulletSpeed = 700;
 	this.weapon1.fireAngle = 0;
 	this.weapon1.rate = 90000000000000;
 	this.weapon1.bulletGravity.y = -1000;
 	this.weapon2.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
 	this.weapon2.trackSprite(this.player, -75,-10);
-	this.weapon2.bulletSpeed = 2000;
+	this.weapon2.bulletSpeed = 700;
 	this.weapon2.fireAngle = 180;
 	this.weapon2.rate = 90000000000000;
 	this.weapon2.bulletGravity.y = -1000;
@@ -140,9 +141,16 @@ Level3.prototype.addPlayer = function(x, y) {
 	
 };
 Level3.prototype.fireWeaponback = function (){
+	if(this.weapon2.fire()!=false){
+		this.gun.play();
+	}
+	
 	this.weapon2.fire();
 };
 Level3.prototype.fireWeapon = function (){
+	if(this.weapon1.fire()!=false){
+		this.gun.play();
+	}
 	this.weapon1.fire();
 };
 
