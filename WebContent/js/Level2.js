@@ -192,7 +192,7 @@ function gframes(key, n) {
 };
 function kframes(key, n) {
 	f = [];
-	for (var i = 3; i <= n; i++) {
+	for (var i = 4; i <= n; i++) {
 		f.push(key + "_" + "00" + i);
 	}
 	return f;
