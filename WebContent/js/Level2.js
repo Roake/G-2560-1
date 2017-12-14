@@ -64,6 +64,16 @@ b.scale.set(0.8);
 	
 }
 
+Level2.prototype.onCollide = function(a,bullet){
+	
+	bullet.kill();
+	
+	exp = this.add.sprite(a.x, a.y,"hitmark");
+	exp.anchor.set(0.5,0.5);
+	exp.animations.add("all",null,12,false).play().killOnComplete=true;
+	this.hit.play();
+	};
+	
 Level2.prototype.createWeapon = function() {
 	this.weapon1 = this.add.weapon(100, "bullet",10);	
 	this.weapon2 = this.add.weapon(100, "bullet",10);	
@@ -86,6 +96,8 @@ Level2.prototype.update = function() {
 	this.game.physics.arcade.collide(this.enemies,this.maplayer);
 	this.game.physics.arcade.collide(this.goal,this.maplayer);
 	this.physics.arcade.collide(this.player,this.goal,this.Next,null,this);
+//	this.physics.arcade.collide(this.a,this.weapon1.bullets,this.onCollide,null,this);
+//	this.physics.arcade.collide(this.a,this.weapon2.bullets,this.onCollide,null,this);
 	/*if (input.keyboard.isDown) {
 		var dx = (pointer.worldX - this.player.x) * 2;
 		if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
