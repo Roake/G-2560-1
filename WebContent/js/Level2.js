@@ -171,9 +171,9 @@ Level2.prototype.Next = function(player,goal){
 	this.game.state.start("Level3");
 	}
 
-Level2.prototype.onCollide = function(enemies,bullet){
+Level2.prototype.onCollide = function(enemy1,bullet){
 	explosion = this.add.audio("lift",0.5,false);
-	if(enemies.kill() !=false){
+	if(enemy1.kill() !=false){
 	explosion.play();
 	}
 	bullet.kill();
