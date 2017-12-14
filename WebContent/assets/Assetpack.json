@@ -364,6 +364,12 @@
       "key": "gun",
       "urls": ["assets/audio/gun.ogg"],
       "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "0039",
+      "urls": ["assets/audio/0039.mp3"],
+      "autoDecode": true
     }
   ],
   "level": [],
@@ -374,7 +380,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513162424239",
+    "generated": "1513223564028",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
