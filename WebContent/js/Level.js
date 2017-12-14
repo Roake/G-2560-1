@@ -127,6 +127,7 @@ Level.prototype.createText = function (){
 	msgTxt.scale.set(1);
 	msgTxt.anchor.set(0.5,0.5);
 	this.input.onDown.add(this.WIN1, this);
+	this.time.events.add(10000,function(){this.destroy();},msgTxt);
 	}
 Level.prototype.WIN1 = function() {
 	msgTxt.loadTexture("WIN1-1",0);
@@ -150,12 +151,9 @@ Level.prototype.SGT5 = function() {
 		}
 Level.prototype.WIN2 = function() {
 	msgTxt.loadTexture("WIN1-2",0);
-	this.input.onDown.add(this.DES, this);
 		}
-Level.prototype.DES = function() {
-	this.msgTxt.visible = false; 
-	}
-//FUCK!! I can't fix dialogue
+
+
 Level.prototype.addPlayer = function(x, y) {
 	
 	var t = this.add.sprite(x, y, "Winston");
