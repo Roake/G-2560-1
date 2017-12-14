@@ -16,7 +16,7 @@ Level4.prototype.create = function() {
 	background.fixedToCamera = true;
 	this.lift = this.add.audio("lift");
 	this.lift.play();
-	this.music = this.add.audio("0039");
+	this.music = this.add.audio("0039",0.5);
 	this.music.loopFull()
 	this.map = this.game.add.tilemap("c1-4");
 	this.map.addTilesetImage('industrial.v1');

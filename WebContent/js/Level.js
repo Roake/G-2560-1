@@ -153,9 +153,8 @@ Level.prototype.WIN2 = function() {
 	this.input.onDown.add(this.DES, this);
 		}
 Level.prototype.DES = function() {
-	msgTxt.visible = false; 
-	return msgTxt;
-}
+	this.msgTxt.visible = false; 
+	}
 //FUCK!! I can't fix dialogue
 Level.prototype.addPlayer = function(x, y) {
 	
