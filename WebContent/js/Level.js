@@ -150,10 +150,10 @@ Level.prototype.SGT5 = function() {
 		}
 Level.prototype.WIN2 = function() {
 	msgTxt.loadTexture("WIN1-2",0);
-	msgTxt.events.onInputDown.add(destroySprite, this);
+	this.input.onDown.add(this.DES, this);
 		}
-function destroySprite (sprite) {
-   sprite.destroy();
+Level.prototype.DES = function() {
+	msgTxt.visible = false; 
 }
 //
 
@@ -225,7 +225,7 @@ function gframes(key, n) {
 };
 function kframes(key, n) {
 	f = [];
-	for (var i = 1; i <= n; i++) {
+	for (var i = 3; i <= n; i++) {
 		f.push(key + "_" + "00" + i);
 	}
 	return f;
