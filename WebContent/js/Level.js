@@ -150,10 +150,10 @@ Level.prototype.SGT5 = function() {
 		}
 Level.prototype.WIN2 = function() {
 	msgTxt.loadTexture("WIN1-2",0);
-				this.input.onDown.add(this.destroySprite, this);
+	msgTxt.events.onInputDown.add(destroySprite, this);
 		}
 function destroySprite (sprite) {
-    this.sprite.destroy();
+   sprite.destroy();
 }
 //
 
