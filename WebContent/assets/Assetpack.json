@@ -162,12 +162,6 @@
       "format": "TILED_JSON"
     },
     {
-      "type": "tilemap",
-      "key": "test",
-      "url": "assets/map/test.json",
-      "format": "TILED_JSON"
-    },
-    {
       "type": "spritesheet",
       "key": "industrial.v1",
       "url": "assets/map/industrial.v1.png",
@@ -401,7 +395,7 @@
     },
     {
       "type": "spritesheet",
-      "key": "TS4",
+      "key": "tileset4",
       "url": "assets/map/tileset4.png",
       "frameWidth": 0,
       "frameHeight": 0,
@@ -414,6 +408,12 @@
       "key": "ost",
       "urls": ["assets/audio/menu.ogg"],
       "autoDecode": true
+    },
+    {
+      "type": "tilemap",
+      "key": "test",
+      "url": "assets/map/test.json",
+      "format": "TILED_JSON"
     }
   ],
   "level": [],
@@ -424,7 +424,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513331958852",
+    "generated": "1513340041478",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
