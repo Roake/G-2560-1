@@ -20,6 +20,7 @@ Setting.prototype.create = function (){
 	var sprite = this.add.sprite(this.world.centerX, this.world.centerY,
 	"SetPage");
 sprite.anchor.set(0.5, 0.5);
+	this.cache.removeSound("ost");
 
 	var text = this.add.text(this.world.centerX-100, this.world.centerY, "Not Available in Alpha Version", {fill: 'white'});
 	text.scale.set(1);

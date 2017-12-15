@@ -11,6 +11,7 @@ Cutscene.prototype = proto;
 
 
 Cutscene.prototype.create = function() {
+	this.cache.removeSound("ost");
 		var p1 = this.add.button(this.world.centerX, this.world.centerY,
 	"PG1",this.PG2, this);
 p1.anchor.set(0.5, 0.5);

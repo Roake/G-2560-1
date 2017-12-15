@@ -42,18 +42,21 @@ Menu.prototype.create = function() {
 	};
 Menu.prototype.Start = function(x,y) {
 	this.game.state.start("Cutscene");
+	
 	}
 
 Menu.prototype.Set = function(x,y) {
 		this.game.state.start("Setting");
+		
 	}
 	
 Menu.prototype.Dev = function(x,y) {
 	this.game.state.start("Dev");
+
 }
 
 
 Menu.prototype.startGame = function() {
 	this.game.state.start("Pick");
-	menu.stop();
+	
 };

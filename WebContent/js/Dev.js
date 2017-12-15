@@ -13,6 +13,7 @@ Dev.prototype = proto;
  */
 
 Dev.prototype.create = function() {
+	this.cache.removeSound("ost");
 	var sprite = this.add.sprite(this.world.centerX, this.world.centerY,
 	"DevPage");
 sprite.anchor.set(0.5, 0.5);
