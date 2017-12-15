@@ -414,6 +414,12 @@
       "key": "test",
       "url": "assets/map/test.json",
       "format": "TILED_JSON"
+    },
+    {
+      "type": "tilemap",
+      "key": "testmap",
+      "url": "assets/map/testmap.json",
+      "format": "TILED_JSON"
     }
   ],
   "level": [],
@@ -424,7 +430,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513340041478",
+    "generated": "1513340215254",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
