@@ -21,7 +21,9 @@ Menu.prototype.create = function() {
 		var f = this.add.sprite(930, 670,"F5");
 		f.anchor.set(0.5, 0.5);
 		f.scale.set (0.3);
-
+		
+		var menu = this.add.sound("menu",0.5,true,true);
+		menu.play();
 		
 		
 		var start = this.add.button(277,370,"Start-Icon",this.Start, this);
@@ -53,4 +55,5 @@ Menu.prototype.Dev = function(x,y) {
 
 Menu.prototype.startGame = function() {
 	this.game.state.start("Pick");
+	menu.stop();
 };

@@ -16,7 +16,7 @@ Level.prototype.create = function() {
 	background.fixedToCamera = true;
 	this.map = this.game.add.tilemap("c1-1");
 	this.map.addTilesetImage('industrial.v1');
-//	this.map.addTilesetImage('tileset4');
+//	this.map.addTilesetImage('TS4');
 	this.maplayer = this.map.createLayer("TL1");
 	this.maplayer1 = this.map.createLayer("TL2");
 	

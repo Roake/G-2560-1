@@ -24,7 +24,7 @@
         }, 
         {
          "draworder":"topdown",
-         "name":"OL1",
+         "name":"object",
          "objects":[
                 {
                  "gid":1585,
@@ -83,7 +83,7 @@
                  "type":"enemy2",
                  "visible":true,
                  "width":16,
-                 "x":952.666666666667,
+                 "x":952.667,
                  "y":236
                 }, 
                 {
@@ -107,8 +107,8 @@
                  "type":"enemy2",
                  "visible":true,
                  "width":16,
-                 "x":1377.33333333333,
-                 "y":361.333333333333
+                 "x":1377.33,
+                 "y":361.333
                 }, 
                 {
                  "gid":1562,
