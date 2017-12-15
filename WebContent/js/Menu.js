@@ -22,7 +22,7 @@ Menu.prototype.create = function() {
 		f.anchor.set(0.5, 0.5);
 		f.scale.set (0.3);
 		
-		var menu = this.add.sound("menu",0.5,true,true);
+		var menu = this.add.sound("ost",0.5,true,true);
 		menu.play();
 		
 		
