@@ -165,7 +165,7 @@ Level2.prototype.addDummy = function(x, y) {
 	var a = this.add.sprite(x, y,
 	"Dummy");
 		a.anchor.set(1, 0.56);
-a.scale.set(0.3);
+a.scale.set(0.2);
 a.smoothed=false;
 return a;
 };

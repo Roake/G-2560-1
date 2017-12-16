@@ -170,11 +170,11 @@ this.game.physics.arcade.enable(a);
 return a;
 };
 
-//Level4.prototype.Next = function(player,goal){ 
-//	
-//	this.game.state.start("Level5");
-//	
-//}
+Level4.prototype.Next = function(player,goal){ 
+	this.music.stop();
+	this.game.state.start("Level5");
+	
+}
 
 Level4.prototype.addGoal = function(x, y) {
 	var c = this.add.sprite(x, y, "go");

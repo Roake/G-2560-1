@@ -12,6 +12,7 @@ window.onload = function() {
 	game.state.add("Level2", Level2);
 	game.state.add("Level3", Level3);
 	game.state.add("Level4", Level4);
+	game.state.add("Level5", Level5);
 	game.state.add("Cutscene", Cutscene);
 	game.state.add("EndCutscene", EndCutscene);
 	game.state.add("Dev", Dev);
