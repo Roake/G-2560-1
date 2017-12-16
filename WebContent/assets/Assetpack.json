@@ -420,6 +420,12 @@
       "key": "testmap",
       "url": "assets/map/testmap.json",
       "format": "TILED_JSON"
+    },
+    {
+      "type": "image",
+      "key": "medkit",
+      "url": "assets/images/medkit.png",
+      "overwrite": false
     }
   ],
   "level": [],
@@ -430,7 +436,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513340215254",
+    "generated": "1513454972186",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
