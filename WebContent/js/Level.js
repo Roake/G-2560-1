@@ -31,8 +31,9 @@ Level.prototype.create = function() {
 	this.game.physics.arcade.gravity.y = 1000;
 
 //if(this.game.character==1){
-	this.enemies = this.add.group();
+	this.bot = this.add.group();
 	this.goal=this.add.group();
+	this.enemy=this.add.group();
 	for (x  in this.map.objects.object) {
 	var obj = this.map.objects.object[x];
 	if (obj.type == "player") {
@@ -43,8 +44,14 @@ Level.prototype.create = function() {
 
 		if (obj.type == "bot") {
 			var a = this.addSGT(obj.x, obj.y);
-			this.enemies.add(a);
-		} if (obj.type == "goal") {
+			this.bot.add(a);
+		}
+		if(obj.type == "enemy1"){
+			var e = this.addEnemy(obj.x,obj.y);
+			this.enemy.add(e);
+		}
+
+		if (obj.type == "goal") {
 			// เพิ่ม sprite goal
 			var g = this.addGoal(obj.x,obj.y);
 			this.goal.add(g);
@@ -79,7 +86,8 @@ Level.prototype.createWeapon = function() {
 
 Level.prototype.update = function() {
 	this.game.physics.arcade.collide(this.player,this.maplayer);
-	this.game.physics.arcade.collide(this.enemies,this.maplayer);
+	this.game.physics.arcade.collide(this.enemy,this.maplayer);
+	this.game.physics.arcade.collide(this.bot,this.maplayer);
 	this.game.physics.arcade.collide(this.goal,this.maplayer);
 	this.physics.arcade.collide(this.player,this.goal,this.Next,null,this);
 	/*if (input.keyboard.isDown) {
@@ -102,20 +110,20 @@ Level.prototype.update = function() {
 				this.player.play("ffb");}} 
 		 }else if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
 			this.player.body.velocity.x = -200;
-			this.player.scale.x = -0.32;
+			this.player.scale.x = -0.23;
 			this.player.play("walk");
 	
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
 			this.player.body.velocity.x = 200;
-			this.player.scale.x = 0.32;
+			this.player.scale.x = 0.23;
 			this.player.play("walk");
 			
 		}
 		else if (this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
-			if(this.player.scale.x == -0.32){
+			if(this.player.scale.x == -0.23){
 			this.player.play("attack");
 			this.fireWeaponback();}
-			if(this.player.scale.x == 0.32){
+			if(this.player.scale.x == 0.23){
 				this.player.play("attack");
 				this.fireWeapon();}
 		}else {
@@ -169,7 +177,7 @@ Level.prototype.addPlayer = function(x, y) {
 	t.animations.add("attack", kframes("Winston-Fire", 5), 10, true);
 	t.animations.add("ffb", gframes("Winston-Fire-From-Above", 5), 20, true);
 	t.anchor.set(0.5, 0.5);
-	t.scale.set (0.32);
+	t.scale.set (0.23);
 	t.smoothed = false;
 	this.game.physics.arcade.enable(t);
 	t.play("idle");
@@ -178,6 +186,26 @@ Level.prototype.addPlayer = function(x, y) {
 	
 	
 };
+
+Level.prototype.addEnemy = function(x, y) {
+	
+	var t = this.add.sprite(x, y, "Wehrmacht");
+	t.animations.add("idle", gframes("Wehrmacht-Idle", 2),2, true);
+	t.animations.add("walk", gframes("Wehrmacht-Walk", 5), 5, true);
+	
+	t.animations.add("attack", kframes("Wehrmacht-Attack", 2), 10, true);
+	
+	t.anchor.set(0.5, 0.5);
+	t.scale.set (0.23);
+	t.smoothed = false;
+	this.game.physics.arcade.enable(t);
+	t.play("idle");
+	t.body.collideWorldBounds = true;
+	return t;
+	
+	
+};
+
 Level.prototype.fireWeaponback = function (){
 	if(this.weapon2.fire()!=false){
 		this.gun.play();
@@ -196,7 +224,7 @@ Level.prototype.addSGT = function(x, y) {
 		var a = this.add.sprite(x, y,
 	"SGTMcFry");
 		a.anchor.set(-1, 0.5);
-a.scale.set(0.3);
+a.scale.set(0.23);
 a.animations.add("idle").play(1,true);
 a.smoothed=false;
 this.game.physics.arcade.enable(a);
