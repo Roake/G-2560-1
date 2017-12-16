@@ -69,13 +69,16 @@ Level2.prototype.createWeapon = function() {
 	this.weapon1.trackSprite(this.player, 75, -10);
 	this.weapon1.bulletSpeed = 700;
 	this.weapon1.fireAngle = 0;
-	this.weapon1.rate = 90000000000000;
+	this.weapon1.rate = 500;
+	
+	this.weapon1.bulletAngleOffset=90;
 	this.weapon1.bulletGravity.y = -1000;
 	this.weapon2.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
 	this.weapon2.trackSprite(this.player, -75,-10);
 	this.weapon2.bulletSpeed = 700;
 	this.weapon2.fireAngle = 180;
-	this.weapon2.rate = 90000000000000;
+	this.weapon2.bulletAngleOffset=-270;
+	this.weapon2.rate = 500;
 	this.weapon2.bulletGravity.y = -1000;
 	}
 
@@ -106,20 +109,20 @@ Level2.prototype.update = function() {
 				this.player.play("ffb");}} 
 		 }else if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
 			this.player.body.velocity.x = -200;
-			this.player.scale.x = -0.32;
+			this.player.scale.x = -0.2;
 			this.player.play("walk");
 	
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
 			this.player.body.velocity.x = 200;
-			this.player.scale.x = 0.32;
+			this.player.scale.x = 0.2;
 			this.player.play("walk");
 			
 		}
 		else if (this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
-			if(this.player.scale.x == -0.32){
+			if(this.player.scale.x == -0.2){
 			this.player.play("attack");
 			this.fireWeaponback();}
-			if(this.player.scale.x == 0.32){
+			if(this.player.scale.x == 0.2){
 				this.player.play("attack");
 				this.fireWeapon();}
 		}else {
@@ -137,7 +140,7 @@ Level2.prototype.addPlayer = function(x, y) {
 	t.animations.add("attack", kframes("Winston-Fire", 5), 10, true);
 	t.animations.add("ffb", gframes("Winston-Fire-From-Above", 5), 20, true);
 	t.anchor.set(0.5, 0.5);
-	t.scale.set (0.32);
+	t.scale.set (0.2);
 	t.smoothed = false;
 	this.game.physics.arcade.enable(t);
 	t.play("idle");
