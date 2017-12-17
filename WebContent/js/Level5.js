@@ -67,7 +67,7 @@ Level5.prototype.create = function() {
 			this.goal.add(g);
 		}
 	
-	var text = this.add.text(10, this.world.height-30, "Alpha Version C:1-1", {fill: 'white'});
+	var text = this.add.text(10, this.world.height-30, "Alpha Version C:2-1", {fill: 'white'});
 	text.scale.set(1);
 	
 	this.createWeapon();
@@ -104,6 +104,7 @@ Level5.prototype.update = function() {
 	this.game.physics.arcade.collide(this.goal,this.maplayer);
 	this.physics.arcade.collide(this.player,this.goal,this.Next,null,this);
 	this.game.physics.arcade.collide(this.hp,this.maplayer);
+	this.physics.arcade.collide(this.hp,this.player,this.playerCollideHp,null,this);
 	/*if (input.keyboard.isDown) {
 		var dx = (pointer.worldX - this.player.x) * 2;
 		if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
@@ -146,6 +147,22 @@ Level5.prototype.update = function() {
 		}
 };
 
+Level5.prototype.addHealth = function(hp) {
+
+    //score text
+    addHeal = this.add.text(hp.x, hp.y, 'HP+', {
+        fill: 'yellow'
+    });
+    delay = this.add.tween(addHeal);
+    delay.to({
+        y: hp.y - 20
+    }, 500, "Linear", true, 500);
+    delay.onComplete.add(function(addHeal) {
+        addHeal.kill();
+    }, this);
+    //kill the +1 on delay play complete
+}
+
 //ด้านล่างนี้เดี๋ยวซ่อมเองนะ อย่าลืมล่ะ (บอกตัวเอง)
 //Level5.prototype.createText = function (){
 //	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
@@ -181,6 +198,10 @@ Level5.prototype.update = function() {
 //	
 //		}
 
+Level5.prototype.playerCollideHp = function (player,hp){
+	hp.kill();
+	this.addHealth(hp);
+}
 
 Level5.prototype.addPlayer = function(x, y) {
 	
@@ -221,9 +242,10 @@ Level5.prototype.addEnemy = function(x, y) {
 };
 Level5.prototype.addHp = function(x,y){
 	var h = this.add.sprite(x,y,"medkit");
-	h.anchor.set(0.5,0.5);
-	h.scale.set(0.5);
+	h.anchor.set(0.5,0.25);
+	h.scale.set(0.05);
 	this.game.physics.arcade.enable(h);
+	
 	h.body.collideWorldBounds=true;
 	return h;
 	
