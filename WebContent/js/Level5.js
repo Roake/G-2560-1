@@ -22,7 +22,10 @@ Level5.prototype.create = function() {
 	
 	var sewer = this.add.sound("c1-1bgm",0.5,true,true);
 	sewer.play();
-
+	
+	
+	this.hitmark=this.add.audio("hit");
+	this.hitmark.allowMultiple=true;
 	this.gun = this.add.audio("gun");
 	this.gun.allowMultiple=true;
 	this.maplayer.resizeWorld();
@@ -107,7 +110,7 @@ Level5.prototype.update = function() {
 	this.physics.arcade.collide(this.player,this.goal,this.Next,null,this);
 	this.game.physics.arcade.collide(this.hp,this.maplayer);
 	this.physics.arcade.collide(this.hp,this.player,this.playerCollideHp,null,this);
-	this.physics.arcade.collide(this.aliens,this.weapon1.bullets,this.onCollide,null,this);
+	this.physics.arcade.collide(this.enemy,this.weapon1.bullets,this.onCollide,null,this);
 	/*if (input.keyboard.isDown) {
 		var dx = (pointer.worldX - this.player.x) * 2;
 		if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
@@ -256,8 +259,9 @@ Level5.prototype.addHp = function(x,y){
 }
 
 Level5.prototype.onCollide = function(enemy,bullet){
-	enemy.kill();
+
 	bullet.kill();
+	this.hitmark.play();
 	//this.game.score++;
 	
 //	this.scoreText.text = ''+this.game.score;

@@ -24,6 +24,8 @@ b.scale.set(0.8);
 	this.maplayer = this.map.createLayer("TL1");
 	this.maplayer1 = this.map.createLayer("TL2");
 	
+	this.hitmark = this.add.audio("hit");
+	this.hitmark.allowMultiple=true;
 	this.gun = this.add.audio("gun");
 	this.gun.allowMultiple=true;
 	
@@ -87,8 +89,9 @@ Level2.prototype.update = function() {
 	this.game.physics.arcade.collide(this.enemies,this.maplayer);
 	this.game.physics.arcade.collide(this.goal,this.maplayer);
 	this.physics.arcade.collide(this.player,this.goal,this.Next,null,this);
-	this.physics.arcade.collide(this.enemy1,this.weapon1.bullets,this.onCollide,null,this);
-	this.physics.arcade.collide(this.enemy2,this.weapon2.bullets,this.onCollide,null,this);
+	this.physics.arcade.collide(this.enemies,this.weapon1.bullets,this.onCollide,null,this);
+	this.physics.arcade.collide(this.enemies,this.weapon2.bullets,this.onCollide,null,this);
+
 	/*if (input.keyboard.isDown) {
 		var dx = (pointer.worldX - this.player.x) * 2;
 		if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
@@ -149,6 +152,19 @@ Level2.prototype.addPlayer = function(x, y) {
 	
 	
 };
+Level2.prototype.onCollide = function(enemies,bullet){
+
+		bullet.kill();
+		this.hitmark.play();
+		//this.game.score++;
+		
+//		this.scoreText.text = ''+this.game.score;
+		
+		//exp = this.add.sprite(alien.x, alien.y,"Explosion");
+		//exp.anchor.set(0.5);
+		//exp.animations.add("all",null,12,false).play().killOnComplete=true;
+		//this.boom.play();
+		};
 Level2.prototype.fireWeaponback = function (){if(this.weapon2.fire()!=false){
 	this.gun.play();
 }
@@ -174,16 +190,18 @@ Level2.prototype.Next = function(player,goal){
 	this.game.state.start("Level3");
 	}
 
-Level2.prototype.onCollide = function(enemy1,bullet){
-	explosion = this.add.audio("lift",0.5,false);
-	if(enemy1.kill() !=false){
-	explosion.play();
-	}
+Level2.prototype.onCollide = function(enemy,bullet){
+
 	bullet.kill();
-	bomb = this.add.sprite(alien.x,alien.y,"explosjon3");
-	bomb.anchor.set(0.5);
-	bomb.scale.set(1);
-	bomb.animations.add("bork").play(12,false,true);
+	this.hitmark.play();
+	//this.game.score++;
+	
+//	this.scoreText.text = ''+this.game.score;
+	
+	//exp = this.add.sprite(alien.x, alien.y,"Explosion");
+	//exp.anchor.set(0.5);
+	//exp.animations.add("all",null,12,false).play().killOnComplete=true;
+	//this.boom.play();
 	};
 	
 
