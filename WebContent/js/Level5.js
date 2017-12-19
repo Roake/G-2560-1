@@ -29,7 +29,7 @@ Level5.prototype.create = function() {
 	this.map.setCollisionBetween(0,1000,true,this.maplayer);
 	this.game.physics.startSystem(Phaser.Physics.ARCADE);
 	this.game.physics.arcade.gravity.y = 1000;
-
+	
 //if(this.game.character==1){
 	this.bot = this.add.group();
 	this.goal=this.add.group();
@@ -102,9 +102,12 @@ Level5.prototype.update = function() {
 	this.game.physics.arcade.collide(this.enemy,this.maplayer);
 	this.game.physics.arcade.collide(this.bot,this.maplayer);
 	this.game.physics.arcade.collide(this.goal,this.maplayer);
+//	this.game.physics.arcade.collide(this.weapon1.bullets,this.maplayer);
+//	this.game.physics.arcade.collide(this.weapon2.bullets,this.maplayer);
 	this.physics.arcade.collide(this.player,this.goal,this.Next,null,this);
 	this.game.physics.arcade.collide(this.hp,this.maplayer);
 	this.physics.arcade.collide(this.hp,this.player,this.playerCollideHp,null,this);
+	this.physics.arcade.collide(this.aliens,this.weapon1.bullets,this.onCollide,null,this);
 	/*if (input.keyboard.isDown) {
 		var dx = (pointer.worldX - this.player.x) * 2;
 		if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
@@ -240,6 +243,7 @@ Level5.prototype.addEnemy = function(x, y) {
 	
 	
 };
+
 Level5.prototype.addHp = function(x,y){
 	var h = this.add.sprite(x,y,"medkit");
 	h.anchor.set(0.5,0.25);
@@ -250,6 +254,20 @@ Level5.prototype.addHp = function(x,y){
 	return h;
 	
 }
+
+Level5.prototype.onCollide = function(enemy,bullet){
+	enemy.kill();
+	bullet.kill();
+	//this.game.score++;
+	
+//	this.scoreText.text = ''+this.game.score;
+	
+	//exp = this.add.sprite(alien.x, alien.y,"Explosion");
+	//exp.anchor.set(0.5);
+	//exp.animations.add("all",null,12,false).play().killOnComplete=true;
+	//this.boom.play();
+	};
+	
 Level5.prototype.addEnemy2 = function(x, y) {
 	
 	var t = this.add.sprite(x, y, "Wehrmacht");
@@ -295,11 +313,11 @@ this.game.physics.arcade.enable(a);
 return a;
 };
 
-//Level5.prototype.Next = function(player,goal){ 
-//	
-//	this.game.state.start("Level6");
-//	
-//}
+Level5.prototype.Next = function(player,goal){ 
+	
+	this.game.state.start("Level6");
+	
+}
 
 Level5.prototype.addGoal = function(x, y) {
 	var c = this.add.sprite(x, y, "go");
