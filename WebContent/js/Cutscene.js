@@ -52,7 +52,7 @@ text.scale.set(1);
 };
 
 Cutscene.prototype.startGame = function() {
-	this.cache.removeSound("ost");
+
 	this.game.state.start("Pick");
 };
 

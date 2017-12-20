@@ -52,6 +52,7 @@ function gframes(key, n) {
 }
 Pick.prototype.WinstonPlay = function(x,y) {
 	characterPick(1);
+	this.cache.removeSound("ost");
 	this.game.state.start("Level");
 	}
 

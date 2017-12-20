@@ -11,7 +11,9 @@ MidCutscenew.prototype = proto;
 
 
 MidCutscenew.prototype.create = function() {
-
+	var a = this.add.sound("ost",0.5,true,true);
+	a.play();
+	
 	
 		var p1 = this.add.button(this.world.centerX, this.world.centerY,
 	"MID1",this.PG2, this);
@@ -46,6 +48,7 @@ text.scale.set(1);
 
 
 MidCutscenew.prototype.re = function() {
+	this.cache.removeSound("a");
 	this.game.state.start("Level5");
 };
 
