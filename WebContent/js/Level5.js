@@ -130,8 +130,7 @@ Level5.prototype.createEnemyWeapon = function() {
 	this.weapon4.bulletAngleOffset=-270;
 	this.weapon4.rate = 500;
 	this.weapon4.bulletGravity.y = -1000;
-	
-	}
+		}
 
 Level5.prototype.createWeapon = function() {
 	this.weapon1 = this.add.weapon(100, "bullet",10);	

@@ -112,16 +112,6 @@
     },
     {
       "type": "spritesheet",
-      "key": "bullet",
-      "url": "assets/images/bullet.png",
-      "frameWidth": 10,
-      "frameHeight": 10,
-      "frameMax": -1,
-      "margin": 0,
-      "spacing": 0
-    },
-    {
-      "type": "spritesheet",
       "key": "explosjon3",
       "url": "assets/images/explosjon3.png",
       "frameWidth": 128,
@@ -584,6 +574,16 @@
       "key": "MID4",
       "url": "assets/images/MID4.png",
       "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "bullet",
+      "url": "assets/images/bullet.png",
+      "frameWidth": 10,
+      "frameHeight": 10,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
     }
   ],
   "level": [],
@@ -594,7 +594,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513795505646",
+    "generated": "1513795884014",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
