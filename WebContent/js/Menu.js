@@ -21,7 +21,7 @@ Menu.prototype.create = function() {
 		var f = this.add.sprite(930, 670,"F5");
 		f.anchor.set(0.5, 0.5);
 		f.scale.set (0.3);
-		
+
 		var menu = this.add.sound("ost",0.5,true,true);
 		menu.play();
 		

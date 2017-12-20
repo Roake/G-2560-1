@@ -14,8 +14,7 @@ MidCutscenew.prototype.create = function() {
 	var a = this.add.sound("ost",0.5,true,true);
 	a.play();
 	
-	
-		var p1 = this.add.button(this.world.centerX, this.world.centerY,
+	var p1 = this.add.button(this.world.centerX, this.world.centerY,
 	"MID1",this.PG2, this);
 p1.anchor.set(0.5, 0.5);
 var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});

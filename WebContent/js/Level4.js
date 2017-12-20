@@ -20,7 +20,7 @@ Level4.prototype.create = function() {
 	this.music.loopFull()
 	this.map = this.game.add.tilemap("c1-4");
 	this.map.addTilesetImage('industrial.v1');
-	this.cache.removeSound('c1-1bgm');
+
 	this.gun = this.add.audio("gun");
 	this.gun.allowMultiple=true;
 	this.maplayer = this.map.createLayer("TL1");
@@ -172,6 +172,7 @@ return a;
 
 Level4.prototype.Next = function(player,goal){ 
 	this.music.stop();
+	this.cache.removeSound('c1-1bgm');
 	this.game.state.start("MidCutscenew");
 	
 }
