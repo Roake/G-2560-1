@@ -1,18 +1,17 @@
 /**
- *Mid state.
+ *MidCutscenew state.
  */
-function Mid() {
+function MidCutscenew() {
 	Phaser.State.call(this);
 }
 
 /** @type Phaser.State */
 var proto = Object.create(Phaser.State);
-Mid.prototype = proto;
+MidCutscenew.prototype = proto;
 
 
-Mid.prototype.create = function() {
-	var a = this.add.sound("ost",0.5,true,true);
-	a.play();
+MidCutscenew.prototype.create = function() {
+
 	
 		var p1 = this.add.button(this.world.centerX, this.world.centerY,
 	"MID1",this.PG2, this);
@@ -21,7 +20,7 @@ var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'whit
 text.scale.set(1);
 }
 
-Mid.prototype.PG2 = function() {
+MidCutscenew.prototype.PG2 = function() {
 	var p2 = this.add.button(this.world.centerX, this.world.centerY,
 	"MID2",this.PG3, this);
 p2.anchor.set(0.5, 0.5);
@@ -29,7 +28,7 @@ var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'whit
 text.scale.set(1);
 };
 
-Mid.prototype.PG3 = function() {
+MidCutscenew.prototype.PG3 = function() {
 	var p3 = this.add.button(this.world.centerX, this.world.centerY,
 	"MID3",this.PG4, this);
 p3.anchor.set(0.5, 0.5);
@@ -37,17 +36,16 @@ var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'whit
 text.scale.set(1);
 };
 
-Mid.prototype.PG4 = function() {
+MidCutscenew.prototype.PG4 = function() {
 	var p4 = this.add.button(this.world.centerX, this.world.centerY,
-	"MID4",this.startGame, this);
+	"MID4",this.re, this);
 p4.anchor.set(0.5, 0.5);
 var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
 text.scale.set(1);
 };
 
 
-Mid.prototype.startGame = function() {
-	this.cache.removeSound("ost");
+MidCutscenew.prototype.re = function() {
 	this.game.state.start("Level5");
 };
 

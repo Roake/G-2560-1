@@ -16,7 +16,7 @@ window.onload = function() {
 	game.state.add("Level6", Level6);
 	game.state.add("PreBoss", PreBoss);
 	game.state.add("Cutscene", Cutscene);
-	game.state.add("Mid", Mid);
+	game.state.add("MidCutscenew", MidCutscenew);
 	game.state.add("EndCutscene", EndCutscene);
 	game.state.add("Dev", Dev);
 	game.state.add("Setting", Setting);
