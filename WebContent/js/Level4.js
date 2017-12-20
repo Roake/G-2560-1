@@ -60,7 +60,7 @@ Level4.prototype.create = function() {
 	text.scale.set(1);
 	
 	this.createWeapon();
-
+	this.createText();
 	}
 //}
 };
@@ -131,6 +131,55 @@ Level4.prototype.update = function() {
 			this.player.play("idle");
 		}
 };
+Level4.prototype.createText = function (){
+	msgTxt  = this.add.button(this.world.centerX, this.world.centerY+300,
+	"GEN2-1");
+	msgTxt.scale.set(1);
+	msgTxt.anchor.set(0.5,0.5);
+	this.input.onDown.add(this.WIN1, this);
+
+	}
+Level4.prototype.WIN1 = function() {
+	msgTxt.loadTexture("WIN2-1",0);
+			this.input.onDown.add(this.SGT2, this);
+		}
+Level4.prototype.SGT2 = function() {
+	msgTxt.loadTexture("GEN2-2",0);
+			this.input.onDown.add(this.SGT3, this);
+		}
+Level4.prototype.SGT3 = function() {
+	msgTxt.loadTexture("GEN2-3",0);
+			this.input.onDown.add(this.SGT4, this);
+		}	
+Level4.prototype.SGT4 = function() {
+	msgTxt.loadTexture("WIN2-2",0);
+			this.input.onDown.add(this.SGT5, this);
+		}
+Level4.prototype.SGT5 = function() {
+	msgTxt.loadTexture("GEN2-4",0);
+			this.input.onDown.add(this.WIN2, this);
+		}
+Level4.prototype.WIN2 = function() {
+	msgTxt.loadTexture("GEN2-5",0);
+	this.input.onDown.add(this.WIN3, this);
+		}
+Level4.prototype.WIN3 = function() {
+	msgTxt.loadTexture("GEN2-6",0);
+		this.input.onDown.add(fade, this);
+		if(this.input.onDown){
+		this.time.events.add(Phaser.Timer.SECOND * 4, resetFade, this);
+		this.time.events.add(Phaser.Timer.SECOND * 4, this.Next, this);}
+		};
+
+		function fade() {
+		//  You can set your own fade color and duration
+			this.game.camera.fade(0x000000, 2000);
+		}
+
+		function resetFade() {
+			this.game.camera.resetFX();
+
+		}
 
 Level4.prototype.addPlayer = function(x, y) {
 	
@@ -166,7 +215,7 @@ Level4.prototype.fireWeapon = function (){
 
 Level4.prototype.addSGT = function(x, y) {
 		var a = this.add.sprite(x, y,
-	"SGTMcFry");
+	"GenDragur");
 		a.anchor.set(-1, 0.5);
 a.scale.set(0.2);
 a.animations.add("idle").play(1,true);
