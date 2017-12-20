@@ -95,13 +95,6 @@
     },
     {
       "type": "atlas",
-      "key": "Wehrmacht",
-      "textureURL": "assets/images/Wehrmacht.png",
-      "atlasURL": "assets/images/Wehrmacht.json",
-      "format": "TEXTURE_ATLAS_JSON_HASH"
-    },
-    {
-      "type": "atlas",
       "key": "Winston",
       "textureURL": "assets/images/Winston.png",
       "atlasURL": "assets/images/Winston.json",
@@ -432,6 +425,20 @@
       "key": "c2-2",
       "url": "assets/map/c2-2.json",
       "format": "TILED_JSON"
+    },
+    {
+      "type": "atlas",
+      "key": "GenDragur",
+      "textureURL": "assets/images/GenDragur.png",
+      "atlasURL": "assets/images/GenDragur.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "Wehrmacht",
+      "textureURL": "assets/images/Wehrmacht.png",
+      "atlasURL": "assets/images/Wehrmacht.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
     }
   ],
   "level": [],
@@ -442,7 +449,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513680252768",
+    "generated": "1513789783657",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

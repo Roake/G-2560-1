@@ -23,7 +23,7 @@
     "maxWidth": 10240,
     "maxHeight": 10240,
     "square": false,
-    "stripWhitespaceX": false,
+    "stripWhitespaceX": true,
     "stripWhitespaceY": true,
     "alphaThreshold": 0,
     "filterMin": "Nearest",
