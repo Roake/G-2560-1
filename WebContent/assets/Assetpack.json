@@ -439,6 +439,13 @@
       "textureURL": "assets/images/Wehrmacht.png",
       "atlasURL": "assets/images/Wehrmacht.json",
       "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "ColAnschluss",
+      "textureURL": "assets/images/ColAnschluss.png",
+      "atlasURL": "assets/images/ColAnschluss.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
     }
   ],
   "level": [],
@@ -449,7 +456,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513789783657",
+    "generated": "1513790435897",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
