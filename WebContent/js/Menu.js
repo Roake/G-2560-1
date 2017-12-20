@@ -41,7 +41,7 @@ Menu.prototype.create = function() {
 		
 	};
 Menu.prototype.Start = function(x,y) {
-	this.game.state.start("Cutscene");
+	this.game.state.start("Level6");
 	
 	}
 

@@ -54,9 +54,14 @@ Level3.prototype.create = function() {
 	this.createWeapon();
 
 	}
-
-//}
 };
+Level3.prototype.createText = function (){
+	msgTxt  = this.add.sprite(this.world.centerX, this.world.centerY,
+	"WIN1-3");
+	msgTxt.scale.set(1);
+	msgTxt.anchor.set(0.5,0.5); 
+	};
+
 
 Level3.prototype.createWeapon = function() {
 	this.weapon1 = this.add.weapon(100, "bullet",10);	
@@ -168,19 +173,7 @@ this.game.physics.arcade.enable(a);
 return a;
 };
 
-Level3.prototype.createText = function (){
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-	"WIN1-3",this.destroySprite, this);
-	msgTxt.scale.set(1);
-	msgTxt.anchor.set(0.5,0.5); 
-	}
 
-
-function destroySprite (sprite) {
-sprite.destroy();
-
-}
-		
 
 
 Level3.prototype.Next = function(player,goal){ 
