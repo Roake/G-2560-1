@@ -426,6 +426,12 @@
       "key": "medkit",
       "url": "assets/images/medkit.png",
       "overwrite": false
+    },
+    {
+      "type": "tilemap",
+      "key": "c2-2",
+      "url": "assets/map/c2-2.json",
+      "format": "TILED_JSON"
     }
   ],
   "level": [],
@@ -436,7 +442,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513454972186",
+    "generated": "1513680252768",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
