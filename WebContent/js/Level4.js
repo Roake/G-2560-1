@@ -22,7 +22,7 @@ Level4.prototype.create = function() {
 	this.map.addTilesetImage('industrial.v1');
 
 //	this.cache.removeSound('c1-1bgm');
-	this.game.sound.removeByKey('c1-1bgm');
+	this.game.sound.remove('c1-1bgm');
 
 
 

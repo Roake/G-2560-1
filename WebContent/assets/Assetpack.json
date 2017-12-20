@@ -427,22 +427,6 @@
       "format": "TILED_JSON"
     },
     {
-<<<<<<< HEAD
-      "type": "spritesheet",
-      "key": "hit",
-      "url": "assets/images/hitmark.png",
-      "frameWidth": 0,
-      "frameHeight": 0,
-      "frameMax": -1,
-      "margin": 0,
-      "spacing": 0
-    },
-    {
-      "type": "audio",
-      "key": "heal",
-      "urls": ["assets/audio/heal.ogg"],
-      "autoDecode": true
-=======
       "type": "atlas",
       "key": "GenDragur",
       "textureURL": "assets/images/GenDragur.png",
@@ -600,7 +584,6 @@
       "key": "MID4",
       "url": "assets/images/MID4.png",
       "overwrite": false
->>>>>>> branch 'master' of https://github.com/Roake/G-2560-1.git
     }
   ],
   "level": [],
@@ -611,11 +594,7 @@
     "overwrite": false
   }],
   "meta": {
-<<<<<<< HEAD
-    "generated": "1513787751333",
-=======
-    "generated": "1513790594106",
->>>>>>> branch 'master' of https://github.com/Roake/G-2560-1.git
+    "generated": "1513795505646",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
