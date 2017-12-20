@@ -140,7 +140,7 @@ Level5.prototype.createWeapon = function() {
 	this.weapon1.bulletSpeed = 700;
 	this.weapon1.fireAngle = 0;
 	this.weapon1.rate = 500;
-	this.weapon1.bulletCollideWorldBounds1;
+	
 	this.weapon1.bulletAngleOffset=90;
 	this.weapon1.bulletGravity.y = -1000;
 	this.weapon2.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
@@ -150,7 +150,6 @@ Level5.prototype.createWeapon = function() {
 	this.weapon2.bulletAngleOffset=-270;
 	this.weapon2.rate = 500;
 	this.weapon2.bulletGravity.y = -1000;
-	
 	}
 
 Level5.prototype.update = function() {
@@ -353,8 +352,7 @@ Level5.prototype.onPlayerCollide = function(player,enemy){
 	var tw = this.add.tween(enemy);
 	tw.to({alpha:1},200, "Linear",true,0,5);
 	tw.onComplete.addOnce(function(){this.alpha=1;this.canhit=true;}, enemy);
-	
-	return true;
+		return true;
 	}
 
 
