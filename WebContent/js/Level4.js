@@ -20,8 +20,12 @@ Level4.prototype.create = function() {
 	this.music.loopFull()
 	this.map = this.game.add.tilemap("c1-4");
 	this.map.addTilesetImage('industrial.v1');
+<<<<<<< HEAD
 //	this.cache.removeSound('c1-1bgm');
 	this.game.sound.removeByKey('c1-1bgm');
+=======
+
+>>>>>>> branch 'master' of https://github.com/Roake/G-2560-1.git
 	this.gun = this.add.audio("gun");
 	this.gun.allowMultiple=true;
 	this.maplayer = this.map.createLayer("TL1");
@@ -173,7 +177,8 @@ return a;
 
 Level4.prototype.Next = function(player,goal){ 
 	this.music.stop();
-	this.game.state.start("Level5");
+	this.cache.removeSound('c1-1bgm');
+	this.game.state.start("MidCutscenew");
 	
 }
 

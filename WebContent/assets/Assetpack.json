@@ -95,13 +95,6 @@
     },
     {
       "type": "atlas",
-      "key": "Wehrmacht",
-      "textureURL": "assets/images/Wehrmacht.png",
-      "atlasURL": "assets/images/Wehrmacht.json",
-      "format": "TEXTURE_ATLAS_JSON_HASH"
-    },
-    {
-      "type": "atlas",
       "key": "Winston",
       "textureURL": "assets/images/Winston.png",
       "atlasURL": "assets/images/Winston.json",
@@ -434,6 +427,7 @@
       "format": "TILED_JSON"
     },
     {
+<<<<<<< HEAD
       "type": "spritesheet",
       "key": "hit",
       "url": "assets/images/hitmark.png",
@@ -448,6 +442,165 @@
       "key": "heal",
       "urls": ["assets/audio/heal.ogg"],
       "autoDecode": true
+=======
+      "type": "atlas",
+      "key": "GenDragur",
+      "textureURL": "assets/images/GenDragur.png",
+      "atlasURL": "assets/images/GenDragur.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "Wehrmacht",
+      "textureURL": "assets/images/Wehrmacht.png",
+      "atlasURL": "assets/images/Wehrmacht.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "ColAnschluss",
+      "textureURL": "assets/images/ColAnschluss.png",
+      "atlasURL": "assets/images/ColAnschluss.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "image",
+      "key": "COL3-1",
+      "url": "assets/dialogue/COL3-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "COL3-2",
+      "url": "assets/dialogue/COL3-2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN2-1",
+      "url": "assets/dialogue/GEN2-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN2-2",
+      "url": "assets/dialogue/GEN2-2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN2-3",
+      "url": "assets/dialogue/GEN2-3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN2-4",
+      "url": "assets/dialogue/GEN2-4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN2-5",
+      "url": "assets/dialogue/GEN2-5.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN2-6",
+      "url": "assets/dialogue/GEN2-6.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN3-1",
+      "url": "assets/dialogue/GEN3-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN3-2",
+      "url": "assets/dialogue/GEN3-2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN1-3",
+      "url": "assets/dialogue/WIN1-3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN2-1",
+      "url": "assets/dialogue/WIN2-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN2-2",
+      "url": "assets/dialogue/WIN2-2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN3-1",
+      "url": "assets/dialogue/WIN3-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN3-2",
+      "url": "assets/dialogue/WIN3-2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN3-3",
+      "url": "assets/dialogue/WIN3-3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN3-4",
+      "url": "assets/dialogue/WIN3-4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "BOSSBG",
+      "url": "assets/images/BOSSBG.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "ColAnschluss1",
+      "url": "assets/images/ColAnschluss1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "MID1",
+      "url": "assets/images/MID1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "MID2",
+      "url": "assets/images/MID2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "MID3",
+      "url": "assets/images/MID3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "MID4",
+      "url": "assets/images/MID4.png",
+      "overwrite": false
+>>>>>>> branch 'master' of https://github.com/Roake/G-2560-1.git
     }
   ],
   "level": [],
@@ -458,7 +611,11 @@
     "overwrite": false
   }],
   "meta": {
+<<<<<<< HEAD
     "generated": "1513787751333",
+=======
+    "generated": "1513790594106",
+>>>>>>> branch 'master' of https://github.com/Roake/G-2560-1.git
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

@@ -1,0 +1,89 @@
+{
+  "frames": {
+    "Col-Attack_000": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 1406,
+        "y": 28,
+        "w": 676,
+        "h": 599
+      },
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 0,
+        "w": 676,
+        "h": 599
+      },
+      "sourceSize": {
+        "w": 717,
+        "h": 637
+      }
+    },
+    "Col-Attack_001": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 707,
+        "y": 11,
+        "w": 697,
+        "h": 616
+      },
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 0,
+        "w": 697,
+        "h": 616
+      },
+      "sourceSize": {
+        "w": 717,
+        "h": 637
+      }
+    },
+    "Col-Attack_002": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2084,
+        "y": 32,
+        "w": 676,
+        "h": 595
+      },
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 0,
+        "w": 676,
+        "h": 595
+      },
+      "sourceSize": {
+        "w": 717,
+        "h": 637
+      }
+    },
+    "Col-Attack_003": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 703,
+        "h": 625
+      },
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 0,
+        "w": 703,
+        "h": 625
+      },
+      "sourceSize": {
+        "w": 717,
+        "h": 637
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "ColAnschluss.png"
+  }
+}

@@ -13,7 +13,6 @@ Pick.prototype = proto;
  */
 
 Pick.prototype.create = function() {
-	this.cache.removeSound("ost");
 	var sprite = this.add.sprite(this.world.centerX, this.world.centerY,
 	"PickPage");
 sprite.anchor.set(0.5, 0.5);
@@ -52,6 +51,7 @@ function gframes(key, n) {
 }
 Pick.prototype.WinstonPlay = function(x,y) {
 	characterPick(1);
+	this.cache.removeSound("ost");
 	this.game.state.start("Level");
 	}
 
