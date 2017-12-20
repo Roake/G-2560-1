@@ -172,7 +172,7 @@ return a;
 
 Level4.prototype.Next = function(player,goal){ 
 	this.music.stop();
-	this.game.state.start("Level5");
+	this.game.state.start("MidCutscenew");
 	
 }
 
