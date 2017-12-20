@@ -584,6 +584,24 @@
       "frameMax": -1,
       "margin": 0,
       "spacing": 0
+    },
+    {
+      "type": "audio",
+      "key": "heal",
+      "urls": ["assets/audio/heal.ogg"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "menu2",
+      "urls": ["assets/audio/menu2.ogg"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "sewer 2",
+      "urls": ["assets/audio/sewer 2.ogg"],
+      "autoDecode": true
     }
   ],
   "level": [],
@@ -594,7 +612,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513795884014",
+    "generated": "1513800355535",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
