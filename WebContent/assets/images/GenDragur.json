@@ -1,0 +1,49 @@
+{
+  "frames": {
+    "GenDragur_Idle_000": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 476,
+        "y": 2,
+        "w": 471,
+        "h": 723
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 0,
+        "w": 471,
+        "h": 723
+      },
+      "sourceSize": {
+        "w": 472,
+        "h": 723
+      }
+    },
+    "GenDragur_Idle_001": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 472,
+        "h": 723
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 472,
+        "h": 723
+      },
+      "sourceSize": {
+        "w": 472,
+        "h": 723
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "GenDragur.png"
+  }
+}

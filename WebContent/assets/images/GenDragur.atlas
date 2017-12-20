@@ -1,15 +1,8 @@
 {
   "version": 2,
   "files": [
-    "Design/Wehrmacht(FULL)/Animated/Wehrmacht-Attack_000.png",
-    "Design/Wehrmacht(FULL)/Animated/Wehrmacht-Attack_001.png",
-    "Design/Wehrmacht(FULL)/Animated/Wehrmacht-Idle_000.png",
-    "Design/Wehrmacht(FULL)/Animated/Wehrmacht-Idle_001.png",
-    "Design/Wehrmacht(FULL)/Animated/Wehrmacht-Walk_000.png",
-    "Design/Wehrmacht(FULL)/Animated/Wehrmacht-Walk_001.png",
-    "Design/Wehrmacht(FULL)/Animated/Wehrmacht-Walk_002.png",
-    "Design/Wehrmacht(FULL)/Animated/Wehrmacht-Walk_003.png",
-    "Design/Wehrmacht(FULL)/Animated/Wehrmacht-Walk_004.png"
+    "Design/GenDragur_Idle_000.png",
+    "Design/GenDragur_Idle_001.png"
   ],
   "settings": {
     "pot": false,
@@ -20,8 +13,8 @@
     "rotation": false,
     "minWidth": 16,
     "minHeight": 16,
-    "maxWidth": 10240,
-    "maxHeight": 10240,
+    "maxWidth": 1024,
+    "maxHeight": 1024,
     "square": false,
     "stripWhitespaceX": false,
     "stripWhitespaceY": true,
@@ -31,7 +24,7 @@
     "wrapX": "ClampToEdge",
     "wrapY": "ClampToEdge",
     "format": "RGBA8888",
-    "alias": true,
+    "alias": false,
     "outputFormat": "png",
     "jpegQuality": 0.8999999761581421,
     "ignoreBlankImages": true,
