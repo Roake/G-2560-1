@@ -35,8 +35,8 @@
                  "type":"bot",
                  "visible":true,
                  "width":16,
-                 "x":36.0000333333333,
-                 "y":448.666666666667
+                 "x":36,
+                 "y":448.667
                 }, 
                 {
                  "gid":464,
@@ -47,8 +47,8 @@
                  "type":"bot2",
                  "visible":true,
                  "width":16,
-                 "x":151.333333333333,
-                 "y":460.000333333333
+                 "x":151.333,
+                 "y":460
                 }, 
                 {
                  "gid":464,
@@ -59,8 +59,8 @@
                  "type":"player",
                  "visible":true,
                  "width":16,
-                 "x":283.333333333333,
-                 "y":508.666666666667
+                 "x":283.333,
+                 "y":508.667
                 }, 
                 {
                  "gid":464,
@@ -73,6 +73,18 @@
                  "width":16,
                  "x":952,
                  "y":433.333
+                }, 
+                {
+                 "gid":71,
+                 "height":16,
+                 "id":5,
+                 "name":"hp",
+                 "rotation":0,
+                 "type":"hp",
+                 "visible":true,
+                 "width":16,
+                 "x":63,
+                 "y":574
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -80,7 +92,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":5,
+ "nextobjectid":6,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.0.3",

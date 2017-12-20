@@ -432,6 +432,22 @@
       "key": "c2-2",
       "url": "assets/map/c2-2.json",
       "format": "TILED_JSON"
+    },
+    {
+      "type": "spritesheet",
+      "key": "hit",
+      "url": "assets/images/hitmark.png",
+      "frameWidth": 0,
+      "frameHeight": 0,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "audio",
+      "key": "heal",
+      "urls": ["assets/audio/heal.ogg"],
+      "autoDecode": true
     }
   ],
   "level": [],
@@ -442,7 +458,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513680252768",
+    "generated": "1513787751333",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

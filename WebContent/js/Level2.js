@@ -190,7 +190,7 @@ Level2.prototype.Next = function(player,goal){
 	this.game.state.start("Level3");
 	}
 
-Level2.prototype.onCollide = function(enemy,bullet){
+Level2.prototype.onCollide = function(enemies,bullet){
 
 	bullet.kill();
 	this.hitmark.play();

@@ -20,8 +20,7 @@ Level6.prototype.create = function() {
 	this.maplayer = this.map.createLayer("TL1");
 	this.maplayer1 = this.map.createLayer("TL2");
 	
-	var sewer = this.add.sound("c1-1bgm",0.5,true,true);
-	sewer.play();
+	
 
 	this.gun = this.add.audio("gun");
 	this.gun.allowMultiple=true;
