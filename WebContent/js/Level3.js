@@ -168,6 +168,21 @@ this.game.physics.arcade.enable(a);
 return a;
 };
 
+Level3.prototype.createText = function (){
+	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
+	"WIN1-3",this.destroySprite, this);
+	msgTxt.scale.set(1);
+	msgTxt.anchor.set(0.5,0.5); 
+	}
+
+
+function destroySprite (sprite) {
+sprite.destroy();
+
+}
+		
+
+
 Level3.prototype.Next = function(player,goal){ 
 	
 	this.game.state.start("Level4");
