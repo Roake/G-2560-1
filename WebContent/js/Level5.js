@@ -40,11 +40,9 @@ Level5.prototype.create = function() {
 	this.scoreText.fixedToCamera = true;
 	
 //if(this.game.character==1){
-	this.bot = this.add.group();
 	this.goal=this.add.group();
 	this.enemy=this.add.group();
 	this.hp=this.add.group();
-	this.createEnemyWeapon();
 	this.createWeapon();
 	for (x  in this.map.objects.object) {
 	var obj = this.map.objects.object[x];
@@ -58,15 +56,10 @@ Level5.prototype.create = function() {
 			 
 		}
 
-		if (obj.type == "bot") {
-			var a = this.addSGT(obj.x, obj.y);
-			this.bot.add(a);
-		}
-		if(obj.type == "enemy1"){
+			if(obj.type == "enemy1"){
 			var e = this.addEnemy(obj.x,obj.y);
 			this.enemy.add(e);
-	
-			
+				
 		}
 		if(obj.type == "hp"){
 			var h = this.addHp(obj.x,obj.y);
@@ -98,39 +91,9 @@ Level5.prototype.create = function() {
 //}
 };
 
-Level5.prototype.fireEWeaponback = function (){
-	if(this.weapon4.fire()!=false){
-		this.gun.play();
-	}
-	
-	this.weapon4.fire();
-};
-Level5.prototype.fireEWeapon = function (){
-	if(this.weapon3.fire()!=false){
-		this.gun.play();
-	}
-	this.weapon3.fire();
-};
 
-Level5.prototype.createEnemyWeapon = function() {
-	this.weapon3 = this.add.weapon(100, "bullet",10);	
-	this.weapon4 = this.add.weapon(100, "bullet",10);	
-	this.weapon3.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
-	this.weapon3.trackSprite(this.enemy, 75, -10);
-	this.weapon3.bulletSpeed = 700;
-	this.weapon3.fireAngle = 0;
-	this.weapon3.rate = 500;
-	this.weapon3.bulletCollideWorldBounds1;
-	this.weapon3.bulletAngleOffset=90;
-	this.weapon3.bulletGravity.y = -1000;
-	this.weapon4.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
-	this.weapon4.trackSprite(this.enemy, -75,-10);
-	this.weapon4.bulletSpeed = 700;
-	this.weapon4.fireAngle = 180;
-	this.weapon4.bulletAngleOffset=-270;
-	this.weapon4.rate = 500;
-	this.weapon4.bulletGravity.y = -1000;
-		}
+
+
 
 Level5.prototype.createWeapon = function() {
 	this.weapon1 = this.add.weapon(100, "bullet",10);	
@@ -150,7 +113,7 @@ Level5.prototype.createWeapon = function() {
 	this.weapon2.bulletAngleOffset=-270;
 	this.weapon2.rate = 500;
 	this.weapon2.bulletGravity.y = -1000;
-	}
+	};
 
 Level5.prototype.update = function() {
 	
@@ -238,44 +201,9 @@ Level5.prototype.addHealth = function(hp) {
     //kill the +1 on delay play complete
 }
 
-//ด้านล่างนี้เดี๋ยวซ่อมเองนะ อย่าลืมล่ะ (บอกตัวเอง)
-//Level5.prototype.createText = function (){
-//	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-//	"SGT1-1");
-//	msgTxt.scale.set(1);
-//	msgTxt.anchor.set(0.5,0.5);
-//	this.input.onDown.add(this.WIN1, this);
-//	this.time.events.add(10000,function(){this.destroy();},msgTxt);
-//	
-//	}
-//Level5.prototype.WIN1 = function() {
-//	msgTxt.loadTexture("WIN1-1",0);
-//			this.input.onDown.add(this.SGT2, this);
-//		}
-//Level5.prototype.SGT2 = function() {
-//	msgTxt.loadTexture("SGT1-2",0);
-//			this.input.onDown.add(this.SGT3, this);
-//		}
-//Level5.prototype.SGT3 = function() {
-//	msgTxt.loadTexture("SGT1-3",0);
-//			this.input.onDown.add(this.SGT4, this);
-//		}	
-//Level5.prototype.SGT4 = function() {
-//	msgTxt.loadTexture("SGT1-4",0);
-//			this.input.onDown.add(this.SGT5, this);
-//		}
-//Level5.prototype.SGT5 = function() {
-//	msgTxt.loadTexture("SGT1-5",0);
-//			this.input.onDown.add(this.WIN2, this);
-//		}
-//Level5.prototype.WIN2 = function() {
-//	msgTxt.loadTexture("WIN1-2",0);
-//	
-//		}
 Level5.prototype.bulletOnCollideWorld = function(bullet){
 	
-	
-}
+	}
 Level5.prototype.playerCollideHp = function (player,hp){
 	hp.kill();
 	this.addHealth(hp);
@@ -324,6 +252,29 @@ Level5.prototype.addEnemy = function(x, y) {
 	
 	
 };
+Level5.prototype.addEnemy2 = function(x, y) {
+	
+	var t = this.add.sprite(x, y, "Wehrmacht");
+	t.animations.add("idle", gframes("Wehrmacht-Idle", 2),2, true);
+	t.animations.add("walk", gframes("Wehrmacht-Walk", 5), 5, true);
+	
+	t.animations.add("attack", gframes("Wehrmacht-Attack", 2), 10, true);
+	
+	t.anchor.set(0.5, 0.5);
+	t.scale.set(0.2);
+	t.scale.x=-0.2;
+	t.smoothed = false;
+	this.game.physics.arcade.enable(t);
+	t.play("idle");
+	t.body.collideWorldBounds = true;
+	t.alive=true;
+	t.maxHealth=3;
+	t.setHealth(3);
+	
+	return t;
+	
+	
+};
 
 Level5.prototype.addHp = function(x,y){
 	var h = this.add.sprite(x,y,"medkit");
@@ -345,7 +296,6 @@ Level5.prototype.onPlayerCollide = function(player,enemy){
 	var tw = this.add.tween(player);
 	tw.to({alpha:1},200, "Linear",true,0,5);
 	tw.onComplete.addOnce(function(){this.alpha=1;this.canhit=true;}, player);
-	
 	enemy.canhit = false;
 	enemy.alpha = 0.1;
 	this.hitmark.play();
@@ -353,6 +303,9 @@ Level5.prototype.onPlayerCollide = function(player,enemy){
 	tw.to({alpha:1},200, "Linear",true,0,5);
 	tw.onComplete.addOnce(function(){this.alpha=1;this.canhit=true;}, enemy);
 		return true;
+		if(this.game.score==0){
+			this.onPlayerKilled();
+		}
 	}
 
 
@@ -385,29 +338,6 @@ Level5.prototype.onCollide = function(enemy,bullet){
 	
 	};
 	
-Level5.prototype.addEnemy2 = function(x, y) {
-	
-	var t = this.add.sprite(x, y, "Wehrmacht");
-	t.animations.add("idle", gframes("Wehrmacht-Idle", 2),2, true);
-	t.animations.add("walk", gframes("Wehrmacht-Walk", 5), 5, true);
-	
-	t.animations.add("attack", gframes("Wehrmacht-Attack", 2), 10, true);
-	
-	t.anchor.set(0.5, 0.5);
-	t.scale.set(0.2);
-	t.scale.x=-0.2;
-	t.smoothed = false;
-	this.game.physics.arcade.enable(t);
-	t.play("idle");
-	t.body.collideWorldBounds = true;
-	t.alive=true;
-	t.maxHealth=3;
-	t.setHealth(3);
-	
-	return t;
-	
-	
-};
 
 Level5.prototype.fireWeaponback = function (){
 	if(this.weapon2.fire()!=false){
@@ -421,17 +351,6 @@ Level5.prototype.fireWeapon = function (){
 		this.gun.play();
 	}
 	this.weapon1.fire();
-};
-
-Level5.prototype.addSGT = function(x, y) {
-		var a = this.add.sprite(x, y,
-	"SGTMcFry");
-		a.anchor.set(-1, 0.5);
-a.scale.set(0.2);
-a.animations.add("idle").play(1,true);
-a.smoothed=false;
-this.game.physics.arcade.enable(a);
-return a;
 };
 
 Level5.prototype.Next = function(player,goal){ 
@@ -451,19 +370,11 @@ Level5.prototype.addGoal = function(x, y) {
 };
 
 Level5.prototype.onPlayerKilled = function(){
-	
-	this.gameover=true;
-	
-	
-		txt=this.add.text(this.world.centerX,this.world.centerY,
-	 "WASTED",{ fill: 'Red'});
+		dead=this.add.button (this.world.centerX,this.world.centerY,
+				 "END",this.quitGame, this);
+		dead.anchor.set(0.5,0.5);
 
-	var tw = this.add.tween(txt.scale);
-	tw.to({x:3,y:3},1000, "Linear",true,0);
-	delay = this.add.tween(txt);
-	delay.to({y:100},1000, "Linear",true,2000);
-	tw.chain(delay);
-	delay.onComplete.addOnce(this.quitGame, this);
+	this.gameover=true;
 };
 
 function gframes(key, n) {
