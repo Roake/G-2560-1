@@ -565,12 +565,6 @@
     },
     {
       "type": "image",
-      "key": "GenDragur",
-      "url": "assets/images/GenDragur.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
       "key": "MID1",
       "url": "assets/images/MID1.png",
       "overwrite": false
@@ -622,6 +616,20 @@
       "key": "BOSSPBG",
       "url": "assets/images/BOSSPBG.png",
       "overwrite": false
+    },
+    {
+      "type": "atlas",
+      "key": "ColAnschluss2",
+      "textureURL": "assets/images/ColAnschluss.png",
+      "atlasURL": "assets/images/ColAnschluss.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "GenDragur",
+      "textureURL": "assets/images/GenDragur.png",
+      "atlasURL": "assets/images/GenDragur.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
     }
   ],
   "level": [],
@@ -632,7 +640,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513832944831",
+    "generated": "1513834180240",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
