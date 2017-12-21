@@ -39,6 +39,7 @@ Level6.prototype.create = function() {
 	this.scoreText.strokeThickness=6;
 	this.scoreText.fixedToCamera = true;
 	
+	
 //if(this.game.character==1){
 	this.bot = this.add.group();
 	this.goal=this.add.group();
@@ -52,7 +53,7 @@ Level6.prototype.create = function() {
 			this.game.camera.follow(this.player,Phaser.Camera.FOLLOW_PLATFORMER);
 			this.player.canhit=true;
 			 this.player.maxHealth = 6;
-			 this.player.setHealth(3);
+			 this.player.setHealth(5);
 			 
 		}
 
@@ -384,8 +385,8 @@ Level6.prototype.addEnemy2 = function(x, y) {
 	t.play("idle");
 	t.body.collideWorldBounds = true;
 	t.alive=true;
-	t.maxHealth=3;
-	t.setHealth(3);
+	t.maxHealth=20;
+	t.setHealth(20);
 
 	return t;
 	

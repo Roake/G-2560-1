@@ -91,7 +91,7 @@ Level5.prototype.create = function() {
 	text.scale.set(1);
 	
 	this.createWeapon();
-	   
+
 //	this.createText();
 	}
 //}
