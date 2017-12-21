@@ -52,12 +52,16 @@ Level3.prototype.create = function() {
 	text.scale.set(1);
 	
 	this.createWeapon();
-
+	this.createText();
 	}
-
-//}
 };
-
+Level3.prototype.createText = function (){
+	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
+	"WIN1-3");
+	msgTxt.scale.set(1);
+	msgTxt.anchor.set(0.5,0.5); 
+	this.time.events.add(5000,function(){this.destroy();},msgTxt);
+}
 Level3.prototype.createWeapon = function() {
 	this.weapon1 = this.add.weapon(100, "bullet",10);	
 	this.weapon2 = this.add.weapon(100, "bullet",10);	
@@ -167,6 +171,9 @@ a.smoothed=false;
 this.game.physics.arcade.enable(a);
 return a;
 };
+
+
+
 
 Level3.prototype.Next = function(player,goal){ 
 	

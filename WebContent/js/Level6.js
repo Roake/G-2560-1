@@ -11,8 +11,8 @@ Level6.prototype = proto;
 
 
 Level6.prototype.create = function() {
-	background = this.add.tileSprite(0, 0, 1024, 768, "BG");
-	background.scale.set(1);
+	background = this.add.tileSprite(0, 100, 2048, 1440, "BOSSBG");
+	background.scale.set(0.6);
 	background.fixedToCamera = true;
 	this.map = this.game.add.tilemap("c2-2");
 	this.map.addTilesetImage('industrial.v1');
