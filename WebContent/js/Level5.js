@@ -189,6 +189,9 @@ Level5.prototype.update = function() {
 			this.player.body.velocity.x = 0;
 			this.player.play("idle");
 		}
+		 if(this.player.Health<=0){
+			 onPlayerKilled();
+		 }
 };
 
 Level5.prototype.addHealth = function(hp) {
@@ -409,7 +412,7 @@ Level5.prototype.addGoal = function(x, y) {
 };
 
 Level5.prototype.onPlayerKilled = function(){
-	if(this.player.Health<=0){
+
 		this.gameover=true;
 		lose = this.add.sprite(this.world.centerX,this.world.centerY,"END");
 		lose.anchor.set(0.5,0.5);
@@ -418,7 +421,7 @@ Level5.prototype.onPlayerKilled = function(){
 		tw.to({y:100},1000, "Linear",true,2000);
 		tw.onComplete.addOnce(this.quitGame, this);
 		return;
-	}
+	
 }
 function gframes(key, n) {
 	f = [];

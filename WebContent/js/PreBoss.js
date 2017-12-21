@@ -16,25 +16,23 @@ PreBoss.prototype.create = function() {
 	background.scale.set(1);
 	background.fixedToCamera = true;
 	
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY+300,
+	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
 	"WIN3-1");
 	msgTxt.scale.set(1);
 	msgTxt.anchor.set(0.5,0.5);
-	this.input.onDown.add(this.WIN1, this);
-	}
-PreBoss.prototype.WIN1 = function() {
-	msgTxt.loadTexture("WIN3-1",0);
 	this.input.onDown.add(this.SGT2, this);
-}
+	}
 PreBoss.prototype.SGT2 = function() {
 msgTxt.loadTexture("COL3-1",0);
 	this.input.onDown.add(this.SGT3, this);
-	var a = this.add.sound("Boss",0.5,true,true);
-	a.play();
+	this.lift = this.add.audio("Boss");
+	this.lift.play();
+
 }
 PreBoss.prototype.SGT3 = function() {
 msgTxt.loadTexture("GEN3-1",0);
 	this.input.onDown.add(this.SGT4, this);
+	this.lift.stop();
 }	
 PreBoss.prototype.SGT4 = function() {
 msgTxt.loadTexture("COL3-2",0);
