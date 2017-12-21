@@ -38,6 +38,10 @@ Level6.prototype.create = function() {
 	this.scoreText.stroke="#000";
 	this.scoreText.strokeThickness=6;
 	this.scoreText.fixedToCamera = true;
+	this.healthText = this.add.text(400, 30, 'Health : '+this.game.Health,{ font: '25px Arial',fill: 'red' });
+	this.healthText.stroke="#000";
+	this.healthText.strokeThickness=6;
+	this.healthText.fixedToCamera = true;
 	
 //if(this.game.character==1){
 	this.bot = this.add.group();

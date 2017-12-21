@@ -39,6 +39,11 @@ Level5.prototype.create = function() {
 	this.scoreText.strokeThickness=6;
 	this.scoreText.fixedToCamera = true;
 	
+	this.healthText = this.add.text(400, 30, 'Health : '+this.game.Health,{ font: '25px Arial',fill: 'red' });
+	this.healthText.stroke="#000";
+	this.healthText.strokeThickness=6;
+	this.healthText.fixedToCamera = true;
+	
 //if(this.game.character==1){
 	this.bot = this.add.group();
 	this.goal=this.add.group();
@@ -202,43 +207,11 @@ Level5.prototype.addHealth = function(hp) {
     sf.play();
     this.game.score++;
 	this.scoreText.text = 'Score : '+this.game.score;
+	
     //kill the +1 on delay play complete
 }
 
-//ด้านล่างนี้เดี๋ยวซ่อมเองนะ อย่าลืมล่ะ (บอกตัวเอง)
-//Level5.prototype.createText = function (){
-//	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
-//	"SGT1-1");
-//	msgTxt.scale.set(1);
-//	msgTxt.anchor.set(0.5,0.5);
-//	this.input.onDown.add(this.WIN1, this);
-//	this.time.events.add(10000,function(){this.destroy();},msgTxt);
-//	
-//	}
-//Level5.prototype.WIN1 = function() {
-//	msgTxt.loadTexture("WIN1-1",0);
-//			this.input.onDown.add(this.SGT2, this);
-//		}
-//Level5.prototype.SGT2 = function() {
-//	msgTxt.loadTexture("SGT1-2",0);
-//			this.input.onDown.add(this.SGT3, this);
-//		}
-//Level5.prototype.SGT3 = function() {
-//	msgTxt.loadTexture("SGT1-3",0);
-//			this.input.onDown.add(this.SGT4, this);
-//		}	
-//Level5.prototype.SGT4 = function() {
-//	msgTxt.loadTexture("SGT1-4",0);
-//			this.input.onDown.add(this.SGT5, this);
-//		}
-//Level5.prototype.SGT5 = function() {
-//	msgTxt.loadTexture("SGT1-5",0);
-//			this.input.onDown.add(this.WIN2, this);
-//		}
-//Level5.prototype.WIN2 = function() {
-//	msgTxt.loadTexture("WIN1-2",0);
-//	
-//		}
+
 Level5.prototype.bulletOnCollideWorld = function(bullet){
 	
 	
@@ -434,21 +407,17 @@ Level5.prototype.addGoal = function(x, y) {
 };
 
 Level5.prototype.onPlayerKilled = function(){
-	
-	this.gameover=true;
-	
-	
-		txt=this.add.text(this.world.centerX,this.world.centerY,
-	 "WASTED",{ fill: 'Red'});
-
-	var tw = this.add.tween(txt.scale);
-	tw.to({x:3,y:3},1000, "Linear",true,0);
-	delay = this.add.tween(txt);
-	delay.to({y:100},1000, "Linear",true,2000);
-	tw.chain(delay);
-	delay.onComplete.addOnce(this.quitGame, this);
-};
-
+	if(this.player.Health<=0){
+		this.gameover=true;
+		lose = this.add.sprite(this.world.centerX,this.world.centerY,"END");
+		lose.anchor.set(0.5,0.5);
+		lose.scale.set(0.5);
+		var tw = this.add.tween(lose);
+		tw.to({y:100},1000, "Linear",true,2000);
+		tw.onComplete.addOnce(this.quitGame, this);
+		return;
+	}
+}
 function gframes(key, n) {
 	f = [];
 	for (var i = 0; i <= n; i++) {
