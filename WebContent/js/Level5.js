@@ -317,7 +317,23 @@ Level5.prototype.onPlayerCollide = function(player,enemy){
 	var tw = this.add.tween(enemy);
 	tw.to({alpha:1},200, "Linear",true,0,5);
 	tw.onComplete.addOnce(function(){this.alpha=1;this.canhit=true;}, enemy);
+	addHeal = this.add.text(enemy.x,enemy.y, 'Score+', {
+        fill: 'red'
+    });
+    delay = this.add.tween(addHeal);
+    delay.to
+    delay.to({ y: enemy.y-50 }, 300, "Linear", true, 1);
+    delay.onComplete.add(function(addHeal) {
+        addHeal.kill();
+    }, this);
+    exp = this.add.sprite(enemy.x, enemy.y,"hitmark");
+	exp.anchor.set(0.4,0.5);
+	exp.scale.set(0.6);
+	exp.animations.add("all",null,12,false).play().killOnComplete=true;
+	this.hitmark.play();
 	
+	this.game.score++;
+	this.scoreText.text = 'Score : '+this.game.score;
 	return true;
 	}
 
