@@ -55,7 +55,7 @@ Level5.prototype.create = function() {
 			this.player.canhit=true;
 //			 this.player.maxHealth = 6;
 //			 this.player.setHealth(3);
-			 this.player.hp=3;
+			 this.player.hp=5;
 		}
 
 		if (obj.type == "bot") {
@@ -208,11 +208,12 @@ Level5.prototype.addHealth = function(hp) {
         addHeal.kill();
     }, this);
 //    this.player.heal(2);
+    this.player.hp+=2;
     var sf = this.add.audio("heal");
     sf.play();
     this.game.score++;
 	this.scoreText.text = 'Score : '+this.game.score;
-	
+	this.healthText.text = 'Health : '+this.player.hp;
     //kill the +1 on delay play complete
 }
 

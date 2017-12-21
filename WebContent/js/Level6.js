@@ -38,11 +38,7 @@ Level6.prototype.create = function() {
 	this.scoreText.stroke="#000";
 	this.scoreText.strokeThickness=6;
 	this.scoreText.fixedToCamera = true;
-	this.healthText = this.add.text(400, 30, 'Health : '+this.game.Health,{ font: '25px Arial',fill: 'red' });
-	this.healthText.stroke="#000";
-	this.healthText.strokeThickness=6;
-	this.healthText.fixedToCamera = true;
-	
+
 	
 //if(this.game.character==1){
 	this.bot = this.add.group();
@@ -56,9 +52,9 @@ Level6.prototype.create = function() {
 			this.player = this.addPlayer(obj.x, obj.y);
 			this.game.camera.follow(this.player,Phaser.Camera.FOLLOW_PLATFORMER);
 			this.player.canhit=true;
-			 this.player.maxHealth = 6;
-			 this.player.setHealth(5);
-			 
+//			 this.player.maxHealth = 6;
+//			 this.player.setHealth(5);
+			 this.player.hp=5;
 		}
 
 		if (obj.type == "bot") {
@@ -99,6 +95,10 @@ Level6.prototype.create = function() {
 	   
 //	this.createText();
 	}
+	this.healthText = this.add.text(400, 30, 'Health : '+this.player.hp,{ font: '25px Arial',fill: 'red' });
+	this.healthText.stroke="#000";
+	this.healthText.strokeThickness=6;
+	this.healthText.fixedToCamera = true;
 //}
 };
 
@@ -190,7 +190,7 @@ Level6.prototype.update = function() {
 };
 
 Level6.prototype.addHealth = function(hp) {
-
+	this.player.hp+=2;
     //score text
     addHeal = this.add.text(hp.x, hp.y, 'HP++', {
         fill: 'yellow'
@@ -207,7 +207,9 @@ Level6.prototype.addHealth = function(hp) {
     sf.play();
     this.game.score++;
 	this.scoreText.text = 'Score : '+this.game.score;
+	this.healthText.text=' Health : '+this.player.hp;
     //kill the +1 on delay play complete
+	
 }
 
 //ด้านล่างนี้เดี๋ยวซ่อมเองนะ อย่าลืมล่ะ (บอกตัวเอง)
@@ -308,7 +310,7 @@ Level6.prototype.addHp = function(x,y){
 }
 
 Level6.prototype.onPlayerCollide = function(player,enemy){
-	player.damage(1);
+	player.hp-=1;
 	enemy.damage(1);
 	player.canhit = false;
 	player.alpha = 0.1;
@@ -337,7 +339,7 @@ Level6.prototype.onPlayerCollide = function(player,enemy){
 	exp.scale.set(0.6);
 	exp.animations.add("all",null,12,false).play().killOnComplete=true;
 	this.hitmark.play();
-	
+	this.healthText.text='Health : '+this.player.hp;
 	this.game.score++;
 	this.scoreText.text = 'Score : '+this.game.score;
 	return true;
@@ -369,6 +371,7 @@ Level6.prototype.onCollide = function(enemy,bullet){
 	
 	this.game.score++;
 	this.scoreText.text = 'Score : '+this.game.score;
+	
 	
 	
 	};
