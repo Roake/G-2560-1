@@ -16,7 +16,7 @@ PreBoss.prototype.create = function() {
 	background.scale.set(1);
 	background.fixedToCamera = true;
 	
-	msgTxt  = this.add.button(this.world.centerX, this.world.centerY,
+	msgTxt  = this.add.button(this.world.centerX-700, this.world.centerY,
 	"WIN3-1");
 	msgTxt.scale.set(1);
 	msgTxt.anchor.set(0.5,0.5);
