@@ -576,6 +576,70 @@
       "key": "BOSSPBG",
       "url": "assets/images/BOSSPBG.png",
       "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "ColAnschluss1",
+      "url": "assets/images/ColAnschluss1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "LV5BG",
+      "url": "assets/images/LV5BG.jpg",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "MID1",
+      "url": "assets/images/MID1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "MID2",
+      "url": "assets/images/MID2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "MID3",
+      "url": "assets/images/MID3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "MID4",
+      "url": "assets/images/MID4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "image",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "image1",
+      "overwrite": false
+    },
+    {
+      "type": "audio",
+      "key": "Boss",
+      "urls": ["assets/audio/Boss.ogg"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "menu2",
+      "urls": ["assets/audio/menu2.ogg"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "sewer 2",
+      "urls": ["assets/audio/sewer 2.ogg"],
+      "autoDecode": true
     }
   ],
   "level": [],
@@ -586,7 +650,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513836695240",
+    "generated": "1513837229872",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",

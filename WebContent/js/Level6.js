@@ -427,7 +427,7 @@ return a;
 };
 
 Level6.prototype.Next = function(player,goal){ 
-	
+	this.game.cache.removeSound("sewer 2");
 	this.game.state.start("EndCutscene");
 	
 }
