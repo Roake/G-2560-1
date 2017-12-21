@@ -44,8 +44,6 @@ Level5.prototype.create = function() {
 	this.goal=this.add.group();
 	this.enemy=this.add.group();
 	this.hp=this.add.group();
-	this.createEnemyWeapon();
-	this.createWeapon();
 	for (x  in this.map.objects.object) {
 	var obj = this.map.objects.object[x];
 	if (obj.type == "player") {
@@ -92,45 +90,12 @@ Level5.prototype.create = function() {
 	var text = this.add.text(10, this.world.height-30, "Alpha Version C:2-1", {fill: 'white'});
 	text.scale.set(1);
 	
+	this.createWeapon();
 	   
 //	this.createText();
 	}
 //}
 };
-
-Level5.prototype.fireEWeaponback = function (){
-	if(this.weapon4.fire()!=false){
-		this.gun.play();
-	}
-	
-	this.weapon4.fire();
-};
-Level5.prototype.fireEWeapon = function (){
-	if(this.weapon3.fire()!=false){
-		this.gun.play();
-	}
-	this.weapon3.fire();
-};
-
-Level5.prototype.createEnemyWeapon = function() {
-	this.weapon3 = this.add.weapon(100, "bullet",10);	
-	this.weapon4 = this.add.weapon(100, "bullet",10);	
-	this.weapon3.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
-	this.weapon3.trackSprite(this.enemy, 75, -10);
-	this.weapon3.bulletSpeed = 700;
-	this.weapon3.fireAngle = 0;
-	this.weapon3.rate = 500;
-	this.weapon3.bulletCollideWorldBounds1;
-	this.weapon3.bulletAngleOffset=90;
-	this.weapon3.bulletGravity.y = -1000;
-	this.weapon4.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
-	this.weapon4.trackSprite(this.enemy, -75,-10);
-	this.weapon4.bulletSpeed = 700;
-	this.weapon4.fireAngle = 180;
-	this.weapon4.bulletAngleOffset=-270;
-	this.weapon4.rate = 500;
-	this.weapon4.bulletGravity.y = -1000;
-		}
 
 Level5.prototype.createWeapon = function() {
 	this.weapon1 = this.add.weapon(100, "bullet",10);	
@@ -320,7 +285,6 @@ Level5.prototype.addEnemy = function(x, y) {
 	t.body.collideWorldBounds = true;
 	t.health=5;
 	t.maxHealth=5;
-	
 	return t;
 	
 	
@@ -375,7 +339,7 @@ Level5.prototype.onCollide = function(enemy,bullet){
         addHeal.kill();
     }, this);
 	
-	exp = this.add.sprite(enemy.x, enemy.y,"hit");
+	exp = this.add.sprite(enemy.x, enemy.y,"hitmark");
 	exp.anchor.set(0.4,0.5);
 	exp.scale.set(0.6);
 	exp.animations.add("all",null,12,false).play().killOnComplete=true;
