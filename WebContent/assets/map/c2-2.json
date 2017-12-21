@@ -68,7 +68,7 @@
                  "id":4,
                  "name":"enemy",
                  "rotation":0,
-                 "type":"enemy1",
+                 "type":"enemy2",
                  "visible":true,
                  "width":16,
                  "x":952,

@@ -160,8 +160,9 @@ Level5.prototype.update = function() {
 					if(this.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
 				this.player.play("ffb");}} 
 		 }else if (this.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
-			this.player.body.velocity.x = -200;
+		this.player.body.velocity.x=-200;
 			this.player.scale.x = -0.2;
+			
 			this.player.play("walk");
 	
 		}else if (this.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
