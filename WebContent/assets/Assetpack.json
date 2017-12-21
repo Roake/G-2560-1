@@ -630,6 +630,12 @@
       "textureURL": "assets/images/GenDragur.png",
       "atlasURL": "assets/images/GenDragur.json",
       "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "image",
+      "key": "LV5BG",
+      "url": "assets/images/LV5BG.jpg",
+      "overwrite": false
     }
   ],
   "level": [],
@@ -640,7 +646,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513834180240",
+    "generated": "1513834947522",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
