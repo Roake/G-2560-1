@@ -87,9 +87,9 @@ Level6.prototype.create = function() {
 		
 			
 		}
-	
-	var text = this.add.text(10, this.world.height-30, "Alpha Version C:2-1", {fill: 'white'});
-	text.scale.set(1);
+//	
+//	var text = this.add.text(10, this.world.height-30, "Alpha Version C:2-1", {fill: 'white'});
+//	text.scale.set(1);
 	
 	this.createWeapon();
 	   

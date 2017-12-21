@@ -93,8 +93,8 @@ Level5.prototype.create = function() {
 //	this.createText();
 	
 	}
-	var text = this.add.text(10, this.world.height-30, "Alpha Version C:2-1", {fill: 'white'});
-	text.scale.set(1);
+//	var text = this.add.text(10, this.world.height-30, "Alpha Version C:2-1", {fill: 'white'});
+//	text.scale.set(1);
 	
 	this.createWeapon();
 	this.healthText = this.add.text(400, 30, 'Health : '+this.player.hp,{ font: '25px Arial',fill: 'red' });

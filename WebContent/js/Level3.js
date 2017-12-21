@@ -48,8 +48,8 @@ Level3.prototype.create = function() {
 			this.goal.add(g);
 		}
 	
-	var text = this.add.text(10, this.world.height-30, "Alpha Version C:1-3", {fill: 'white'});
-	text.scale.set(1);
+//	var text = this.add.text(10, this.world.height-30, "Alpha Version C:1-3", {fill: 'white'});
+//	text.scale.set(1);
 	
 	this.createWeapon();
 	this.createText();

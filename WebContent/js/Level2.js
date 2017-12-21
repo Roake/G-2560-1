@@ -57,8 +57,8 @@ b.scale.set(0.8);
 			this.enemies.add(b);
 		}
 	
-	var text = this.add.text(10, this.world.height-30, "Alpha Version C:1-2", {fill: 'white'});
-	text.scale.set(1);
+//	var text = this.add.text(10, this.world.height-30, "Alpha Version C:1-2", {fill: 'white'});
+//	text.scale.set(1);
 		this.createWeapon();
 		}
 	
