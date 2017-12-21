@@ -53,9 +53,9 @@ Level5.prototype.create = function() {
 			this.player = this.addPlayer(obj.x, obj.y);
 			this.game.camera.follow(this.player,Phaser.Camera.FOLLOW_PLATFORMER);
 			this.player.canhit=true;
-			 this.player.maxHealth = 6;
-			 this.player.setHealth(3);
-			 
+//			 this.player.maxHealth = 6;
+//			 this.player.setHealth(3);
+			 this.player.hp=3;
 		}
 
 		if (obj.type == "bot") {
@@ -97,7 +97,7 @@ Level5.prototype.create = function() {
 	text.scale.set(1);
 	
 	this.createWeapon();
-	this.healthText = this.add.text(400, 30, 'Health : '+this.game.Health,{ font: '25px Arial',fill: 'red' });
+	this.healthText = this.add.text(400, 30, 'Health : '+this.player.hp,{ font: '25px Arial',fill: 'red' });
 	this.healthText.stroke="#000";
 	this.healthText.strokeThickness=6;
 	this.healthText.fixedToCamera = true;
@@ -204,7 +204,7 @@ Level5.prototype.addHealth = function(hp) {
     delay.onComplete.add(function(addHeal) {
         addHeal.kill();
     }, this);
-    this.player.heal(2);
+//    this.player.heal(2);
     var sf = this.add.audio("heal");
     sf.play();
     this.game.score++;
@@ -278,7 +278,7 @@ Level5.prototype.addHp = function(x,y){
 }
 
 Level5.prototype.onPlayerCollide = function(player,enemy){
-	player.damage(1);
+	player.hp-=1;
 	enemy.damage(1);
 	player.canhit = false;
 	player.alpha = 0.1;
@@ -307,7 +307,7 @@ Level5.prototype.onPlayerCollide = function(player,enemy){
 	exp.scale.set(0.6);
 	exp.animations.add("all",null,12,false).play().killOnComplete=true;
 	this.hitmark.play();
-	
+	this.healthText.text = 'Health : '+this.player.hp;
 	this.game.score++;
 	this.scoreText.text = 'Score : '+this.game.score;
 	return true;
