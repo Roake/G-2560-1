@@ -392,7 +392,7 @@ return a;
 
 Level5.prototype.Next = function(player,goal){ 
 	
-	this.game.state.start("Level6");
+	this.game.state.start("PreBoss");
 	
 }
 

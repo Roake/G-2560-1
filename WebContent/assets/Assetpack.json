@@ -595,14 +595,32 @@
     },
     {
       "type": "image",
-      "key": "BOSSPBG",
-      "url": "assets/images/BOSSPBG.png",
+      "key": "BOSSBG",
+      "url": "assets/images/BOSSBG.png",
       "overwrite": false
     },
     {
+      "type": "audio",
+      "key": "Boss",
+      "urls": ["assets/audio/Boss.ogg"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "menu2",
+      "urls": ["assets/audio/menu2.ogg"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "sewer 2",
+      "urls": ["assets/audio/sewer 2.ogg"],
+      "autoDecode": true
+    },
+    {
       "type": "image",
-      "key": "BOSSBG",
-      "url": "assets/images/BOSSBG.png",
+      "key": "BOSSPBG",
+      "url": "assets/images/BOSSPBG.png",
       "overwrite": false
     }
   ],
@@ -614,7 +632,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513831230756",
+    "generated": "1513832944831",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
