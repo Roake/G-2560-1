@@ -144,7 +144,9 @@ Level5.prototype.update = function() {
 	 if(this.player.canhit){
 		 this.physics.arcade.collide(this.enemy,this.player,this.onPlayerCollide,null,this);
 		 }
-	
+	if(this.player.hp==0){
+		this.game.state.start("End");
+	}
 //	 this.enemy.forEachAlive(function(e){
 //		 if(e.x > this.world.width) e.x = -Math.random() * 300;
 //		 },this);

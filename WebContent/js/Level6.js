@@ -142,7 +142,9 @@ Level6.prototype.update = function() {
 	 if(this.player.canhit){
 		 this.physics.arcade.collide(this.enemy,this.player,this.onPlayerCollide,null,this);
 		 }
-	
+	 if(this.player.hp==0){
+			this.game.state.start("End");
+		}
 //	 this.enemy.forEachAlive(function(e){
 //		 if(e.x > this.world.width) e.x = -Math.random() * 300;
 //		 },this);
@@ -378,18 +380,17 @@ Level6.prototype.onCollide = function(enemy,bullet){
 	
 Level6.prototype.addEnemy2 = function(x, y) {
 	
-	var t = this.add.sprite(x, y, "Wehrmacht");
-	t.animations.add("idle", gframes("Wehrmacht-Idle", 2),2, true);
-	t.animations.add("walk", gframes("Wehrmacht-Walk", 5), 5, true);
+	var t = this.add.sprite(x, y, "ColAnschluss");
+
 	
-	t.animations.add("attack", gframes("Wehrmacht-Attack", 2), 10, true);
+	t.animations.add("attack", gframes("Col-Attack", 2), 10, true);
 	
 	t.anchor.set(0.5, 0.5);
-	t.scale.set(0.2);
-	t.scale.x=-0.2;
+	t.scale.set(0.4);
+	t.scale.x=-0.4;
 	t.smoothed = false;
 	this.game.physics.arcade.enable(t);
-	t.play("idle");
+	t.play("attack");
 	t.body.collideWorldBounds = true;
 	t.alive=true;
 	t.maxHealth=20;

@@ -450,6 +450,20 @@
       "autoDecode": true
     },
     {
+      "type": "atlas",
+      "key": "ColAnschluss",
+      "textureURL": "assets/images/ColAnschluss.png",
+      "atlasURL": "assets/images/ColAnschluss.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "GenDragur",
+      "textureURL": "assets/images/GenDragur.png",
+      "atlasURL": "assets/images/GenDragur.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
       "type": "image",
       "key": "COL3-1",
       "url": "assets/dialogue/COL3-1.png",
@@ -553,88 +567,14 @@
     },
     {
       "type": "image",
-      "key": "ColAnschluss",
-      "url": "assets/images/ColAnschluss.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "ColAnschluss1",
-      "url": "assets/images/ColAnschluss1.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "MID1",
-      "url": "assets/images/MID1.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "MID2",
-      "url": "assets/images/MID2.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "MID3",
-      "url": "assets/images/MID3.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
-      "key": "MID4",
-      "url": "assets/images/MID4.png",
-      "overwrite": false
-    },
-    {
-      "type": "image",
       "key": "BOSSBG",
       "url": "assets/images/BOSSBG.png",
       "overwrite": false
     },
     {
-      "type": "audio",
-      "key": "Boss",
-      "urls": ["assets/audio/Boss.ogg"],
-      "autoDecode": true
-    },
-    {
-      "type": "audio",
-      "key": "menu2",
-      "urls": ["assets/audio/menu2.ogg"],
-      "autoDecode": true
-    },
-    {
-      "type": "audio",
-      "key": "sewer 2",
-      "urls": ["assets/audio/sewer 2.ogg"],
-      "autoDecode": true
-    },
-    {
       "type": "image",
       "key": "BOSSPBG",
       "url": "assets/images/BOSSPBG.png",
-      "overwrite": false
-    },
-    {
-      "type": "atlas",
-      "key": "ColAnschluss2",
-      "textureURL": "assets/images/ColAnschluss.png",
-      "atlasURL": "assets/images/ColAnschluss.json",
-      "format": "TEXTURE_ATLAS_JSON_HASH"
-    },
-    {
-      "type": "atlas",
-      "key": "GenDragur",
-      "textureURL": "assets/images/GenDragur.png",
-      "atlasURL": "assets/images/GenDragur.json",
-      "format": "TEXTURE_ATLAS_JSON_HASH"
-    },
-    {
-      "type": "image",
-      "key": "LV5BG",
-      "url": "assets/images/LV5BG.jpg",
       "overwrite": false
     }
   ],
@@ -646,7 +586,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513834947522",
+    "generated": "1513836695240",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
