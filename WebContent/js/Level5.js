@@ -47,7 +47,7 @@ Level5.prototype.create = function() {
 	for (x  in this.map.objects.object) {
 	var obj = this.map.objects.object[x];
 	if (obj.type == "player") {
-			console.log(this.player);
+			
 			this.player = this.addPlayer(obj.x, obj.y);
 			this.game.camera.follow(this.player,Phaser.Camera.FOLLOW_PLATFORMER);
 			this.player.canhit=true;

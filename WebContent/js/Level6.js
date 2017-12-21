@@ -386,7 +386,7 @@ Level6.prototype.addEnemy2 = function(x, y) {
 	t.alive=true;
 	t.maxHealth=3;
 	t.setHealth(3);
-	
+
 	return t;
 	
 	
