@@ -57,10 +57,10 @@ Level6.prototype.create = function() {
 			 this.player.hp=5;
 		}
 
-		if (obj.type == "bot") {
-			var a = this.addSGT(obj.x, obj.y);
-			this.bot.add(a);
-		}
+//		if (obj.type == "bot") {
+//			var a = this.addSGT(obj.x, obj.y);
+//			this.bot.add(a);
+//		}
 		if(obj.type == "enemy1"){
 			var e = this.addEnemy(obj.x,obj.y);
 			this.enemy.add(e);
@@ -425,11 +425,11 @@ this.game.physics.arcade.enable(a);
 return a;
 };
 
-//Level6.prototype.Next = function(player,goal){ 
-//	
-//	this.game.state.start("Level6");
-//	
-//}
+Level6.prototype.Next = function(player,goal){ 
+	
+	this.game.state.start("EndCutscene");
+	
+}
 
 Level6.prototype.addGoal = function(x, y) {
 	var c = this.add.sprite(x, y, "go");
