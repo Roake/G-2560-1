@@ -448,6 +448,156 @@
       "key": "heal",
       "urls": ["assets/audio/heal.ogg"],
       "autoDecode": true
+    },
+    {
+      "type": "image",
+      "key": "COL3-1",
+      "url": "assets/dialogue/COL3-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "COL3-2",
+      "url": "assets/dialogue/COL3-2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN2-1",
+      "url": "assets/dialogue/GEN2-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN2-2",
+      "url": "assets/dialogue/GEN2-2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN2-3",
+      "url": "assets/dialogue/GEN2-3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN2-4",
+      "url": "assets/dialogue/GEN2-4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN2-5",
+      "url": "assets/dialogue/GEN2-5.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN2-6",
+      "url": "assets/dialogue/GEN2-6.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN3-1",
+      "url": "assets/dialogue/GEN3-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GEN3-2",
+      "url": "assets/dialogue/GEN3-2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN1-3",
+      "url": "assets/dialogue/WIN1-3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN2-1",
+      "url": "assets/dialogue/WIN2-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN2-2",
+      "url": "assets/dialogue/WIN2-2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN3-1",
+      "url": "assets/dialogue/WIN3-1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN3-2",
+      "url": "assets/dialogue/WIN3-2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN3-3",
+      "url": "assets/dialogue/WIN3-3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "WIN3-4",
+      "url": "assets/dialogue/WIN3-4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "BOSSBG",
+      "url": "assets/images/BOSSBG.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "ColAnschluss",
+      "url": "assets/images/ColAnschluss.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "ColAnschluss1",
+      "url": "assets/images/ColAnschluss1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "GenDragur",
+      "url": "assets/images/GenDragur.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "MID1",
+      "url": "assets/images/MID1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "MID2",
+      "url": "assets/images/MID2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "MID3",
+      "url": "assets/images/MID3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "MID4",
+      "url": "assets/images/MID4.png",
+      "overwrite": false
     }
   ],
   "level": [],
@@ -458,7 +608,7 @@
     "overwrite": false
   }],
   "meta": {
-    "generated": "1513824901221",
+    "generated": "1513830948327",
     "app": "Phaser Editor",
     "url": "http://phasereditor.boniatillo.com",
     "version": "1.0",
