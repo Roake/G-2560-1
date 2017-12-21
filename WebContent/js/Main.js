@@ -21,6 +21,7 @@ window.onload = function() {
 	game.state.add("Dev", Dev);
 	game.state.add("Setting", Setting);
 	game.state.add("Pick", Pick);
+	game.state.add("End", End);
 	
 	
 	
