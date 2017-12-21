@@ -39,10 +39,7 @@ Level5.prototype.create = function() {
 	this.scoreText.strokeThickness=6;
 	this.scoreText.fixedToCamera = true;
 	
-	this.healthText = this.add.text(400, 30, 'Health : '+this.game.Health,{ font: '25px Arial',fill: 'red' });
-	this.healthText.stroke="#000";
-	this.healthText.strokeThickness=6;
-	this.healthText.fixedToCamera = true;
+	
 	
 //if(this.game.character==1){
 	this.bot = this.add.group();
@@ -92,13 +89,18 @@ Level5.prototype.create = function() {
 			
 		}
 	
+	
+//	this.createText();
+	
+	}
 	var text = this.add.text(10, this.world.height-30, "Alpha Version C:2-1", {fill: 'white'});
 	text.scale.set(1);
 	
 	this.createWeapon();
-
-//	this.createText();
-	}
+	this.healthText = this.add.text(400, 30, 'Health : '+this.game.Health,{ font: '25px Arial',fill: 'red' });
+	this.healthText.stroke="#000";
+	this.healthText.strokeThickness=6;
+	this.healthText.fixedToCamera = true;
 //}
 };
 
