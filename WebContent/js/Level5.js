@@ -11,7 +11,7 @@ Level5.prototype = proto;
 
 
 Level5.prototype.create = function() {
-	background = this.add.tileSprite(0, 0, 1024, 768, "BG");
+	background = this.add.tileSprite(0, 0, 1024, 768, "LV5BG");
 	background.scale.set(1);
 	background.fixedToCamera = true;
 	this.map = this.game.add.tilemap("c2-1");
