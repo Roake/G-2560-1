@@ -11,7 +11,7 @@ EndCutscene.prototype = proto;
 
 
 EndCutscene.prototype.create = function() {
-		var p1 = this.add.sprite(this.world.centerX, this.world.centerY,
+		var p1 = this.add.button(this.world.centerX, this.world.centerY,
 	"END1");
 p1.anchor.set(0.5, 0.5);
 this.input.onDown.add(this.PG2, this);
@@ -20,7 +20,7 @@ text.scale.set(1);
 }
 
 EndCutscene.prototype.PG2 = function() {
-	var p2 = this.add.sprite(this.world.centerX, this.world.centerY,
+	var p2 = this.add.button(this.world.centerX, this.world.centerY,
 	"END2");
 p2.anchor.set(0.5, 0.5);
 this.input.onDown.add(this.PG3, this);
@@ -29,7 +29,7 @@ text.scale.set(1);
 };
 
 EndCutscene.prototype.PG3 = function() {
-	var p3 = this.add.sprite(this.world.centerX, this.world.centerY,
+	var p3 = this.add.button(this.world.centerX, this.world.centerY,
 	"END3");
 p3.anchor.set(0.5, 0.5);
 this.input.onDown.add(this.PG4, this);
@@ -38,7 +38,7 @@ text.scale.set(1);
 };
 
 EndCutscene.prototype.PG4 = function() {
-	var p4 = this.add.sprite(this.world.centerX, this.world.centerY,
+	var p4 = this.add.button(this.world.centerX, this.world.centerY,
 	"END4");
 p4.anchor.set(0.5, 0.5);
 var text = this.add.text(10, this.world.height-30, "Alpha Version", {fill: 'white'});
